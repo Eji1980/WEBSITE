@@ -171,6 +171,40 @@
     .mc-grid .card .leave { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin: 1.1rem 28px .35rem; }
     .mc-grid .card p { padding: 0 28px 28px; }
 
+    /* Booking */
+    .book { background: var(--blush); border-bottom: 1px solid var(--line); }
+    .book-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 36px; }
+    .book-intro h2, .book-intro .lead { margin: 0; }
+    .book-frame { background: #fff; border-radius: var(--radius); border-top: 4px solid var(--deep); box-shadow: 0 30px 60px -40px rgba(31,42,38,.45); overflow: hidden; }
+    .calendly-inline-widget { min-width: 280px; height: 720px; }
+    .book .note { margin-top: 16px; }
+
+    /* Masterclass interest form */
+    .interest { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px 64px; margin-top: 56px; padding: 44px; background: var(--blush); border-radius: var(--radius); scroll-margin-top: 24px; }
+    .interest-intro h3 { font-size: 1.6rem; color: var(--deep); }
+    .interest-intro p { color: var(--muted); max-width: 40ch; }
+    .interest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; min-width: 0; }
+    .interest-form .full { grid-column: 1 / -1; }
+    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
+    .field label, .field legend { font-weight: 600; font-size: .95rem; padding: 0; }
+    .field label span { font-weight: 400; color: var(--muted); }
+    .field legend { margin-bottom: 6px; }
+    .interest-form input[type=text], .interest-form input[type=email], .interest-form textarea {
+      font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
+    }
+    .interest-form textarea { resize: vertical; }
+    .interest-form input:focus-visible, .interest-form textarea:focus-visible { outline: 2px solid var(--deep); outline-offset: 1px; border-color: var(--deep); }
+    .choice { display: flex; gap: 10px; align-items: flex-start; font-size: 1rem; line-height: 1.45; margin-top: 4px; }
+    .choice input { accent-color: var(--deep); width: 18px; height: 18px; margin: 2px 0 0; flex: none; }
+    .consent { font-size: .9rem; color: var(--muted); }
+    .form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+    .form-foot .btn { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+    .form-status { margin: 0; font-weight: 500; }
+    .form-status.error { color: #a23b1e; }
+    .interest-done { grid-column: 1 / -1; text-align: center; padding: 12px 0; }
+    .interest-done h3 { color: var(--deep); font-size: 1.6rem; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
     /* FAQ */
     .faq-section { background: var(--bg); }
     .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px 80px; align-items: start; }
@@ -208,7 +242,9 @@
       .lockup .box { padding: 18px 18px 26px; }
       .about .wrap { grid-template-columns: 1fr; gap: 40px; }
       .about .wrap > div:first-child { width: 180px; }
-      .familiar-grid, .shift-intro, .mc-intro, .faq-grid { grid-template-columns: 1fr; }
+      .familiar-grid, .shift-intro, .mc-intro, .faq-grid, .book-intro, .interest { grid-template-columns: 1fr; }
+      .interest { padding: 28px 20px; }
+      .calendly-inline-widget { height: 1000px; }
       .faq-grid h2 { position: static; }
       .final::before { inset: 14px; }
       .coach-intro { grid-template-columns: 1fr; margin-bottom: 48px; }
@@ -224,6 +260,7 @@
       .wrap { padding: 0 16px; }
       .actions .btn { width: 100%; text-align: center; }
       .final .wrap { padding: 0 32px; }
+      .interest-form { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -243,7 +280,7 @@
         <p class="hero-sub">Coaching and Mentoring for Leaders · Online</p>
         <p class="hero-line">For caring leaders who hold everything together.<br>Lead well, and keep room for yourself and your life.</p>
         <div class="actions">
-          <a class="btn" href="https://bookme.name/walkwitheji">Book a free Discovery Conversation</a>
+          <a class="btn" href="#book">Book a free Discovery Conversation</a>
           <a class="link" href="#masterclasses">Explore the masterclasses</a>
         </div>
       </div>
@@ -320,7 +357,7 @@
           <h3>Discovery Conversation</h3>
           <p>We find out together whether coaching fits you. There's no pressure to commit.</p>
         </div>
-        <a class="btn" href="https://bookme.name/walkwitheji">Book your free conversation</a>
+        <a class="btn" href="#book">Book your free conversation</a>
       </div>
 
       <p class="step-label"><span>2</span>Then choose your path</p>
@@ -338,6 +375,22 @@
       </div>
       <!-- TODO (Eji): add prices for The Compass and Walking Home -->
       <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation.</p>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="book-intro">
+        <div>
+          <div class="eyebrow">Free · 30 minutes · online</div>
+          <h2>Book your Discovery Conversation</h2>
+        </div>
+        <p class="lead">Choose a time that suits you. You'll get a confirmation by email with everything you need to join.</p>
+      </div>
+      <div class="book-frame">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/eji-ezestenlund/30min?hide_gdpr_banner=1&amp;primary_color=2f5d50"></div>
+      </div>
+      <p class="note">Calendar not showing? <a href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
     </div>
   </section>
 
@@ -368,8 +421,7 @@
         </div>
         <div>
           <p class="lead">Explore a new perspective together, through guided reflection and real-life application.</p>
-          <!-- TODO (Eji): replace this link with your waiting-list link -->
-          <a class="btn ghost" href="https://bookme.name/walkwitheji">Register your interest</a>
+          <a class="btn ghost" href="#interest">Register your interest</a>
         </div>
       </div>
       <div class="mc-grid">
@@ -385,6 +437,40 @@
           <div class="leave">You leave with</div>
           <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
         </div>
+      </div>
+
+      <div class="interest" id="interest">
+        <div class="interest-intro">
+          <h3>Register your interest</h3>
+          <p>Leave your details and I'll email you when dates are set. No obligation, and no other mailings.</p>
+        </div>
+        <!-- TODO (Eji): replace YOUR_FORM_ID with the ID of your Formspree form -->
+        <form class="interest-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Masterclass interest">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <div class="field">
+            <label for="if-name">Name</label>
+            <input id="if-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="if-email">Email</label>
+            <input id="if-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <fieldset class="field full">
+            <legend>Which masterclass interests you?</legend>
+            <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty" checked> Lead Without Running on Empty</label>
+            <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt" checked> Boundaries Without Guilt</label>
+          </fieldset>
+          <div class="field full">
+            <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
+            <textarea id="if-msg" name="message" rows="3"></textarea>
+          </div>
+          <label class="choice consent full"><input type="checkbox" name="consent" value="yes" required> I agree that Eji Eze Stenlund may email me about the masterclasses. I can unsubscribe at any time.</label>
+          <div class="full form-foot">
+            <button class="btn" type="submit">Register your interest</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -415,8 +501,8 @@
       <h2>What might become possible with more room for you?</h2>
       <p class="sub">No pressure. Start wherever feels right.</p>
       <div class="actions">
-        <a class="btn" href="https://bookme.name/walkwitheji">Book a free Discovery Conversation</a>
-        <a class="link" href="#masterclasses">Register interest in a masterclass</a>
+        <a class="btn" href="#book">Book a free Discovery Conversation</a>
+        <a class="link" href="#interest">Register interest in a masterclass</a>
       </div>
     </div>
   </section>
@@ -425,9 +511,45 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Eji Eze Stenlund · Transformational Life Coach &amp; Leadership Mentor</span>
-    <a href="https://bookme.name/walkwitheji">bookme.name/walkwitheji</a>
+    <a href="#book">Book a free conversation</a>
   </div>
 </footer>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  // Send the masterclass form in the background and thank the visitor in place.
+  (function () {
+    var form = document.querySelector('.interest-form');
+    if (!form) return;
+    var status = form.querySelector('.form-status');
+    var button = form.querySelector('button[type=submit]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.querySelector('input[name=masterclass]:checked')) {
+        status.textContent = 'Please choose at least one masterclass.';
+        status.className = 'form-status error';
+        return;
+      }
+      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+        status.textContent = 'This form is not connected yet. Please try again soon.';
+        status.className = 'form-status error';
+        return;
+      }
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      status.className = 'form-status';
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          form.outerHTML = '<div class="interest-done" role="status"><h3>Thank you!</h3><p>You\'re on the list. I\'ll email you as soon as dates are set.</p></div>';
+        })
+        .catch(function () {
+          button.disabled = false;
+          status.textContent = 'Something went wrong. Please try again in a moment.';
+          status.className = 'form-status error';
+        });
+    });
+  })();
+</script>
 </body>
 </html>
