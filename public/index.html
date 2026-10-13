@@ -89,7 +89,8 @@
     .hero-copy .actions { justify-content: center; margin-top: 1.8rem; }
     .hero-photo { position: relative; z-index: 1; padding: 56px 56px 0 0; display: flex; min-width: 0; }
     .hero-photo::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 72%; background: var(--deep); }
-    .hero-photo img { position: relative; width: 100%; min-height: 540px; height: 100%; object-fit: cover; object-position: 50% 28%; display: block; }
+    .hero-photo { min-height: 596px; }
+    .hero-photo img { position: absolute; top: 56px; left: 0; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: cover; object-position: 50% 26%; display: block; }
 
     /* Familiar */
     .familiar { background: var(--surface); border-block: 1px solid var(--line); }
@@ -239,7 +240,8 @@
       .hero-band { padding: 22px 16px 80px; }
       .hero-panel { grid-template-columns: 1fr; margin: -56px 16px 0; }
       .hero-photo { order: -1; padding: 28px 28px 0 0; }
-      .hero-photo img { min-height: 0; aspect-ratio: 4 / 5; height: auto; object-position: 50% 25%; }
+      .hero-photo { min-height: 0; }
+      .hero-photo img { position: relative; top: 0; width: 100%; aspect-ratio: 1 / 1; height: auto; object-position: 50% 22%; }
       .hero-copy { padding: 48px 20px 92px; }
       .lockup .box { padding: 18px 18px 26px; }
       .about .wrap { grid-template-columns: 1fr; gap: 40px; }
