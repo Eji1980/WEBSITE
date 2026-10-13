@@ -11,7 +11,12 @@ A one-page static website, hosted on Cloudflare Workers.
 Search `index.html` for `TODO (Eji)`:
 1. Prices for The Compass and Walking Home
 2. One or two sentences of your own story (About section)
-3. Your waiting-list link for the Masterclasses (it points to the booking page for now)
+3. Your Formspree form ID for the Masterclass interest form (replace `YOUR_FORM_ID`)
+
+## Booking and sign-ups
+- Bookings: the "Book your Discovery Conversation" section embeds Calendly
+  (`calendly.com/eji-ezestenlund/30min`). Change the `data-url` in `index.html` to use another event.
+- Masterclass interest: the form sends to Formspree, which emails you each sign-up and keeps a list.
 
 ## Deploying on Cloudflare
 In the Cloudflare dashboard: **Workers & Pages → Create → Import a repository**, choose this repo,
