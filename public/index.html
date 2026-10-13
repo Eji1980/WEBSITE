@@ -7,8 +7,8 @@
   <meta name="description" content="1:1 online coaching for caring leaders who hold everything together. Book a free Discovery Conversation with Eji Eze Stenlund.">
   <meta property="og:title" content="Lead without running on empty">
   <meta property="og:description" content="1:1 coaching for caring leaders who hold everything together. Start with a free Discovery Conversation.">
-  <meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero.jpg">
-  <link rel="preload" as="image" href="eji-hero.jpg">
+  <meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero-portrait.jpg">
+  <link rel="preload" as="image" href="eji-hero-portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:ital,wght@0,400;0,500;0,600;1,600&family=Allura&display=swap" rel="stylesheet">
@@ -89,7 +89,7 @@
     .hero-copy .actions { justify-content: center; margin-top: 1.8rem; }
     .hero-photo { position: relative; z-index: 1; padding: 56px 56px 0 0; display: flex; min-width: 0; }
     .hero-photo::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 72%; background: var(--deep); }
-    .hero-photo img { position: relative; width: 100%; min-height: 540px; height: 100%; object-fit: cover; object-position: 78% 30%; display: block; }
+    .hero-photo img { position: relative; width: 100%; min-height: 540px; height: 100%; object-fit: cover; object-position: 50% 28%; display: block; }
 
     /* Familiar */
     .familiar { background: var(--surface); border-block: 1px solid var(--line); }
@@ -149,7 +149,7 @@
 
     /* About */
     .about .wrap { display: grid; grid-template-columns: .55fr 1.45fr; gap: 56px; align-items: center; }
-    .about img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 50%; display: block; box-shadow: 0 0 0 10px var(--soft); }
+    .about img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 50%; display: block; box-shadow: 0 0 0 10px var(--surface), 0 24px 50px -24px rgba(31,42,38,.45); }
     .roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 1.5rem 0; }
     .roles li { font-size: .85rem; padding: 5px 12px; border-radius: 6px; background: var(--soft); color: var(--accent); font-weight: 500; }
     .stat { display: flex; gap: 18px; align-items: baseline; margin-bottom: 1.5rem; }
@@ -157,6 +157,8 @@
 
     .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
     .card p { margin: 0; }
+
+    .about { background: var(--blush); border-block: 1px solid var(--line); }
 
     /* Masterclasses */
     .mc { background: var(--surface); border-block: 1px solid var(--line); }
@@ -237,11 +239,11 @@
       .hero-band { padding: 22px 16px 80px; }
       .hero-panel { grid-template-columns: 1fr; margin: -56px 16px 0; }
       .hero-photo { order: -1; padding: 28px 28px 0 0; }
-      .hero-photo img { min-height: 0; aspect-ratio: 4 / 3; height: auto; object-position: 80% 30%; }
+      .hero-photo img { min-height: 0; aspect-ratio: 4 / 5; height: auto; object-position: 50% 25%; }
       .hero-copy { padding: 48px 20px 92px; }
       .lockup .box { padding: 18px 18px 26px; }
       .about .wrap { grid-template-columns: 1fr; gap: 40px; }
-      .about .wrap > div:first-child { width: 180px; }
+      .about .wrap > div:first-child { width: 180px; margin: 10px 0 0 10px; }
       .familiar-grid, .shift-intro, .mc-intro, .faq-grid, .book-intro, .interest { grid-template-columns: 1fr; }
       .interest { padding: 28px 20px; }
       .calendly-inline-widget { height: 1000px; }
@@ -285,7 +287,7 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="eji-hero.jpg" alt="Eji Eze Stenlund smiling, with a lake and forest at sunrise behind her" width="1600" height="900" fetchpriority="high">
+        <img src="eji-hero-portrait.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="1000" height="1500" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -325,6 +327,24 @@
         <div class="more">Trusting your own judgement</div>
         <div class="less">An automatic yes, then guilt</div>
         <div class="more">Clear, kind boundaries</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div><img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
+      <div>
+        <div class="eyebrow">About me</div>
+        <h2>Hi, I'm Eji Eze Stenlund.</h2>
+        <p class="lead">I'm a Transformational Life Coach and Leadership Mentor.</p>
+        <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
+        <ul class="roles">
+          <li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li>
+        </ul>
+        <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming.</p>
+        <!-- TODO (Eji): add one or two sentences of your own story here -->
+        <p>Today I work online with leaders around the world.</p>
       </div>
     </div>
   </section>
@@ -394,23 +414,6 @@
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="wrap">
-      <div><img src="eji.jpg" alt="Portrait of Eji Eze Stenlund" width="900" height="1200" loading="lazy"></div>
-      <div>
-        <div class="eyebrow">About me</div>
-        <h2>Hi, I'm Eji Eze Stenlund.</h2>
-        <p class="lead">I'm a Transformational Life Coach and Leadership Mentor.</p>
-        <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
-        <ul class="roles">
-          <li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li>
-        </ul>
-        <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming.</p>
-        <!-- TODO (Eji): add one or two sentences of your own story here -->
-        <p>Today I work online with leaders around the world.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="mc" id="masterclasses">
     <div class="wrap">
