@@ -7,7 +7,8 @@
   <meta name="description" content="1:1 online coaching for caring leaders who hold everything together. Book a free Discovery Conversation with Eji Eze Stenlund.">
   <meta property="og:title" content="Lead without running on empty">
   <meta property="og:description" content="1:1 coaching for caring leaders who hold everything together. Start with a free Discovery Conversation.">
-  <meta property="og:image" content="eji.jpg">
+  <meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero.jpg">
+  <link rel="preload" as="image" href="eji-hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
     section { padding: 88px 0; }
     .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--warm); margin-bottom: 1rem; }
-    .lead { font-size: 1.2rem; color: var(--muted); max-width: 36em; }
+    .lead { font-size: 1.2rem; color: var(--muted); max-width: min(36em, 65ch); }
     .btn {
       display: inline-block; background: var(--accent); color: var(--accent-ink);
       padding: 15px 26px; border-radius: 999px; text-decoration: none; font-weight: 600;
@@ -62,18 +63,37 @@
     header .btn { padding: 10px 18px; font-size: .9rem; }
 
     /* Hero */
-    .hero { padding: 40px 0 96px; }
-    .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items: center; }
-    .portrait { position: relative; }
-    .portrait img { width: 100%; height: auto; display: block; border-radius: 200px 200px var(--radius) var(--radius); }
-    .portrait::after {
-      content: ""; position: absolute; inset: 18px -18px -18px 18px; z-index: -1;
-      border-radius: 200px 200px var(--radius) var(--radius); background: var(--soft);
+    .hero { padding: 32px 0 104px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; z-index: -1; right: -12vw; top: -10vw;
+      width: 62vw; height: 62vw; max-width: 860px; max-height: 860px; border-radius: 50%;
+      background: radial-gradient(circle, var(--soft) 0%, rgba(233,239,233,0) 70%);
     }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
+    .hero h1 { font-size: clamp(2.5rem, 5.2vw, 4.1rem); }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .hero .lead { max-width: 65ch; }
+    .portrait { position: relative; margin: 0; }
+    .portrait img {
+      width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: 52% 42%;
+      display: block; border-radius: 999px 999px var(--radius) var(--radius);
+      box-shadow: 0 30px 60px -30px rgba(31,42,38,.45);
+    }
+    .portrait::after {
+      content: ""; position: absolute; inset: 22px -22px -22px 22px; z-index: -1;
+      border-radius: 999px 999px var(--radius) var(--radius); border: 1.5px solid var(--warm); opacity: .55;
+    }
+    .portrait figcaption {
+      position: absolute; left: -28px; bottom: 36px; background: var(--surface);
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px;
+      box-shadow: 0 14px 30px -18px rgba(31,42,38,.35); font-size: .9rem; line-height: 1.4;
+    }
+    .portrait figcaption strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; font-weight: 600; }
+    .portrait figcaption span { color: var(--muted); }
 
     /* Familiar */
     .familiar { background: var(--surface); border-block: 1px solid var(--line); }
-    .quote { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.5rem, 3.4vw, 2.2rem); line-height: 1.3; font-style: italic; max-width: 22em; margin-bottom: 2.5rem; }
+    .quote { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.3; font-style: italic; max-width: 22em; margin-bottom: 2.5rem; padding-left: 24px; border-left: 3px solid var(--warm); }
     .checks { list-style: none; padding: 0; margin: 0 0 2.5rem; display: grid; gap: 14px; max-width: 44em; }
     .checks li { padding-left: 34px; position: relative; font-size: 1.1rem; }
     .checks li::before { content: ""; position: absolute; left: 0; top: .5em; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--warm); }
@@ -103,7 +123,7 @@
 
     /* About */
     .about .wrap { display: grid; grid-template-columns: .55fr 1.45fr; gap: 56px; align-items: center; }
-    .about img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 50%; display: block; }
+    .about img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 50%; display: block; box-shadow: 0 0 0 10px var(--soft); }
     .roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 1.5rem 0; }
     .roles li { font-size: .85rem; padding: 5px 12px; border-radius: 6px; background: var(--soft); color: var(--accent); font-weight: 500; }
     .stat { display: flex; gap: 18px; align-items: baseline; margin-bottom: 1.5rem; }
@@ -137,8 +157,10 @@
       section { padding: 64px 0; }
       .hero { padding: 16px 0 64px; }
       .hero .wrap, .about .wrap { grid-template-columns: 1fr; gap: 40px; }
-      .portrait { max-width: 340px; order: -1; margin: 0 auto; }
-      .about .wrap > div:first-child { display: none; }
+      .hero .wrap { gap: 48px; }
+      .portrait { width: min(360px, 82%); order: -1; margin: 0 auto; }
+      .portrait figcaption { left: -16px; bottom: -18px; padding: 10px 14px; }
+      .about .wrap > div:first-child { width: 180px; }
       .packages, .mc-grid { grid-template-columns: 1fr; }
       .shift-grid { grid-template-columns: 1fr; }
       .shift-grid > .head { display: none; }
@@ -167,16 +189,17 @@
     <div class="wrap">
       <div>
         <div class="eyebrow">1:1 coaching for leaders · online · available now</div>
-        <h1>Lead without running on empty.</h1>
+        <h1>Lead without <em>running on empty.</em></h1>
         <p class="lead">When perspectives shift, new possibilities emerge. I offer 1:1 coaching for caring leaders who hold everything together, so you can stay steady for your team without carrying it all alone.</p>
         <div class="actions">
           <a class="btn" href="https://bookme.name/walkwitheji">Book a free Discovery Conversation</a>
           <a class="link" href="#coaching">See how coaching works</a>
         </div>
       </div>
-      <div class="portrait">
-        <img src="eji.jpg" alt="Eji Eze Stenlund, smiling" width="900" height="1200">
-      </div>
+      <figure class="portrait">
+        <img src="eji-hero.jpg" alt="Eji Eze Stenlund, smiling warmly" width="1000" height="1500" fetchpriority="high">
+        <figcaption><strong>Eji Eze Stenlund</strong><span>Life Coach &amp; Leadership Mentor</span></figcaption>
+      </figure>
     </div>
   </section>
 
