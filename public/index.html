@@ -58,12 +58,6 @@
     .link { font-weight: 600; text-decoration: none; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
     .actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 2rem; }
 
-    /* Header */
-    header { padding: 22px 0; }
-    header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .brand { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; text-decoration: none; color: var(--ink); }
-    header .btn { padding: 10px 18px; font-size: .9rem; }
-
     /* Hero: quote band, then a framed panel overlapping it */
     .hero { padding: 0 0 88px; }
     .hero-band { background: var(--accent); color: #fff; text-align: center; padding: 30px 20px 128px; }
@@ -99,33 +93,59 @@
 
     /* Familiar */
     .familiar { background: var(--surface); border-block: 1px solid var(--line); }
-    .quote { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.3; font-style: italic; max-width: 22em; margin-bottom: 2.5rem; padding-left: 24px; border-left: 3px solid var(--warm); }
-    .checks { list-style: none; padding: 0; margin: 0 0 2.5rem; display: grid; gap: 14px; max-width: 44em; }
-    .checks li { padding-left: 34px; position: relative; font-size: 1.1rem; }
-    .checks li::before { content: ""; position: absolute; left: 0; top: .5em; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--warm); }
-    .reassure { font-size: 1.15rem; max-width: 38em; padding: 22px 26px; background: var(--soft); border-radius: var(--radius); }
+    .familiar-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px 80px; align-items: start; }
+    .quote { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.25; font-style: italic; margin: 0; padding-left: 24px; border-left: 3px solid var(--warm); color: var(--deep); }
+    .checks { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; }
+    .checks li { padding: 16px 0 16px 34px; position: relative; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
+    .checks li:first-child { padding-top: 0; }
+    .checks li::before { content: ""; position: absolute; left: 0; top: calc(16px + .5em); width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--warm); }
+    .checks li:first-child::before { top: .5em; }
+    .reassure { font-size: 1.15rem; margin: 0; padding: 24px 28px; background: var(--blush); border-left: 4px solid var(--deep); border-radius: 0 var(--radius) var(--radius) 0; max-width: 65ch; }
 
     /* Shift */
-    .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); margin: 2rem 0; }
-    .shift-grid > div { padding: 18px 24px; border-top: 1px solid var(--line); }
-    .shift-grid > .head { border-top: 0; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-    .shift-grid > .less { color: var(--muted); }
-    .shift-grid > .more { background: var(--soft); font-weight: 500; }
-    .shift-grid > .head.more { color: var(--accent); }
-    .closing-line { font-family: "Fraunces", Georgia, serif; font-size: 1.4rem; font-style: italic; }
+    .shift-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 40px; }
+    .shift-intro h2, .shift-intro .lead { margin: 0; }
+    .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+    .shift-grid > div { padding: 20px 28px; border-top: 1px solid var(--line); min-width: 0; }
+    .shift-grid > .head { border-top: 0; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding-block: 16px; }
+    .shift-grid > .less { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(184,101,63,.45); text-decoration-thickness: 1.5px; }
+    .shift-grid > .head.less { text-decoration: none; background: var(--bg); }
+    .shift-grid > .more { position: relative; background: var(--blush); color: var(--deep); font-weight: 600; font-size: 1.05rem; padding-left: 52px; }
+    .shift-grid > .more::before { content: "→"; position: absolute; left: 24px; color: var(--warm); font-weight: 400; }
+    .shift-grid > .head.more { background: var(--deep); color: #fff; font-size: .8rem; padding-left: 28px; border-top-color: var(--deep); }
+    .shift-grid > .head.more::before { content: none; }
 
     /* Coaching */
     .coaching { background: var(--surface); border-block: 1px solid var(--line); }
-    .topics { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 1rem 0 3rem; }
-    .topics li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; font-size: .95rem; }
-    .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 1.5rem; }
-    .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
-    .card.featured { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-    .card .format { font-size: .85rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--warm); margin-bottom: .75rem; }
-    .card.featured .format { color: #f3c9a8; }
-    .card p { margin: 0; }
-    .card.featured .btn { background: var(--surface); color: var(--accent); margin-top: 1.5rem; align-self: flex-start; }
-    .note { font-size: .95rem; color: var(--muted); }
+    .coach-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 72px; align-items: end; margin-bottom: 64px; }
+    .coach-intro h2 { margin-bottom: .3em; }
+    .coach-intro .lead { margin: 0; }
+    .coach-how { margin: 0; padding: 4px 0 4px 26px; border-left: 2px solid var(--warm); max-width: 65ch; }
+    .coach-how strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; margin-bottom: .35rem; }
+    .topics-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
+    .topics-head h3 { margin: 0; white-space: nowrap; }
+    .topics-head::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+    .topics { list-style: none; padding: 0; margin: 0 0 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); column-gap: 40px; counter-reset: topic; }
+    .topics li { counter-increment: topic; display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; min-width: 0; }
+    .topics li::before { content: counter(topic, decimal-leading-zero); font-family: "Fraunces", Georgia, serif; font-size: 1rem; color: var(--warm); flex: none; }
+    .step-label { display: flex; align-items: center; gap: 12px; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--deep); margin: 0 0 14px; }
+    .step-label span { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--deep); font-family: "Fraunces", Georgia, serif; font-size: .95rem; letter-spacing: 0; }
+    .start {
+      display: grid; grid-template-columns: 1fr auto; gap: 24px 48px; align-items: center;
+      background: var(--deep); color: #fff; border-radius: var(--radius); padding: 40px 44px; margin-bottom: 48px;
+    }
+    .start .format { color: #f3c9a8; }
+    .start h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .3em; }
+    .start p { margin: 0; max-width: 46ch; opacity: .92; }
+    .start .btn { background: var(--surface); color: var(--deep); white-space: nowrap; }
+    .start .btn:hover { background: #fff; }
+    .format { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin-bottom: .6rem; }
+    .paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+    .path { position: relative; background: var(--blush); border-radius: 0 0 var(--radius) var(--radius); padding: 36px 36px 32px; border-top: 4px solid var(--accent); min-width: 0; }
+    .path:nth-child(2) { border-top-color: var(--warm); }
+    .path h3 { font-size: 1.6rem; color: var(--deep); margin-bottom: .35em; }
+    .path p { margin: 0; font-size: 1.1rem; }
+    .note { font-size: .95rem; color: var(--muted); margin: 20px 0 0; max-width: 65ch; }
 
     /* About */
     .about .wrap { display: grid; grid-template-columns: .55fr 1.45fr; gap: 56px; align-items: center; }
@@ -135,25 +155,40 @@
     .stat { display: flex; gap: 18px; align-items: baseline; margin-bottom: 1.5rem; }
     .stat strong { font-family: "Fraunces", Georgia, serif; font-size: 3.2rem; line-height: 1; color: var(--warm); }
 
+    .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
+    .card p { margin: 0; }
+
     /* Masterclasses */
     .mc { background: var(--surface); border-block: 1px solid var(--line); }
+    .mc-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 40px; }
+    .mc-intro h2 { margin: 0; }
+    .mc-intro .lead { margin: 0 0 1.25rem; }
     .badge { display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--warm); color: #fff; padding: 4px 10px; border-radius: 6px; margin-bottom: 1rem; }
-    .mc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 2rem 0; }
-    .mc-grid .card .len { color: var(--muted); font-size: .9rem; margin-bottom: .75rem; }
-    .mc-grid .card .leave { font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 1rem 0 .25rem; }
+    .mc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
+    .mc-grid .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 0; overflow: hidden; }
+    .mc-grid .card .len { order: -1; background: var(--deep); color: #fff; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 12px 28px; margin: 0; }
+    .mc-grid .card h3 { font-size: 1.45rem; color: var(--deep); padding: 26px 28px 0; margin: 0; }
+    .mc-grid .card .leave { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin: 1.1rem 28px .35rem; }
+    .mc-grid .card p { padding: 0 28px 28px; }
 
     /* FAQ */
-    .faq { max-width: 760px; }
-    details { border-bottom: 1px solid var(--line); padding: 20px 0; }
-    summary { cursor: pointer; font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    .faq-section { background: var(--bg); }
+    .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px 80px; align-items: start; }
+    .faq-grid h2 { position: sticky; top: 32px; }
+    .faq-grid h2 em { display: block; font-family: "Allura", cursive; font-style: normal; font-weight: 400; font-size: 1.15em; color: var(--warm); margin-top: .15em; }
+    details { border-bottom: 1px solid var(--line); padding: 22px 0; }
+    details:first-of-type { border-top: 1px solid var(--line); }
+    summary { cursor: pointer; font-weight: 600; font-size: 1.12rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--accent); }
-    details[open] summary::after { content: "–"; }
-    details p { margin: 12px 0 0; color: var(--muted); }
+    summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--deep); color: var(--deep); font-size: 1.1rem; line-height: 1; font-weight: 400; }
+    details[open] summary::after { content: "–"; background: var(--deep); color: #fff; }
+    details p { margin: 12px 0 0; color: var(--muted); max-width: 60ch; }
 
     /* Final */
-    .final { background: var(--accent); color: var(--accent-ink); text-align: center; }
-    .final h2 { max-width: 18em; margin: 0 auto 1.5rem; }
+    .final { position: relative; background: var(--accent); color: var(--accent-ink); text-align: center; overflow: hidden; }
+    .final::before { content: ""; position: absolute; inset: 28px; border: 1px solid rgba(255,255,255,.22); pointer-events: none; }
+    .final .script-line { font-family: "Allura", cursive; font-size: clamp(2rem, 4vw, 2.6rem); color: #f3c9a8; line-height: 1; margin: 0 0 .4rem; }
+    .final h2 { max-width: 18em; margin: 0 auto 1.25rem; }
     .final .btn { background: var(--surface); color: var(--accent); }
     .final .btn:hover { background: #fff; }
     .final .sub { opacity: .9; font-size: 1.15rem; }
@@ -173,17 +208,22 @@
       .lockup .box { padding: 18px 18px 26px; }
       .about .wrap { grid-template-columns: 1fr; gap: 40px; }
       .about .wrap > div:first-child { width: 180px; }
-      .packages, .mc-grid { grid-template-columns: 1fr; }
+      .familiar-grid, .shift-intro, .mc-intro, .faq-grid { grid-template-columns: 1fr; }
+      .faq-grid h2 { position: static; }
+      .final::before { inset: 14px; }
+      .coach-intro { grid-template-columns: 1fr; margin-bottom: 48px; }
+      .start { grid-template-columns: 1fr; padding: 32px 24px; }
+      .start .btn { white-space: normal; text-align: center; }
+      .path { padding: 28px 24px; }
       .shift-grid { grid-template-columns: 1fr; }
       .shift-grid > .head { display: none; }
-      .shift-grid > .less::before { content: "Less: "; font-weight: 600; }
-      .shift-grid > .more::before { content: "More: "; font-weight: 600; color: var(--accent); }
-      .shift-grid > .more { border-top: 0; }
-      header .btn { display: none; }
+      .shift-grid > .less { padding-bottom: 6px; }
+      .shift-grid > .more { border-top: 0; background: var(--surface); padding-top: 0; padding-bottom: 20px; }
     }
     @media (max-width: 480px) {
       .wrap { padding: 0 16px; }
       .actions .btn { width: 100%; text-align: center; }
+      .final .wrap { padding: 0 32px; }
     }
   </style>
 </head>
@@ -214,9 +254,12 @@
   </section>
 
   <section class="familiar">
-    <div class="wrap">
-      <div class="eyebrow">Does this sound familiar?</div>
-      <p class="quote">“How do you lead when you are struggling yourself?”</p>
+    <div class="wrap familiar-grid">
+      <div>
+        <div class="eyebrow">Does this sound familiar?</div>
+        <p class="quote">“How do you lead when you are struggling yourself?”</p>
+      </div>
+      <div>
       <ul class="checks">
         <li>Everyone turns to you, and you are last on your own list.</li>
         <li>It feels easier to do it yourself than to hand it over.</li>
@@ -224,13 +267,16 @@
         <li>You keep a steady face, so nobody sees you are running on empty.</li>
       </ul>
       <p class="reassure">None of this makes you a weak leader. It often means you care and take responsibility seriously. Every committed leader has limits, and honouring them is part of leading well.</p>
+      </div>
     </div>
   </section>
 
   <section class="shift">
     <div class="wrap">
-      <h2>What would you like more of?</h2>
-      <p class="lead">Clearer priorities, shared responsibility, trust in yourself and room to breathe, at work and beyond it.</p>
+      <div class="shift-intro">
+        <h2>What would you like more of?</h2>
+        <p class="lead">Clearer priorities, shared responsibility, trust in yourself and room to breathe, at work and beyond it.</p>
+      </div>
       <div class="shift-grid" role="table" aria-label="Less of and more of">
         <div class="head less" role="columnheader">Less of</div>
         <div class="head more" role="columnheader">More of</div>
@@ -248,12 +294,16 @@
 
   <section class="coaching" id="coaching">
     <div class="wrap">
-      <div class="eyebrow">Coaching for Leaders</div>
-      <h2>You can start today.</h2>
-      <p class="lead">Three ways to work with me 1:1, all online. The first is a free conversation.</p>
-      <p style="max-width:40em">Coaching is a partnership. I don't hand you advice. I give you space to reflect and provide practical tools, and I help you see the thoughts and habits that keep you carrying everything. Then you take steps into the life and leadership you desire.</p>
+      <div class="coach-intro">
+        <div>
+          <div class="eyebrow">Coaching for Leaders</div>
+          <h2>You can start today.</h2>
+          <p class="lead">Three ways to work with me 1:1, all online. The first is a free conversation.</p>
+        </div>
+        <p class="coach-how"><strong>Coaching is a partnership.</strong>I don't hand you advice. I give you space to reflect and provide practical tools, and I help you see the thoughts and habits that keep you carrying everything. Then you take steps into the life and leadership you desire.</p>
+      </div>
 
-      <h3 style="margin-top:2rem">What we can work on</h3>
+      <div class="topics-head"><h3>What we can work on</h3></div>
       <ul class="topics">
         <li>Your energy and priorities</li>
         <li>Letting go and handing over</li>
@@ -263,19 +313,24 @@
         <li>Leading through a demanding season</li>
       </ul>
 
-      <div class="packages">
-        <div class="card featured">
+      <p class="step-label"><span>1</span>Start here</p>
+      <div class="start">
+        <div>
           <div class="format">Free · 30 minutes</div>
           <h3>Discovery Conversation</h3>
           <p>We find out together whether coaching fits you. There's no pressure to commit.</p>
-          <a class="btn" href="https://bookme.name/walkwitheji">Book it free</a>
         </div>
-        <div class="card">
+        <a class="btn" href="https://bookme.name/walkwitheji">Book your free conversation</a>
+      </div>
+
+      <p class="step-label"><span>2</span>Then choose your path</p>
+      <div class="paths">
+        <div class="path">
           <div class="format">One 90-minute session</div>
           <h3>The Compass</h3>
           <p>Clarity on one pressing situation, and one meaningful next step.</p>
         </div>
-        <div class="card">
+        <div class="path">
           <div class="format">Six 1:1 sessions</div>
           <h3>Walking Home</h3>
           <p>Lasting change in how you lead and how you live.</p>
@@ -283,9 +338,6 @@
       </div>
       <!-- TODO (Eji): add prices for The Compass and Walking Home -->
       <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation.</p>
-      <div class="actions">
-        <a class="btn" href="https://bookme.name/walkwitheji">Book a free Discovery Conversation</a>
-      </div>
     </div>
   </section>
 
@@ -309,9 +361,17 @@
 
   <section class="mc" id="masterclasses">
     <div class="wrap">
-      <span class="badge">Coming soon</span>
-      <h2>Live Masterclasses</h2>
-      <p class="lead">Explore a new perspective together, through guided reflection and real-life application.</p>
+      <div class="mc-intro">
+        <div>
+          <span class="badge">Coming soon</span>
+          <h2>Live Masterclasses</h2>
+        </div>
+        <div>
+          <p class="lead">Explore a new perspective together, through guided reflection and real-life application.</p>
+          <!-- TODO (Eji): replace this link with your waiting-list link -->
+          <a class="btn ghost" href="https://bookme.name/walkwitheji">Register your interest</a>
+        </div>
+      </div>
       <div class="mc-grid">
         <div class="card">
           <h3>Lead Without Running on Empty</h3>
@@ -326,14 +386,13 @@
           <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
         </div>
       </div>
-      <!-- TODO (Eji): replace this link with your waiting-list link -->
-      <a class="btn ghost" href="https://bookme.name/walkwitheji">Register your interest</a>
     </div>
   </section>
 
-  <section>
-    <div class="wrap faq">
-      <h2>Questions you might have</h2>
+  <section class="faq-section" id="faq">
+    <div class="wrap faq-grid">
+      <h2>Questions <em>you might have</em></h2>
+      <div>
       <details open>
         <summary>I have no time. Is coaching realistic?</summary>
         <p>Sessions are online and focused. You can choose a single 90-minute session, or six sessions at your own pace.</p>
@@ -346,11 +405,13 @@
         <summary>Is this therapy?</summary>
         <p>No. Coaching works alongside medical or therapeutic support, not instead of it.</p>
       </details>
+      </div>
     </div>
   </section>
 
   <section class="final">
     <div class="wrap">
+      <p class="script-line" aria-hidden="true">Walk with Eji</p>
       <h2>What might become possible with more room for you?</h2>
       <p class="sub">No pressure. Start wherever feels right.</p>
       <div class="actions">
