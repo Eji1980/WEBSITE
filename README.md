@@ -3,7 +3,8 @@
 A one-page static website, hosted on Cloudflare Workers.
 
 - `public/index.html`: the page (text and design)
-- `public/eji.jpg`: the photo
+- `public/eji-hero.jpg`: the colour photo at the top of the page
+- `public/eji.jpg`: the black-and-white photo in the About section
 - `wrangler.jsonc`: tells Cloudflare to serve the `public` folder
 
 ## Still to add
