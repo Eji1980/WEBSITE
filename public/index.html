@@ -380,8 +380,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         <h3>Register your interest</h3>
         <p>Leave your details and I'll email you when dates are set. No obligation, and no other mailings.</p>
       </div>
-      <!-- TODO (Eji): replace YOUR_FORM_ID with the ID of your Formspree form -->
-      <form class="interest-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="interest-form" action="https://formspree.io/f/xoejpvjz" method="POST">
         <input type="hidden" name="_subject" value="Masterclass interest">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
         <div class="field">
@@ -486,22 +485,25 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         status.className = 'form-status error';
         return;
       }
-      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
-        status.textContent = 'This form is not connected yet. Please try again soon.';
-        status.className = 'form-status error';
-        return;
-      }
       button.disabled = true;
       status.textContent = 'Sending…';
       status.className = 'form-status';
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (res) {
-          if (!res.ok) throw new Error(res.status);
+          if (!res.ok) {
+            // Show Formspree's own message (e.g. an invalid email) when it sends one.
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              var msg = data.errors && data.errors.map(function (er) { return er.message; }).join(' ');
+              var err = new Error(msg || res.status);
+              err.fromFormspree = !!msg;
+              throw err;
+            });
+          }
           form.outerHTML = '<div class="interest-done" role="status"><h3>Thank you!</h3><p>You\'re on the list. I\'ll email you as soon as dates are set.</p></div>';
         })
-        .catch(function () {
+        .catch(function (err) {
           button.disabled = false;
-          status.textContent = 'Something went wrong. Please try again in a moment.';
+          status.textContent = err && err.fromFormspree ? err.message : 'Something went wrong. Please try again in a moment.';
           status.className = 'form-status error';
         });
     });
