@@ -40,7 +40,7 @@ p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
 .hero-body{color:var(--ink);font-size:1.05rem;line-height:1.6;max-width:30em;margin:1.1rem 0 0;}
 .hero-copy .actions{justify-content:center;margin-top:1.8rem;}
 .hero-photo{position:relative;z-index:1;padding:56px 56px 0 0;display:flex;min-width:0;min-height:596px;}
-.hero-photo::before{content:"";position:absolute;top:0;right:0;bottom:0;width:72%;background:var(--deep);}
+.hero-photo::before{content:"";position:absolute;top:0;right:0;bottom:0;width:72%;background:#9db5a4;}
 .hero-photo img{position:absolute;top:56px;left:0;width:calc(100% - 56px);height:calc(100% - 56px);object-fit:cover;object-position:50% 26%;display:block;}
 .familiar{background:var(--surface);border-block:1px solid var(--line);}
 .familiar-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px 80px;align-items:start;}
@@ -142,6 +142,20 @@ p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
 .interest-done{grid-column:1 / -1;text-align:center;padding:12px 0;}.interest-done h3{color:var(--deep);font-size:1.6rem;}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
 .faq-section{background:var(--bg);}
+.ways{background:var(--bg);padding:72px 0;}
+.ways-head{text-align:center;margin:0 auto 36px;max-width:34em;}.ways-head h2{margin:0 0 .4rem;}.ways-head p{color:var(--muted);margin:0;}
+.ways-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.way{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;}
+.way-top{background:var(--accent);color:#fff;padding:22px 28px;}.way.mcw .way-top{background:var(--deep);}
+.way-top .opt{display:block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#f3c9a8;margin-bottom:.3rem;}
+.way-top h3{margin:0;font-size:1.55rem;color:#fff;}
+.way ul{list-style:none;margin:0;padding:22px 28px 6px;flex:1;}
+.way li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line);}.way li:last-child{border-bottom:0;}
+.way li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--warm);}
+.way .btn{margin:10px 28px 28px;align-self:flex-start;}.way.mcw .btn{background:var(--deep);}
+.mc{background:#e6efee;}
+@media (max-width:860px){.ways-grid{grid-template-columns:1fr;}.ways{padding:56px 0;}}
+
 .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 80px;align-items:start;}
 .faq-grid h2{position:sticky;top:32px;}
 .faq-grid h2 em{display:block;font-family:"Allura",cursive;font-style:normal;font-weight:400;font-size:1.15em;color:var(--warm);margin-top:.15em;}
@@ -174,8 +188,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <p class="hero-sub">Stay steady for your team without carrying it all alone.</p>
       <p class="hero-body">For leaders who are running on empty but still expected to lead. Learn the ALIGN method in a live masterclass, or work 1:1 on your own situation with a coach.</p>
       <div class="actions">
-        <a class="btn" href="#book">Book a free Discovery Conversation</a>
-        <a class="link" href="#masterclasses">Explore the ALIGN masterclasses</a>
+        <a class="btn" href="#book">1:1 coaching: book a free conversation</a>
+        <a class="link" href="#masterclasses">Group masterclass: register interest</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -242,11 +256,43 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   </div>
 </section>
 
+<section class="ways" id="ways">
+  <div class="wrap">
+    <div class="ways-head">
+      <div class="eyebrow">Two ways to work with me</div>
+      <h2>Coaching or a masterclass?</h2>
+      <p>Choose personal 1:1 support, or learn a method together with other leaders.</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way">
+        <div class="way-top"><span class="opt">Option 1</span><h3>1:1 Coaching</h3></div>
+        <ul>
+          <li>Just you and me</li>
+          <li>You set the agenda; we work on your own situation</li>
+          <li>One session or six, at your pace</li>
+          <li>Start with a free 30-minute conversation</li>
+        </ul>
+        <a class="btn" href="#coaching">Explore coaching</a>
+      </div>
+      <div class="way mcw">
+        <div class="way-top"><span class="opt">Option 2</span><h3>ALIGN Masterclass</h3></div>
+        <ul>
+          <li>A small live group</li>
+          <li>Learn a five-step method you can use straight away</li>
+          <li>75–90 minutes, live online</li>
+          <li>Coming soon: register your interest</li>
+        </ul>
+        <a class="btn" href="#masterclasses">Explore the masterclass</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="coaching" id="coaching">
   <div class="wrap">
     <div class="coach-intro">
       <div>
-        <div class="eyebrow">Coaching for Leaders</div>
+        <div class="eyebrow">Option 1 · 1:1 Coaching</div>
         <h2>1:1 coaching where you set the agenda</h2>
         <p class="lead">Someone outside the business to think honestly with. You bring your own situation. There's no method to follow and no advice to take. Together we find what's yours to change and your next step.</p>
       </div>
@@ -294,6 +340,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   <div class="wrap">
     <div class="mc-intro">
       <div>
+        <div class="eyebrow">Option 2 · Group Masterclass</div>
         <span class="badge">Coming soon</span>
         <h2>The ALIGN Method</h2>
         <p class="mc-sub">Five steps from running on empty to a new normal you can sustain</p>
