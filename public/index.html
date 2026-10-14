@@ -1,493 +1,378 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lead Without Running on Empty · Coaching with Eji</title>
-  <meta name="description" content="1:1 online coaching for caring leaders who hold everything together. Book a free Discovery Conversation with Eji Eze Stenlund.">
-  <meta property="og:title" content="Lead without running on empty">
-  <meta property="og:description" content="1:1 coaching for caring leaders who hold everything together. Start with a free Discovery Conversation.">
-  <meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero-portrait.jpg">
-  <link rel="preload" as="image" href="eji-hero-portrait.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:ital,wght@0,400;0,500;0,600;1,600&family=Allura&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f3ec;
-      --surface: #fffdf9;
-      --ink: #1f2a26;
-      --muted: #56625d;
-      --line: #e3dccf;
-      --accent: #2f5d50;
-      --accent-ink: #ffffff;
-      --warm: #b8653f;
-      --soft: #e9efe9;
-      --deep: #1d4f57;
-      --blush: #fbefe8;
-      --radius: 14px;
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font: 17px/1.65 "Inter", system-ui, -apple-system, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0 0 .5em; }
-    h1 { font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.02em; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.01em; }
-    h3 { font-size: 1.25rem; }
-    p { margin: 0 0 1em; }
-    a { color: var(--accent); }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-    section { padding: 88px 0; }
-    .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--warm); margin-bottom: 1rem; }
-    .lead { font-size: 1.2rem; color: var(--muted); max-width: min(36em, 65ch); }
-    .btn {
-      display: inline-block; background: var(--accent); color: var(--accent-ink);
-      padding: 15px 26px; border-radius: 999px; text-decoration: none; font-weight: 600;
-      transition: transform .15s ease, background .15s ease;
-    }
-    .btn:hover { background: #244a40; transform: translateY(-1px); }
-    .btn.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
-    .btn.ghost:hover { background: var(--soft); }
-    .link { font-weight: 600; text-decoration: none; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 2rem; }
-
-    /* Hero: quote band, then a framed panel overlapping it */
-    .hero { padding: 0 0 72px; }
-    .hero-band { background: var(--accent); color: #fff; text-align: center; padding: 30px 20px 128px; }
-    .hero-band blockquote { margin: 0 auto; max-width: 52em; font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: clamp(1.15rem, 2.2vw, 1.45rem); line-height: 1.45; }
-    .hero-band blockquote strong { font-weight: 600; }
-    .hero-band cite { display: block; margin-top: .5rem; font-style: normal; font-size: .95rem; opacity: .85; }
-    .hero-panel {
-      position: relative; max-width: 1260px; margin: -96px auto 0; background: var(--blush);
-      display: grid; grid-template-columns: 1.15fr .85fr; overflow: hidden;
-      box-shadow: 0 30px 60px -40px rgba(31,42,38,.45);
-    }
-    .hero-panel::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 46px; background: var(--accent); }
-    .hero-copy { position: relative; z-index: 1; padding: 72px 48px 116px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; }
-    .lockup { margin: 0 0 2.4rem; color: var(--deep); font-weight: 400; line-height: 1; }
-    .lockup .box {
-      position: relative; display: inline-block; border: 2px solid var(--deep); padding: 22px 30px 30px;
-      font-size: clamp(2rem, 4.4vw, 3.7rem); text-transform: uppercase; letter-spacing: .05em;
-    }
-    .lockup .tag {
-      position: absolute; left: -2px; bottom: -.55em; background: var(--blush); padding: 0 10px 0 0;
-      font-size: clamp(.8rem, 1.2vw, 1rem); letter-spacing: .08em;
-    }
-    .lockup .script {
-      position: absolute; right: -14px; bottom: -.62em; background: var(--blush); padding: 0 8px;
-      font-family: "Allura", cursive; text-transform: none; letter-spacing: 0; font-size: 1.05em; line-height: 1;
-    }
-    .hero-sub { font-style: italic; font-weight: 600; letter-spacing: .06em; color: var(--deep); font-size: 1.1rem; margin: .4rem 0 0; padding-bottom: 14px; border-bottom: 1.5px solid var(--deep); }
-    .hero-line { font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.45; color: var(--deep); max-width: 26em; margin: 18px 0 0; }
-    .hero-copy .actions { justify-content: center; margin-top: 1.8rem; }
-    .hero-photo { position: relative; z-index: 1; padding: 56px 56px 0 0; display: flex; min-width: 0; }
-    .hero-photo::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 72%; background: var(--deep); }
-    .hero-photo { min-height: 596px; }
-    .hero-photo img { position: absolute; top: 56px; left: 0; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: cover; object-position: 50% 26%; display: block; }
-
-    /* Familiar */
-    .familiar { background: var(--surface); border-block: 1px solid var(--line); }
-    .familiar-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px 80px; align-items: start; }
-    .familiar-grid > div:first-child { position: sticky; top: 40px; }
-    .quote { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.25; font-style: italic; margin: 0; padding-left: 24px; border-left: 3px solid var(--warm); color: var(--deep); }
-    .checks { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; }
-    .checks li { padding: 16px 0 16px 34px; position: relative; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
-    .checks li:first-child { padding-top: 0; }
-    .checks li::before { content: ""; position: absolute; left: 0; top: calc(16px + .5em); width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--warm); }
-    .checks li:first-child::before { top: .5em; }
-    .reassure { font-size: 1.15rem; margin: 0; padding: 24px 28px; background: var(--blush); border-left: 4px solid var(--deep); border-radius: 0 var(--radius) var(--radius) 0; max-width: 65ch; }
-
-    /* Shift */
-    .shift-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 40px; }
-    .shift-intro h2, .shift-intro .lead { margin: 0; }
-    .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
-    .shift-grid > div { padding: 20px 28px; border-top: 1px solid var(--line); min-width: 0; }
-    .shift-grid > .head { border-top: 0; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding-block: 16px; }
-    .shift-grid > .less { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(184,101,63,.45); text-decoration-thickness: 1.5px; }
-    .shift-grid > .head.less { text-decoration: none; background: var(--bg); }
-    .shift-grid > .more { position: relative; background: var(--blush); color: var(--deep); font-weight: 600; font-size: 1.05rem; padding-left: 52px; }
-    .shift-grid > .more::before { content: "→"; position: absolute; left: 24px; color: var(--warm); font-weight: 400; }
-    .shift-grid > .head.more { background: var(--deep); color: #fff; font-size: .8rem; padding-left: 28px; border-top-color: var(--deep); }
-    .shift-grid > .head.more::before { content: none; }
-
-    /* Coaching */
-    .coaching { background: var(--surface); border-block: 1px solid var(--line); }
-    .coach-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 72px; align-items: end; margin-bottom: 64px; }
-    .coach-intro h2 { margin-bottom: .3em; }
-    .coach-intro .lead { margin: 0; }
-    .coach-how { margin: 0; padding: 4px 0 4px 26px; border-left: 2px solid var(--warm); max-width: 65ch; }
-    .coach-how strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; margin-bottom: .35rem; }
-    .topics-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
-    .topics-head h3 { margin: 0; white-space: nowrap; }
-    .topics-head::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
-    .topics { list-style: none; padding: 0; margin: 0 0 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); column-gap: 40px; counter-reset: topic; }
-    .topics li { counter-increment: topic; display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; min-width: 0; }
-    .topics li::before { content: counter(topic, decimal-leading-zero); font-family: "Fraunces", Georgia, serif; font-size: 1rem; color: var(--warm); flex: none; }
-    .step-label { display: flex; align-items: center; gap: 12px; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--deep); margin: 0 0 14px; }
-    .step-label span { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--deep); font-family: "Fraunces", Georgia, serif; font-size: .95rem; letter-spacing: 0; }
-    .start {
-      display: grid; grid-template-columns: 1fr auto; gap: 24px 48px; align-items: center;
-      background: var(--deep); color: #fff; border-radius: var(--radius); padding: 40px 44px; margin-bottom: 48px;
-    }
-    .start .format { color: #f3c9a8; }
-    .start h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .3em; }
-    .start p { margin: 0; max-width: 46ch; opacity: .92; }
-    .start .btn { background: var(--surface); color: var(--deep); white-space: nowrap; }
-    .start .btn:hover { background: #fff; }
-    .format { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin-bottom: .6rem; }
-    .paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
-    .path { position: relative; background: var(--blush); border-radius: 0 0 var(--radius) var(--radius); padding: 36px 36px 32px; border-top: 4px solid var(--accent); min-width: 0; }
-    .path:nth-child(2) { border-top-color: var(--warm); }
-    .path h3 { font-size: 1.6rem; color: var(--deep); margin-bottom: .35em; }
-    .path p { margin: 0; font-size: 1.1rem; }
-    .note { font-size: .95rem; color: var(--muted); margin: 20px 0 0; max-width: 65ch; }
-
-    /* About */
-    .about .wrap { display: grid; grid-template-columns: .55fr 1.45fr; gap: 56px; align-items: center; }
-    .about img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 50%; display: block; box-shadow: 0 0 0 10px var(--surface), 0 24px 50px -24px rgba(31,42,38,.45); }
-    .roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 1.5rem 0; }
-    .roles li { font-size: .85rem; padding: 5px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--deep); font-weight: 500; }
-    .stat { display: flex; gap: 18px; align-items: baseline; margin-bottom: 1.5rem; }
-    .stat strong { font-family: "Fraunces", Georgia, serif; font-size: 3.2rem; line-height: 1; color: var(--warm); }
-
-    .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
-    .card p { margin: 0; }
-
-    .about { background: var(--blush); border-block: 1px solid var(--line); }
-
-    /* Masterclasses */
-    .mc { background: var(--surface); border-block: 1px solid var(--line); }
-    .mc-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 40px; }
-    .mc-intro h2 { margin: 0; }
-    .mc-intro .lead { margin: 0 0 1.25rem; }
-    .badge { display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--warm); color: #fff; padding: 4px 10px; border-radius: 6px; margin-bottom: 1rem; }
-    .mc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
-    .mc-grid .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 0; overflow: hidden; }
-    .mc-grid .card .len { order: -1; background: var(--deep); color: #fff; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 12px 28px; margin: 0; }
-    .mc-grid .card h3 { font-size: 1.45rem; color: var(--deep); padding: 26px 28px 0; margin: 0; }
-    .mc-grid .card .leave { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin: 1.1rem 28px .35rem; }
-    .mc-grid .card p { padding: 0 28px 28px; }
-
-    /* Booking */
-    .book { background: var(--blush); border-bottom: 1px solid var(--line); }
-    .book-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 80px; align-items: end; margin-bottom: 36px; }
-    .book-intro h2, .book-intro .lead { margin: 0; }
-    .book-frame { background: #fff; border-radius: var(--radius); border-top: 4px solid var(--deep); box-shadow: 0 30px 60px -40px rgba(31,42,38,.45); overflow: hidden; }
-    .calendly-inline-widget { min-width: 280px; height: 720px; }
-    .book .note { margin-top: 16px; }
-
-    /* Masterclass interest form */
-    .interest { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px 64px; margin-top: 56px; padding: 44px; background: var(--blush); border-radius: var(--radius); scroll-margin-top: 24px; }
-    .interest-intro h3 { font-size: 1.6rem; color: var(--deep); }
-    .interest-intro p { color: var(--muted); max-width: 40ch; }
-    .interest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; min-width: 0; }
-    .interest-form .full { grid-column: 1 / -1; }
-    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
-    .field label, .field legend { font-weight: 600; font-size: .95rem; padding: 0; }
-    .field label span { font-weight: 400; color: var(--muted); }
-    .field legend { margin-bottom: 6px; }
-    .interest-form input[type=text], .interest-form input[type=email], .interest-form textarea {
-      font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
-    }
-    .interest-form textarea { resize: vertical; }
-    .interest-form input:focus-visible, .interest-form textarea:focus-visible { outline: 2px solid var(--deep); outline-offset: 1px; border-color: var(--deep); }
-    .choice { display: flex; gap: 10px; align-items: flex-start; font-size: 1rem; line-height: 1.45; margin-top: 4px; }
-    .choice input { accent-color: var(--deep); width: 18px; height: 18px; margin: 2px 0 0; flex: none; }
-    .consent { font-size: .9rem; color: var(--muted); }
-    .form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
-    .form-foot .btn { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
-    .form-status { margin: 0; font-weight: 500; }
-    .form-status.error { color: #a23b1e; }
-    .interest-done { grid-column: 1 / -1; text-align: center; padding: 12px 0; }
-    .interest-done h3 { color: var(--deep); font-size: 1.6rem; }
-    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-
-    /* FAQ */
-    .faq-section { background: var(--bg); }
-    .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px 80px; align-items: start; }
-    .faq-grid h2 { position: sticky; top: 32px; }
-    .faq-grid h2 em { display: block; font-family: "Allura", cursive; font-style: normal; font-weight: 400; font-size: 1.15em; color: var(--warm); margin-top: .15em; }
-    details { border-bottom: 1px solid var(--line); padding: 22px 0; }
-    details:first-of-type { border-top: 1px solid var(--line); }
-    summary { cursor: pointer; font-weight: 600; font-size: 1.12rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--deep); color: var(--deep); font-size: 1.1rem; line-height: 1; font-weight: 400; }
-    details[open] summary::after { content: "–"; background: var(--deep); color: #fff; }
-    details p { margin: 12px 0 0; color: var(--muted); max-width: 60ch; }
-
-    /* Final */
-    .final { position: relative; background: var(--accent); color: var(--accent-ink); text-align: center; overflow: hidden; }
-    .final::before { content: ""; position: absolute; inset: 28px; border: 1px solid rgba(255,255,255,.22); pointer-events: none; }
-    .final .script-line { font-family: "Allura", cursive; font-size: clamp(2rem, 4vw, 2.6rem); color: #f3c9a8; line-height: 1; margin: 0 0 .4rem; }
-    .final h2 { max-width: 18em; margin: 0 auto 1.25rem; }
-    .final .btn { background: var(--surface); color: var(--accent); }
-    .final .btn:hover { background: #fff; }
-    .final .sub { opacity: .9; font-size: 1.15rem; }
-    .final .actions { justify-content: center; }
-    .final .link { color: #fff; }
-    footer { padding: 32px 0; font-size: .9rem; color: var(--muted); }
-    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-    @media (max-width: 860px) {
-      section { padding: 64px 0; }
-      .hero { padding: 0 0 56px; }
-      .hero-band { padding: 22px 16px 80px; }
-      .hero-panel { grid-template-columns: 1fr; margin: -56px 16px 0; }
-      .hero-photo { order: -1; padding: 28px 28px 0 0; }
-      .hero-photo { min-height: 0; }
-      .hero-photo img { position: relative; top: 0; width: 100%; aspect-ratio: 1 / 1; height: auto; object-position: 50% 22%; }
-      .hero-copy { padding: 48px 20px 92px; }
-      .lockup .box { padding: 18px 18px 26px; }
-      .about .wrap { grid-template-columns: 1fr; gap: 40px; }
-      .about .wrap > div:first-child { width: 180px; margin: 10px 0 0 10px; }
-      .familiar-grid, .shift-intro, .mc-intro, .faq-grid, .book-intro, .interest { grid-template-columns: 1fr; }
-      .interest { padding: 28px 20px; }
-      .calendly-inline-widget { height: 1000px; }
-      .faq-grid h2 { position: static; }
-      .final::before { inset: 14px; }
-      .coach-intro { grid-template-columns: 1fr; margin-bottom: 48px; }
-      .start { grid-template-columns: 1fr; padding: 32px 24px; }
-      .start .btn { white-space: normal; text-align: center; }
-      .path { padding: 28px 24px; }
-      .shift-grid { grid-template-columns: 1fr; }
-      .shift-grid > .head { display: none; }
-      .shift-grid > .less { padding-bottom: 6px; }
-      .shift-grid > .more { border-top: 0; background: var(--surface); padding-top: 0; padding-bottom: 20px; }
-    }
-    @media (max-width: 480px) {
-      .wrap { padding: 0 16px; }
-      .actions .btn { width: 100%; text-align: center; }
-      .final .wrap { padding: 0 32px; }
-      .interest-form { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead from Full · Coaching with Eji</title>
+<meta name="description" content="Lead from Full: 1:1 coaching and ALIGN masterclasses for leaders who are running on empty but still expected to lead. Book a free Discovery Conversation with Eji Eze Stenlund.">
+<meta property="og:title" content="Lead from Full">
+<meta property="og:description" content="Stay steady for your team without carrying it all alone. 1:1 coaching and ALIGN masterclasses with Eji Eze Stenlund.">
+<meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero-portrait.jpg">
+<link rel="preload" as="image" href="eji-hero-portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Inter:ital,wght@0,400;0,500;0,600;1,600&amp;family=Allura&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ec;--surface:#fffdf9;--ink:#1f2a26;--muted:#56625d;--line:#e3dccf;--accent:#2f5d50;--accent-ink:#ffffff;--warm:#b8653f;--soft:#e9efe9;--deep:#1d4f57;--blush:#fbefe8;--radius:14px;--max:1080px;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Inter",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em;}
+h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-0.01em;}h3{font-size:1.25rem;}
+p{margin:0 0 1em;}a{color:var(--accent);}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}section{padding:88px 0;}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:1rem;}
+.lead{font-size:1.2rem;color:var(--muted);max-width:min(36em,65ch);}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .15s ease,background .15s ease;}
+.btn:hover{background:#244a40;transform:translateY(-1px);}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);}.btn.ghost:hover{background:var(--soft);}
+.link{font-weight:600;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px;}
+.actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:2rem;}
+.hero{padding:0 0 72px;}
+.hero-band{background:var(--accent);color:#fff;text-align:center;padding:30px 20px 128px;}
+.band-label{margin:0;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#f3c9a8;}
+.hero-panel{position:relative;max-width:1260px;margin:-96px auto 0;background:var(--blush);display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;box-shadow:0 30px 60px -40px rgba(31,42,38,.45);}
+.hero-panel::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--accent);}
+.hero-copy{position:relative;z-index:1;padding:72px 48px 116px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;}
+.lockup{margin:0 0 2.4rem;color:var(--deep);font-weight:400;line-height:1;}
+.lockup .box{position:relative;display:inline-block;border:2px solid var(--deep);padding:22px 30px 30px;font-size:clamp(2rem,4.4vw,3.7rem);text-transform:uppercase;letter-spacing:.05em;}
+.lockup .script{position:absolute;right:-14px;bottom:-.62em;background:var(--blush);padding:0 8px;font-family:"Allura",cursive;text-transform:none;letter-spacing:0;font-size:1.05em;line-height:1;}
+.hero-sub{font-style:italic;font-weight:600;letter-spacing:.02em;color:var(--deep);font-size:1.1rem;line-height:1.45;max-width:24em;margin:.4rem 0 0;padding-bottom:14px;border-bottom:1.5px solid var(--deep);}
+.hero-body{color:var(--ink);font-size:1.05rem;line-height:1.6;max-width:30em;margin:1.1rem 0 0;}
+.hero-copy .actions{justify-content:center;margin-top:1.8rem;}
+.hero-photo{position:relative;z-index:1;padding:56px 56px 0 0;display:flex;min-width:0;min-height:596px;}
+.hero-photo::before{content:"";position:absolute;top:0;right:0;bottom:0;width:72%;background:var(--deep);}
+.hero-photo img{position:absolute;top:56px;left:0;width:calc(100% - 56px);height:calc(100% - 56px);object-fit:cover;object-position:50% 26%;display:block;}
+.familiar{background:var(--surface);border-block:1px solid var(--line);}
+.familiar-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px 80px;align-items:start;}
+.familiar-grid>div:first-child{position:sticky;top:40px;}
+.quote{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.25;font-style:italic;margin:0;padding-left:24px;border-left:3px solid var(--warm);color:var(--deep);}
+.hook{color:var(--muted);font-size:1.05rem;max-width:34em;margin-top:1.2rem;}
+.checks{list-style:none;padding:0;margin:0 0 2rem;display:grid;}
+.checks li{padding:16px 0 16px 34px;position:relative;font-size:1.1rem;border-bottom:1px solid var(--line);}
+.checks li:first-child{padding-top:0;}
+.checks li::before{content:"";position:absolute;left:0;top:calc(16px + .5em);width:14px;height:14px;border-radius:50%;border:2px solid var(--warm);}
+.checks li:first-child::before{top:.5em;}
+.reassure{font-size:1.15rem;margin:0;padding:24px 28px;background:var(--blush);border-left:4px solid var(--deep);border-radius:0 var(--radius) var(--radius) 0;max-width:65ch;}
+.shift-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:40px;}
+.shift-intro h2,.shift-intro .lead{margin:0;}
+.shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);}
+.shift-grid>div{padding:20px 28px;border-top:1px solid var(--line);min-width:0;}
+.shift-grid>.head{border-top:0;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding-block:16px;}
+.shift-grid>.less{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(184,101,63,.45);text-decoration-thickness:1.5px;}
+.shift-grid>.head.less{text-decoration:none;background:var(--bg);}
+.shift-grid>.more{position:relative;background:var(--blush);color:var(--deep);font-weight:600;font-size:1.05rem;padding-left:52px;}
+.shift-grid>.more::before{content:"→";position:absolute;left:24px;color:var(--warm);font-weight:400;}
+.shift-grid>.head.more{background:var(--deep);color:#fff;font-size:.8rem;padding-left:28px;border-top-color:var(--deep);}
+.shift-grid>.head.more::before{content:none;}
+.coaching{background:var(--surface);border-block:1px solid var(--line);}
+.coach-intro{display:grid;grid-template-columns:1fr 1fr;gap:24px 72px;align-items:end;margin-bottom:64px;}
+.coach-intro h2{margin-bottom:.3em;}.coach-intro .lead{margin:0;}
+.coach-how{margin:0;padding:4px 0 4px 26px;border-left:2px solid var(--warm);max-width:65ch;}
+.coach-how strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.25rem;font-weight:600;margin-bottom:.35rem;}
+.topics-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;}
+.topics-head h3{margin:0;white-space:nowrap;}
+.topics-head::after{content:"";flex:1;border-top:1px solid var(--line);}
+.topics{list-style:none;padding:0;margin:0 0 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:40px;counter-reset:topic;}
+.topics li{counter-increment:topic;display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:1.05rem;min-width:0;}
+.topics li::before{content:counter(topic,decimal-leading-zero);font-family:"Fraunces",Georgia,serif;font-size:1rem;color:var(--warm);flex:none;}
+.step-label{display:flex;align-items:center;gap:12px;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin:0 0 14px;}
+.step-label span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--deep);font-family:"Fraunces",Georgia,serif;font-size:.95rem;letter-spacing:0;}
+.start{display:grid;grid-template-columns:1fr auto;gap:24px 48px;align-items:center;background:var(--deep);color:#fff;border-radius:var(--radius);padding:40px 44px;margin-bottom:48px;}
+.start .format{color:#f3c9a8;}.start h3{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.3em;}
+.start p{margin:0;max-width:46ch;opacity:.92;}
+.start .btn{background:var(--surface);color:var(--deep);white-space:nowrap;}.start .btn:hover{background:#fff;}
+.format{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:.6rem;}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;}
+.path{position:relative;background:var(--blush);border-radius:0 0 var(--radius) var(--radius);padding:36px 36px 32px;border-top:4px solid var(--accent);min-width:0;}
+.path:nth-child(2){border-top-color:var(--warm);}
+.path h3{font-size:1.6rem;color:var(--deep);margin-bottom:.35em;}.path p{margin:0;font-size:1.1rem;}
+.note{font-size:.95rem;color:var(--muted);margin:20px 0 0;max-width:65ch;}
+.trust{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:8px;max-width:65ch;}
+.about .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:56px;align-items:center;}
+.about img{width:100%;height:auto;aspect-ratio:1 / 1;object-fit:cover;object-position:50% 30%;border-radius:50%;display:block;box-shadow:0 0 0 10px var(--surface),0 24px 50px -24px rgba(31,42,38,.45);}
+.about-quote{font-family:"Fraunces",Georgia,serif;font-size:1.3rem;color:var(--deep);border-left:3px solid var(--warm);padding-left:16px;margin:1.4rem 0;}
+.roles{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:1.5rem 0;}
+.roles li{font-size:.85rem;padding:5px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--deep);font-weight:500;}
+.stat{display:flex;gap:18px;align-items:baseline;margin-bottom:1.5rem;}
+.stat strong{font-family:"Fraunces",Georgia,serif;font-size:3.2rem;line-height:1;color:var(--warm);}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;}.card p{margin:0;}
+.about{background:var(--blush);border-block:1px solid var(--line);}
+.mc{background:var(--surface);border-block:1px solid var(--line);}
+.mc-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:40px;}
+.mc-intro h2{margin:0;}.mc-intro .lead{margin:0 0 .9rem;}
+.mc-note{font-size:.95rem;color:var(--muted);margin:0 0 1.5rem;padding-left:14px;border-left:2px solid var(--warm);max-width:40ch;}
+.mc-sub{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.35;color:var(--deep);margin:.6rem 0 0;max-width:22em;}
+.badge{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--warm);color:#fff;padding:4px 10px;border-radius:6px;margin-bottom:1rem;}
+.align-list{list-style:none;padding:0;margin:8px 0 48px;display:grid;}
+.align-list li{display:grid;grid-template-columns:56px 1fr;gap:4px 20px;padding:18px 0;border-bottom:1px solid var(--line);min-width:0;}
+.align-list .ltr{grid-row:span 2;font-family:"Fraunces",Georgia,serif;font-size:2.2rem;line-height:1;color:var(--deep);}
+.align-list .q{font-weight:600;min-width:0;}
+.align-list .q em{font-style:normal;color:var(--warm);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin-right:10px;}
+.align-list .d{color:var(--muted);margin:0;min-width:0;}
+.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;}
+.mc-grid .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;}
+.mc-grid .card .len{order:-1;background:var(--deep);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 28px;margin:0;}
+.mc-label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);padding:22px 28px 0;}
+.mc-grid .card h3{font-size:1.45rem;color:var(--deep);padding:6px 28px 0;margin:0;}
+.mc-grid .card .leave{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin:1.1rem 28px .35rem;}
+.mc-grid .card p{padding:0 28px 28px;}
+.book{background:var(--blush);border-bottom:1px solid var(--line);}
+.book-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:36px;}
+.book-intro h2,.book-intro .lead{margin:0;}
+.book-frame{background:#fff;border-radius:var(--radius);border-top:4px solid var(--deep);box-shadow:0 30px 60px -40px rgba(31,42,38,.45);overflow:hidden;}
+.calendly-inline-widget{min-width:280px;height:720px;}
+.book .note{margin-top:16px;}
+.interest{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 64px;margin-top:56px;padding:44px;background:var(--blush);border-radius:var(--radius);scroll-margin-top:24px;}
+.interest-intro h3{font-size:1.6rem;color:var(--deep);}
+.interest-intro p{color:var(--muted);max-width:40ch;}
+.interest-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;min-width:0;}
+.interest-form .full{grid-column:1 / -1;}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;margin:0;padding:0;border:0;}
+.field label,.field legend{font-weight:600;font-size:.95rem;padding:0;}
+.field label span{font-weight:400;color:var(--muted);}.field legend{margin-bottom:6px;}
+.interest-form input[type=text],.interest-form input[type=email],.interest-form textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;}
+.interest-form textarea{resize:vertical;}
+.interest-form input:focus-visible,.interest-form textarea:focus-visible{outline:2px solid var(--deep);outline-offset:1px;border-color:var(--deep);}
+.choice{display:flex;gap:10px;align-items:flex-start;font-size:1rem;line-height:1.45;margin-top:4px;}
+.choice input{accent-color:var(--deep);width:18px;height:18px;margin:2px 0 0;flex:none;}
+.consent{font-size:.9rem;color:var(--muted);}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;}
+.form-foot .btn{border:0;cursor:pointer;font:inherit;font-weight:600;}
+.form-status{margin:0;font-weight:500;}.form-status.error{color:#a23b1e;}
+.interest-done{grid-column:1 / -1;text-align:center;padding:12px 0;}.interest-done h3{color:var(--deep);font-size:1.6rem;}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.faq-section{background:var(--bg);}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 80px;align-items:start;}
+.faq-grid h2{position:sticky;top:32px;}
+.faq-grid h2 em{display:block;font-family:"Allura",cursive;font-style:normal;font-weight:400;font-size:1.15em;color:var(--warm);margin-top:.15em;}
+details{border-bottom:1px solid var(--line);padding:22px 0;}details:first-of-type{border-top:1px solid var(--line);}
+summary{cursor:pointer;font-weight:600;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--deep);color:var(--deep);font-size:1.1rem;line-height:1;font-weight:400;}
+details[open] summary::after{content:"–";background:var(--deep);color:#fff;}
+details p{margin:12px 0 0;color:var(--muted);max-width:60ch;}
+.final{position:relative;background:var(--accent);color:var(--accent-ink);text-align:center;overflow:hidden;}
+.final::before{content:"";position:absolute;inset:28px;border:1px solid rgba(255,255,255,.22);pointer-events:none;}
+.final .script-line{font-family:"Allura",cursive;font-size:clamp(2rem,4vw,2.6rem);color:#f3c9a8;line-height:1;margin:0 0 .4rem;}
+.final h2{max-width:18em;margin:0 auto 1.25rem;}
+.final .btn{background:var(--surface);color:var(--accent);}.final .btn:hover{background:#fff;}
+.final .sub{opacity:.9;font-size:1.15rem;}.final .actions{justify-content:center;}.final .link{color:#fff;}
+footer{padding:32px 0;font-size:.9rem;color:var(--muted);}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+@media (max-width:860px){section{padding:64px 0;}.hero{padding:0 0 56px;}.hero-band{padding:22px 16px 80px;}.hero-panel{grid-template-columns:1fr;margin:-56px 16px 0;}.hero-photo{order:-1;padding:28px 28px 0 0;min-height:0;}.hero-photo img{position:relative;top:0;width:100%;aspect-ratio:1 / 1;height:auto;object-position:50% 22%;}.hero-copy{padding:48px 20px 92px;}.lockup .box{padding:18px 18px 26px;}.about .wrap{grid-template-columns:1fr;gap:40px;}.about .wrap>div:first-child{width:180px;margin:10px 0 0 10px;}.familiar-grid,.shift-intro,.mc-intro,.faq-grid,.book-intro,.interest{grid-template-columns:1fr;}.familiar-grid>div:first-child{position:static;}.interest{padding:28px 20px;}.calendly-inline-widget{height:1000px;}.faq-grid h2{position:static;}.final::before{inset:14px;}.coach-intro{grid-template-columns:1fr;margin-bottom:48px;}.start{grid-template-columns:1fr;padding:32px 24px;}.start .btn{white-space:normal;text-align:center;}.path{padding:28px 24px;}.shift-grid{grid-template-columns:1fr;}.shift-grid>.head{display:none;}.shift-grid>.less{padding-bottom:6px;}.shift-grid>.more{border-top:0;background:var(--surface);padding-top:0;padding-bottom:20px;}}
+@media (max-width:480px){.wrap{padding:0 16px;}.actions .btn{width:100%;text-align:center;}.final .wrap{padding:0 32px;}.interest-form{grid-template-columns:1fr;}.align-list li{grid-template-columns:40px 1fr;gap:4px 14px;}.align-list .ltr{font-size:1.8rem;}}
+</style>
 </head>
 <body>
-
-
 <main>
-  <section class="hero">
-    <div class="hero-band">
-      <blockquote>“When perspectives shift, <strong>new possibilities emerge.</strong>”
-        <cite>Eji Eze Stenlund</cite>
-      </blockquote>
-    </div>
-    <div class="hero-panel">
-      <div class="hero-copy">
-        <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span></h1>
-        <p class="hero-sub">Coaching and Mentoring for Leaders · Online</p>
-        <p class="hero-line">The best leaders don’t run on empty.<br>They Lead from Full</p>
-        <div class="actions">
-          <a class="btn" href="#book">Book a free Discovery Conversation</a>
-          <a class="link" href="#masterclasses">Explore the masterclasses</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="eji-hero-portrait.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="1000" height="1500" fetchpriority="high">
+<section class="hero">
+  <div class="hero-band"><p class="band-label">Coaching and Mentoring for Leaders · Online</p></div>
+  <div class="hero-panel">
+    <div class="hero-copy">
+      <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span></h1>
+      <p class="hero-sub">Stay steady for your team without carrying it all alone.</p>
+      <p class="hero-body">For leaders who are running on empty but still expected to lead. Learn the ALIGN method in a live masterclass, or work 1:1 on your own situation with a coach.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Book a free Discovery Conversation</a>
+        <a class="link" href="#masterclasses">Explore the ALIGN masterclasses</a>
       </div>
     </div>
-  </section>
+    <div class="hero-photo">
+      <img src="eji-hero-portrait.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="1000" height="1500" fetchpriority="high">
+    </div>
+  </div>
+</section>
 
-  <section class="familiar">
-    <div class="wrap familiar-grid">
-      <div>
-        <div class="eyebrow">Does this sound familiar?</div>
-        <p class="quote">“How do you lead when you are struggling yourself?”</p>
-      </div>
-      <div>
+<section class="familiar">
+  <div class="wrap familiar-grid">
+    <div>
+      <div class="eyebrow">Does this sound familiar?</div>
+      <p class="quote">“How do you lead when you are struggling yourself?”</p>
+      <p class="hook">It's the question leaders ask when they're drained, spread too thin and still expected to be everything for everyone. Most try to push through: faster replies, later evenings, a steady face in every meeting. But pushing harder doesn't refill anything, and your team feels it even when you think you're hiding it. Leading from full starts with the most important person on your team, you.</p>
+    </div>
+    <div>
       <ul class="checks">
-        <li>Everyone turns to you, and you are last on your own list.</li>
+        <li>You are everything for everyone, and always last on your own list.</li>
         <li>It feels easier to do it yourself than to hand it over.</li>
         <li>You say yes when you mean no, then feel guilty or resentful.</li>
         <li>You keep a steady face, so nobody sees you are running on empty.</li>
+        <li>You wonder: is it me, or is it the job?</li>
       </ul>
       <p class="reassure">None of this makes you a weak leader. It often means you care and take responsibility seriously. Every committed leader has limits, and honouring them is part of leading well.</p>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="shift">
-    <div class="wrap">
-      <div class="shift-intro">
-        <h2>What would you like more of?</h2>
-        <p class="lead">Clearer priorities, shared responsibility, trust in yourself and room to breathe, at work and beyond it.</p>
-      </div>
-      <div class="shift-grid" role="table" aria-label="Less of and more of">
-        <div class="head less" role="columnheader">Less of</div>
-        <div class="head more" role="columnheader">More of</div>
-        <div class="less">Carrying everything on your own</div>
-        <div class="more">A team that shares responsibility</div>
-        <div class="less">Reacting to every demand at once</div>
-        <div class="more">Priorities you can stand behind</div>
-        <div class="less">Second-guessing yourself</div>
-        <div class="more">Trusting your own judgement</div>
-        <div class="less">An automatic yes, then guilt</div>
-        <div class="more">Clear, kind boundaries</div>
-      </div>
+<section class="shift">
+  <div class="wrap">
+    <div class="shift-intro">
+      <h2>What would you like more of?</h2>
+      <p class="lead">Clearer priorities, shared responsibility, trust in yourself and room to breathe, at work and beyond it.</p>
     </div>
-  </section>
+    <div class="shift-grid" role="table" aria-label="Less of and more of">
+      <div class="head less" role="columnheader">Less of</div>
+      <div class="head more" role="columnheader">More of</div>
+      <div class="less">Carrying everything on your own</div>
+      <div class="more">A team that shares responsibility</div>
+      <div class="less">Reacting to every demand at once</div>
+      <div class="more">Priorities you can stand behind</div>
+      <div class="less">Second-guessing yourself</div>
+      <div class="more">Trusting your own judgement</div>
+      <div class="less">An automatic yes, then guilt</div>
+      <div class="more">Clear, kind boundaries</div>
+    </div>
+  </div>
+</section>
 
-  <section class="about" id="about">
-    <div class="wrap">
-      <div><img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
+<section class="about" id="about">
+  <div class="wrap">
+    <div><img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">About me</div>
+      <h2>Hi, I'm Eji Eze Stenlund.</h2>
+      <p class="lead">I'm a Transformational Life Coach and Leadership Mentor.</p>
+      <blockquote class="about-quote">“When perspectives shift, new possibilities emerge.”</blockquote>
+      <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
+      <ul class="roles"><li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li></ul>
+      <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming.</p>
+      <!-- TODO (Eji): add one or two sentences of your own story here -->
+      <p>Today I work online with leaders around the world.</p>
+    </div>
+  </div>
+</section>
+
+<section class="coaching" id="coaching">
+  <div class="wrap">
+    <div class="coach-intro">
       <div>
-        <div class="eyebrow">About me</div>
-        <h2>Hi, I'm Eji Eze Stenlund.</h2>
-        <p class="lead">I'm a Transformational Life Coach and Leadership Mentor.</p>
-        <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
-        <ul class="roles">
-          <li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li>
-        </ul>
-        <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming.</p>
-        <!-- TODO (Eji): add one or two sentences of your own story here -->
-        <p>Today I work online with leaders around the world.</p>
+        <div class="eyebrow">Coaching for Leaders</div>
+        <h2>1:1 coaching where you set the agenda</h2>
+        <p class="lead">Someone outside the business to think honestly with. You bring your own situation. There's no method to follow and no advice to take. Together we find what's yours to change and your next step.</p>
       </div>
+      <p class="coach-how"><strong>Is it me, or is it the job?</strong>Some questions can't be answered by a method, because the answer depends on your life, your team and your organisation. In coaching, you decide what we work on. I listen, ask questions and help you see your situation more clearly, so the answers you find are your own and they last.</p>
     </div>
-  </section>
-
-  <section class="coaching" id="coaching">
-    <div class="wrap">
-      <div class="coach-intro">
-        <div>
-          <div class="eyebrow">Coaching for Leaders</div>
-          <h2>You can start today.</h2>
-          <p class="lead">Three ways to work with me 1:1, all online. The first is a free conversation.</p>
-        </div>
-        <p class="coach-how"><strong>Coaching is a partnership.</strong>I don't hand you advice. I give you space to reflect and provide practical tools, and I help you see the thoughts and habits that keep you carrying everything. Then you take steps into the life and leadership you desire.</p>
-      </div>
-
-      <div class="topics-head"><h3>What we can work on</h3></div>
-      <ul class="topics">
-        <li>Your energy and priorities</li>
-        <li>Letting go and handing over</li>
-        <li>Boundaries and saying no</li>
-        <li>How much to share with your team</li>
-        <li>Hard conversations</li>
-        <li>Leading through a demanding season</li>
-      </ul>
-
-      <p class="step-label"><span>1</span>Start here</p>
-      <div class="start">
-        <div>
-          <div class="format">Free · 30 minutes</div>
-          <h3>Discovery Conversation</h3>
-          <p>We find out together whether coaching fits you. There's no pressure to commit.</p>
-        </div>
-        <a class="btn" href="#book">Book your free conversation</a>
-      </div>
-
-      <p class="step-label"><span>2</span>Then choose your path</p>
-      <div class="paths">
-        <div class="path">
-          <div class="format">One 90-minute session</div>
-          <h3>The Compass</h3>
-          <p>Clarity on one pressing situation, and one meaningful next step.</p>
-        </div>
-        <div class="path">
-          <div class="format">Six 1:1 sessions</div>
-          <h3>Walking Home</h3>
-          <p>Lasting change in how you lead and how you live.</p>
-        </div>
-      </div>
-      <!-- TODO (Eji): add prices for The Compass and Walking Home -->
-      <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation.</p>
-    </div>
-  </section>
-
-  <section class="book" id="book">
-    <div class="wrap">
-      <div class="book-intro">
-        <div>
-          <div class="eyebrow">Free · 30 minutes · online</div>
-          <h2>Book your Discovery Conversation</h2>
-        </div>
-        <p class="lead">Choose a time that suits you. You'll get a confirmation by email with everything you need to join.</p>
-      </div>
-      <div class="book-frame">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/eji-ezestenlund/30min?hide_gdpr_banner=1&amp;primary_color=2f5d50"></div>
-      </div>
-      <p class="note">Calendar not showing? <a href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
-    </div>
-  </section>
-
-
-  <section class="mc" id="masterclasses">
-    <div class="wrap">
-      <div class="mc-intro">
-        <div>
-          <span class="badge">Coming soon</span>
-          <h2>Live Masterclasses</h2>
-        </div>
-        <div>
-          <p class="lead">Explore a new perspective together, through guided reflection and real-life application.</p>
-          <a class="btn ghost" href="#interest">Register your interest</a>
-        </div>
-      </div>
-      <div class="mc-grid">
-        <div class="card">
-          <h3>Lead Without Running on Empty</h3>
-          <div class="len">90 minutes · live online</div>
-          <div class="leave">You leave with</div>
-          <p>A one-page plan for a demanding week: what to keep, share or pause, and where to ask for support.</p>
-        </div>
-        <div class="card">
-          <h3>Boundaries Without Guilt</h3>
-          <div class="len">75 minutes · live online</div>
-          <div class="leave">You leave with</div>
-          <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
-        </div>
-      </div>
-
-      <div class="interest" id="interest">
-        <div class="interest-intro">
-          <h3>Register your interest</h3>
-          <p>Leave your details and I'll email you when dates are set. No obligation, and no other mailings.</p>
-        </div>
-        <!-- TODO (Eji): replace YOUR_FORM_ID with the ID of your Formspree form -->
-        <form class="interest-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="_subject" value="Masterclass interest">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-          <div class="field">
-            <label for="if-name">Name</label>
-            <input id="if-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="if-email">Email</label>
-            <input id="if-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <fieldset class="field full">
-            <legend>Which masterclass interests you?</legend>
-            <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty" checked> Lead Without Running on Empty</label>
-            <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt" checked> Boundaries Without Guilt</label>
-          </fieldset>
-          <div class="field full">
-            <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
-            <textarea id="if-msg" name="message" rows="3"></textarea>
-          </div>
-          <label class="choice consent full"><input type="checkbox" name="consent" value="yes" required> I agree that Eji Eze Stenlund may email me about the masterclasses. I can unsubscribe at any time.</label>
-          <div class="full form-foot">
-            <button class="btn" type="submit">Register your interest</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq-section" id="faq">
-    <div class="wrap faq-grid">
-      <h2>Questions <em>you might have</em></h2>
+    <div class="topics-head"><h3>What we can work on</h3></div>
+    <ul class="topics">
+      <li>Your energy and priorities</li>
+      <li>Letting go and handing over</li>
+      <li>Boundaries and saying no</li>
+      <li>How much to share with your team</li>
+      <li>Hard conversations</li>
+      <li>Leading through a demanding season</li>
+    </ul>
+    <p class="step-label"><span>1</span>Start here</p>
+    <div class="start">
       <div>
+        <div class="format">Free · 30 minutes</div>
+        <h3>Discovery Conversation</h3>
+        <p>We find out together whether coaching fits you. There's no pressure to commit.</p>
+      </div>
+      <a class="btn" href="#book">Book your free conversation</a>
+    </div>
+    <p class="step-label"><span>2</span>Then choose your path</p>
+    <div class="paths">
+      <div class="path">
+        <div class="format">One 90-minute session</div>
+        <h3>The Compass</h3>
+        <p>Clarity on one pressing situation, and one meaningful next step.</p>
+      </div>
+      <div class="path">
+        <div class="format">Six 1:1 sessions</div>
+        <h3>Walking Home</h3>
+        <p>Lasting change in how you lead and how you live.</p>
+      </div>
+    </div>
+    <!-- TODO (Eji): add prices for The Compass and Walking Home -->
+    <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation.</p>
+    <!-- TODO (Eji): check this wording against what you may claim while your certification is in progress -->
+    <p class="trust">Trained with Wayfinder Life Coach Training and following ICF ethics and standards. 20+ years inside leadership, Agile and organisational change.</p>
+  </div>
+</section>
+
+<section class="mc" id="masterclasses">
+  <div class="wrap">
+    <div class="mc-intro">
+      <div>
+        <span class="badge">Coming soon</span>
+        <h2>The ALIGN Method</h2>
+        <p class="mc-sub">Five steps from running on empty to a new normal you can sustain</p>
+      </div>
+      <div>
+        <p class="lead">You already know you should delegate more, protect your energy and ask for support. The hard part is doing it while everything keeps coming at you. In a live online masterclass, ALIGN gives you five clear steps to make it happen.</p>
+        <p class="mc-note">Built on change models leaders already trust, and 20+ years inside Agile teams.</p>
+        <a class="btn ghost" href="#interest">Register your interest</a>
+      </div>
+    </div>
+    <ul class="align-list">
+      <li><span class="ltr">A</span><span class="q"><em>Acknowledge</em>Where am I?</span><p class="d">See your current reality clearly, without judging yourself for running on empty.</p></li>
+      <li><span class="ltr">L</span><span class="q"><em>Locate</em>Where do I want to go, and why?</span><p class="d">Decide what leading well actually looks like for you, and why it matters.</p></li>
+      <li><span class="ltr">I</span><span class="q"><em>Investigate</em>What's standing in my way?</span><p class="d">Find the beliefs and patterns, like “I have to be everything for everyone”, that keep you carrying it all.</p></li>
+      <li><span class="ltr">G</span><span class="q"><em>Generate</em>How will I move forward?</span><p class="d">Make a clear plan and choose your first real step.</p></li>
+      <li><span class="ltr">N</span><span class="q"><em>Normalize</em>How do I make it my new normal?</span><p class="d">Try it in real life, adjust, and keep going until it sticks.</p></li>
+    </ul>
+    <div class="mc-grid">
+      <div class="card">
+        <span class="mc-label">An ALIGN Masterclass</span>
+        <h3>Lead Without Running on Empty</h3>
+        <div class="len">90 minutes · live online</div>
+        <div class="leave">You leave with</div>
+        <p>A one-page plan for a demanding week: what to keep, share or pause, and where to ask for support.</p>
+      </div>
+      <div class="card">
+        <span class="mc-label">An ALIGN Masterclass</span>
+        <h3>Boundaries Without Guilt</h3>
+        <div class="len">75 minutes · live online</div>
+        <div class="leave">You leave with</div>
+        <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
+      </div>
+    </div>
+    <div class="interest" id="interest">
+      <div class="interest-intro">
+        <h3>Register your interest</h3>
+        <p>Leave your details and I'll email you when dates are set. No obligation, and no other mailings.</p>
+      </div>
+      <!-- TODO (Eji): replace YOUR_FORM_ID with the ID of your Formspree form -->
+      <form class="interest-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="Masterclass interest">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="field">
+          <label for="if-name">Name</label>
+          <input id="if-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="if-email">Email</label>
+          <input id="if-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <fieldset class="field full">
+          <legend>Which masterclass interests you?</legend>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty" checked> Lead Without Running on Empty</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt" checked> Boundaries Without Guilt</label>
+        </fieldset>
+        <div class="field full">
+          <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
+          <textarea id="if-msg" name="message" rows="3"></textarea>
+        </div>
+        <label class="choice consent full"><input type="checkbox" name="consent" value="yes" required> I agree that Eji Eze Stenlund may email me about the masterclasses. I can unsubscribe at any time.</label>
+        <div class="full form-foot">
+          <button class="btn" type="submit">Register your interest</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap faq-grid">
+    <h2>Questions <em>you might have</em></h2>
+    <div>
       <details open>
         <summary>I have no time. Is coaching realistic?</summary>
         <p>Sessions are online and focused. You can choose a single 90-minute session, or six sessions at your own pace.</p>
+      </details>
+      <details>
+        <summary>What's the difference between a masterclass and coaching?</summary>
+        <p>In a masterclass, you learn the ALIGN method with a group. In coaching, you work 1:1 on your own situation, you set the agenda, and you find your own way forward.</p>
       </details>
       <details>
         <summary>What if the problem is my organisation, not me?</summary>
@@ -497,21 +382,37 @@
         <summary>Is this therapy?</summary>
         <p>No. Coaching works alongside medical or therapeutic support, not instead of it.</p>
       </details>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="final">
-    <div class="wrap">
-      <p class="script-line" aria-hidden="true">Walk with Eji</p>
-      <h2>What might become possible with more room for you?</h2>
-      <p class="sub">No pressure. Start wherever feels right.</p>
-      <div class="actions">
-        <a class="btn" href="#book">Book a free Discovery Conversation</a>
-        <a class="link" href="#interest">Register interest in a masterclass</a>
-      </div>
+<section class="final">
+  <div class="wrap">
+    <p class="script-line" aria-hidden="true">Walk with Eji</p>
+    <h2>What might become possible with more room for you?</h2>
+    <p class="sub">No pressure. Start wherever feels right.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Book a free Discovery Conversation</a>
+      <a class="link" href="#interest">Register interest in an ALIGN masterclass</a>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="book-intro">
+      <div>
+        <div class="eyebrow">Free · 30 minutes · online</div>
+        <h2>Book your Discovery Conversation</h2>
+      </div>
+      <p class="lead">Choose a time that suits you. You'll get a confirmation by email with everything you need to join.</p>
+    </div>
+    <div class="book-frame">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/eji-ezestenlund/30min?hide_gdpr_banner=1&amp;primary_color=2f5d50"></div>
+    </div>
+    <p class="note">Calendar not showing? <a href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
+  </div>
+</section>
 </main>
 
 <footer>
