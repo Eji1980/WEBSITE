@@ -3,7 +3,8 @@
 A one-page static website, hosted on Cloudflare Workers.
 
 - `public/index.html`: the page (text and design)
-- `public/eji-hero-portrait.jpg`: the photo at the top of the page
+- `public/eji-hero-bg.jpg`: the background photo filling the top of the page (blurred placeholder until a professional photo is ready; replace this file to swap it)
+- `public/eji-hero-portrait.jpg`: the portrait shown when the site is shared on social media (no longer on the page itself)
 - `public/eji-hero-sunrise.jpg`: the sunrise photo (not used at the moment), kept in case you want it back
 - `public/eji-about.jpg`: the photo in the About section
 - `wrangler.jsonc`: tells Cloudflare to serve the `public` folder
