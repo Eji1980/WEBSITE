@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lead from Full · Coaching with Eji</title>
-<meta name="description" content="Lead from Full: 1:1 coaching and ALIGN masterclasses for leaders who are running on empty but still expected to lead. Book a free Discovery Conversation with Eji Eze Stenlund.">
+<title>Lead from Full · Coaching and ALIGN Masterclasses for Caring Leaders</title>
+<meta name="description" content="For leaders who care too much to stop. 1:1 coaching where you're the one being listened to, or the ALIGN Method, a live masterclass for recovering from running on empty while you keep leading.">
 <meta property="og:title" content="Lead from Full">
-<meta property="og:description" content="Stay steady for your team without carrying it all alone. 1:1 coaching and ALIGN masterclasses with Eji Eze Stenlund.">
+<meta property="og:description" content="Care for your team without carrying all of it. 1:1 coaching and ALIGN masterclasses with Eji Eze Stenlund.">
 <meta property="og:image" content="https://walkwitheji.eji-ezestenlund.workers.dev/eji-hero-portrait.jpg">
 <link rel="preload" as="image" href="eji-hero-bg.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,7 +130,7 @@ p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
 .interest-form .full{grid-column:1 / -1;}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0;margin:0;padding:0;border:0;}
 .field label,.field legend{font-weight:600;font-size:.95rem;padding:0;}
-.field label span{font-weight:400;color:var(--muted);}.field legend{margin-bottom:6px;}
+.field label span,.field legend span{font-weight:400;color:var(--muted);}.field legend{margin-bottom:6px;}
 .interest-form input[type=text],.interest-form input[type=email],.interest-form textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;}
 .interest-form textarea{resize:vertical;}
 .interest-form input:focus-visible,.interest-form textarea:focus-visible{outline:2px solid var(--deep);outline-offset:1px;border-color:var(--deep);}
@@ -224,23 +224,104 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 @media (max-width:860px){.hero.full .actions .btn{flex:1 1 100%;}}
 @media (min-width:861px){.hero.full .hero-copy .actions{flex-direction:column;align-items:flex-start;}}
 @media (max-width:480px){.hero.full .actions .btn{font-size:.95rem;padding:14px 10px;}}
+/* Lead from Full rewrite: mechanism-first headlines, offer fork after the hero */
+.h2-benefit{display:block;font-size:.62em;font-weight:400;line-height:1.3;letter-spacing:0;color:var(--clay);margin-top:.45em;}
+.btn-k{display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.72;margin-bottom:3px;}
+.hero.full .lockup{margin-bottom:1.4rem;}
+.hero-claim{display:block;margin-top:2.1rem;padding-bottom:16px;border-bottom:1.5px solid rgba(243,201,168,.8);font-family:"Fraunces",Georgia,serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:400;line-height:1.25;letter-spacing:0;text-transform:none;color:#fff;text-wrap:balance;}
+.hero.full .hero-body strong{color:#fff;font-weight:600;}
+.hero.full .actions .btn.two{flex-direction:column;white-space:normal;line-height:1.3;}
+.hero-note{font-size:.92rem;line-height:1.5;color:rgba(255,255,255,.8);margin:1.1rem 0 0;max-width:30em;}
+@media (min-width:861px){.hero.full .hero-copy .actions{align-items:stretch;max-width:25rem;}.hero.full .actions .btn.two{align-items:flex-start;text-align:left;}}
+@media (max-width:860px){.hero-claim{font-size:1.3rem;margin-top:1.8rem;}.hero-note{font-size:.85rem;}}
+
+.ways{padding:88px 0;}
+.ways-hook{max-width:44rem;margin:0 auto 72px;}
+.ways-hook p{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.55;color:var(--ink);margin:0;}
+.ways-hook p strong{display:block;margin-top:1rem;font-weight:600;color:var(--deep);}
+.ways-head{max-width:36em;}
+.ways-grid{grid-template-rows:auto;row-gap:0;column-gap:24px;}
+.way{display:grid;grid-row:span 7;grid-template-rows:subgrid;gap:0;}
+.way-top{padding:24px 28px 26px;}
+.way-top .mech{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.12rem;line-height:1.35;color:#fff;opacity:.92;margin:.55rem 0 0;}
+.way-benefit{padding:22px 28px 18px;margin:0;font-size:1.08rem;font-weight:500;color:var(--deep);}
+.way-row{padding:14px 28px;border-top:1px solid var(--line);margin:0;min-width:0;}
+.way-row dt{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:3px;}
+.way-row dd{margin:0;}
+.way-row.best{background:var(--blush);}
+.way-row.best dd{font-weight:600;color:var(--deep);}
+.way .btn{margin:20px 28px 28px;align-self:end;justify-self:start;}
+.ways-foot{text-align:center;font-size:.95rem;color:var(--muted);max-width:52ch;margin:28px auto 0;}
+@media (max-width:860px){.ways{padding:64px 0;}.ways-hook{margin-bottom:56px;}.way{margin-bottom:20px;}.way-top,.way-benefit,.way-row{padding-left:22px;padding-right:22px;}.way .btn{margin-left:22px;margin-right:22px;}}
+
+.shift-intro{grid-template-columns:1fr;margin-bottom:36px;}
+.shift-intro .eyebrow{margin-bottom:.6rem;}
+.coach-intro .mc-sub{margin:0 0 1.2rem;}
+.topics{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));}
+.final .actions{gap:14px;}
+.final .btn{display:inline-flex;flex-direction:column;align-items:center;line-height:1.3;border:1.5px solid transparent;}
+.final .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.85);}
+.final .btn.alt:hover{background:#fff;color:var(--deep);}
+.familiar .quote{font-weight:400;}
+.align-strip{list-style:none;padding:0;margin:8px 0 14px;display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid var(--line);}
+.align-strip li{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 16px 20px;min-width:0;}
+.align-strip li+li{border-left:1px solid var(--line);}
+.align-strip .ltr{font-family:"Fraunces",Georgia,serif;font-size:2.2rem;line-height:1;color:var(--deep);}
+.align-strip .nm{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--warm);}
+.align-more{color:var(--muted);font-size:.95rem;margin:0 0 48px;}
+@media (max-width:640px){.align-strip{grid-template-columns:1fr;}.align-strip li{flex-direction:row;align-items:baseline;gap:16px;padding:12px 0;}.align-strip li+li{border-left:0;border-top:1px solid var(--line);}.align-strip .ltr{font-size:1.7rem;width:28px;}}
+.coach-intro{align-items:end;}
+@media (max-width:860px){.hero.full .hero-bg{z-index:0;}.hero.full::before{z-index:1;background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.1) 30%,rgba(15,27,69,.78) 44%,rgba(15,27,69,.95) 58%,rgba(15,27,69,.98) 100%);}}
 </style>
 </head>
 <body>
 <main>
 <section class="hero full">
   <img class="hero-bg" src="eji-hero-bg.jpg" alt="" width="1671" height="941" fetchpriority="high">
-  <div class="hero-band"><p class="band-name">Eji Eze Stenlund</p><p class="band-label">Coaching and Mentoring for Leaders · Online</p></div>
+  <div class="hero-band"><p class="band-name">Eji Eze Stenlund</p><p class="band-label">Coaching and masterclasses for leaders who care too much to stop · Online</p></div>
   <div class="hero-copy">
     <div class="hero-inner">
-      <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span></h1>
-      <p class="hero-sub">Stay steady for your team without carrying it all alone.</p>
-      <p class="hero-body">For leaders who are running on empty but still expected to lead. Learn the ALIGN method in a live masterclass, or work 1:1 on your own situation with a coach.</p>
+      <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span><span class="hero-claim">Care for your team without carrying all of it</span></h1>
+      <p class="hero-body">Two ways to come back to yourself while you keep leading:<br><strong>1:1 coaching</strong>, where you're finally the one being listened to, or the <strong>ALIGN Method</strong>, a five-step live masterclass for leaders running on empty.</p>
       <div class="actions">
-        <a class="btn" href="#book">1:1 coaching: book a free conversation</a>
-        <a class="btn hero-alt" href="#masterclasses">Masterclass: Register Interest</a>
+        <a class="btn two" href="#book"><span class="btn-k">1:1 Coaching</span>Book a free 30-minute conversation</a>
+        <a class="btn two hero-alt" href="#interest"><span class="btn-k">ALIGN Masterclass</span>Register your interest</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="ways" id="ways">
+  <div class="wrap">
+    <div class="ways-hook">
+      <p>You're the one everyone brings things to: the deadlines, the crises at home, the decisions from above you didn't make but have to deliver. You keep a steady face, pick up what slips, and feel responsible for everything. Somewhere along the way, you stopped hearing your own voice.<strong>You don't need to care less. You need somewhere to put it down, and a way back to yourself that fits inside a full calendar. That's what Lead from Full is for.</strong></p>
+    </div>
+    <div class="ways-head">
+      <div class="eyebrow">Two ways to lead from full</div>
+      <h2>Choose the support that fits where you are</h2>
+      <p>Coaching is for working on what matters most to you, in your own situation. Masterclasses teach a method, and you leave with a result you can use straight away. Not sure which? <a href="#book">Start with the free conversation</a>.</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way">
+        <div class="way-top"><span class="opt">Option 1 · 1:1</span><h3>Lead from Full Coaching</h3><p class="mech">Someone in your corner, outside your organisation</p></div>
+        <p class="way-benefit">You bring your situation, and together we find what's truly yours to carry.</p>
+        <dl class="way-row best"><dt>Best when</dt><dd>Your question depends on your own life, team and organisation</dd></dl>
+        <dl class="way-row"><dt>Format</dt><dd>1:1 online · one session or six, at your pace</dd></dl>
+        <dl class="way-row"><dt>How it works</dt><dd>You set the agenda. I listen and ask questions. The answers are yours.</dd></dl>
+        <dl class="way-row"><dt>Start with</dt><dd>A free 30-minute conversation</dd></dl>
+        <a class="btn" href="#coaching">Explore coaching</a>
+      </div>
+      <div class="way mcw">
+        <div class="way-top"><span class="opt">Option 2 · Small group</span><h3>The ALIGN Method</h3><p class="mech">Five steps from running on empty to a new normal</p></div>
+        <p class="way-benefit">Recover while you keep leading, with a method you can use straight away.</p>
+        <dl class="way-row best"><dt>Best when</dt><dd>You want a clear structure and the company of other leaders</dd></dl>
+        <dl class="way-row"><dt>Format</dt><dd>Small live group online · 75–90 minutes</dd></dl>
+        <dl class="way-row"><dt>How it works</dt><dd>You learn ALIGN: Acknowledge, Locate, Investigate, Generate, Normalize</dd></dl>
+        <dl class="way-row"><dt>Start with</dt><dd>Register your interest (dates coming soon)</dd></dl>
+        <a class="btn" href="#masterclasses">Explore the ALIGN Method</a>
+      </div>
+    </div>
+    <p class="ways-foot">Coaching follows Wayfinder Life Coach Training and ICF ethics. ALIGN is my own teaching method, built on change models leaders already trust and 20+ years inside Agile teams.</p>
   </div>
 </section>
 
@@ -248,18 +329,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   <div class="wrap familiar-grid">
     <div>
       <div class="eyebrow">Does this sound familiar?</div>
-      <p class="quote">“How do you lead when you are struggling yourself?”</p>
-      <p class="hook">It's the question leaders ask when they're drained, spread too thin and still expected to be everything for everyone. Most try to push through: faster replies, later evenings, a steady face in every meeting. But pushing harder doesn't refill anything, and your team feels it even when you think you're hiding it. Leading from full starts with the most important person on your team, you.</p>
+      <h2 class="quote">“Do you care too much to lead well?”</h2>
+      <p class="hook">It's the question caring leaders ask quietly, usually late in the evening. You're drained and stretched thin, and you're still expected to be everything for everyone. So you push through: faster replies, later evenings, a steady face in every meeting. But pushing harder doesn't refill anything, and your team feels it even when you think you're hiding it.</p>
     </div>
     <div>
       <ul class="checks">
-        <li>You are everything for everyone, and always last on your own list.</li>
-        <li>It feels easier to do it yourself than to hand it over.</li>
+        <li>You're everyone's support, and there's nobody doing the same for you.</li>
+        <li>You feel responsible for everything, and everyone's emotions.</li>
+        <li>It's easier to do it yourself than to hand it over, so you pick up what slips.</li>
         <li>You say yes when you mean no, then feel guilty or resentful.</li>
-        <li>You keep a steady face, so nobody sees you are running on empty.</li>
-        <li>You wonder: is it me, or is it the job?</li>
+        <li>You want to be kind, and you're afraid of being a pushover.</li>
+        <li>You're home, but your head is still at work.</li>
+        <li>You wonder: is it me, or is it the job? Should I even be a leader?</li>
       </ul>
-      <p class="reassure">None of this makes you a weak leader. It often means you care and take responsibility seriously. Every committed leader has limits, and honouring them is part of leading well.</p>
+      <p class="reassure">None of this makes you a weak leader. It usually means you care and take responsibility seriously. Your care is a strength. It just needs somewhere to go other than onto your own shoulders.</p>
     </div>
   </div>
 </section>
@@ -267,69 +350,26 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 <section class="shift">
   <div class="wrap">
     <div class="shift-intro">
-      <h2>What would you like more of?</h2>
-      <p class="lead">Clearer priorities, shared responsibility, trust in yourself and room to breathe, at work and beyond it.</p>
+      <div>
+        <div class="eyebrow">What would you like more of?</div>
+        <h2>From carrying it all to leading from full</h2>
+      </div>
     </div>
     <div class="shift-grid" role="table" aria-label="Less of and more of">
       <div class="head less" role="columnheader">Less of</div>
       <div class="head more" role="columnheader">More of</div>
-      <div class="less">Carrying everything on your own</div>
+      <div class="less">Carrying everyone on your own</div>
       <div class="more">A team that shares responsibility</div>
+      <div class="less">Feeling responsible for everything</div>
+      <div class="more">Knowing what's yours to carry</div>
       <div class="less">Reacting to every demand at once</div>
       <div class="more">Priorities you can stand behind</div>
       <div class="less">Second-guessing yourself</div>
       <div class="more">Trusting your own judgement</div>
       <div class="less">An automatic yes, then guilt</div>
       <div class="more">Clear, kind boundaries</div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap">
-    <div><img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
-    <div>
-      <div class="eyebrow">About me</div>
-      <h2>Hi, I'm Eji Eze Stenlund.</h2>
-      <p class="lead">I'm a Transformational Life Coach and Leadership Mentor.</p>
-      <blockquote class="about-quote">“When perspectives shift, new possibilities emerge.”</blockquote>
-      <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
-      <ul class="roles"><li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li></ul>
-      <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming.</p>
-      <!-- TODO (Eji): add one or two sentences of your own story here -->
-      <p>Today I work online with leaders around the world.</p>
-    </div>
-  </div>
-</section>
-
-<section class="ways" id="ways">
-  <div class="wrap">
-    <div class="ways-head">
-      <div class="eyebrow">Two ways to work with me</div>
-      <h2>Coaching or a masterclass?</h2>
-      <p>Choose personal 1:1 support, or learn a method together with other leaders.</p>
-    </div>
-    <div class="ways-grid">
-      <div class="way">
-        <div class="way-top"><span class="opt">Option 1</span><h3>1:1 Coaching</h3></div>
-        <ul>
-          <li>Just you and me</li>
-          <li>You set the agenda; we work on your own situation</li>
-          <li>One session or six, at your pace</li>
-          <li>Start with a free 30-minute conversation</li>
-        </ul>
-        <a class="btn" href="#coaching">Explore coaching</a>
-      </div>
-      <div class="way mcw">
-        <div class="way-top"><span class="opt">Option 2</span><h3>ALIGN Masterclass</h3></div>
-        <ul>
-          <li>A small live group</li>
-          <li>Learn a five-step method you can use straight away</li>
-          <li>75–90 minutes, live online</li>
-          <li>Coming soon: register your interest</li>
-        </ul>
-        <a class="btn" href="#masterclasses">Explore the masterclass</a>
-      </div>
+      <div class="less">Taking work home in your head</div>
+      <div class="more">Evenings that are yours again</div>
     </div>
   </div>
 </section>
@@ -338,19 +378,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   <div class="wrap">
     <div class="coach-intro">
       <div>
-        <div class="eyebrow">Option 1 · 1:1 Coaching</div>
-        <h2>1:1 coaching where you set the agenda</h2>
-        <p class="lead">Someone outside the business to think honestly with. You bring your own situation. There's no method to follow and no advice to take. Together we find what's yours to change and your next step.</p>
+        <div class="eyebrow">Option 1 · Lead from Full Coaching</div>
+        <h2>Someone in your corner<span class="h2-benefit">1:1 coaching where you set the agenda</span></h2>
+        <p class="mc-sub">You listen to everyone. Here, you're the one being listened to.</p>
+        <p class="lead">Leaders often tell each other: get a coach, someone outside the business you can be honest with. You bring your own situation. There's no method to follow and no advice to take. I listen and ask questions, and together we find what's truly yours to carry and your next step.</p>
       </div>
-      <p class="coach-how"><strong>Is it me, or is it the job?</strong>Some questions can't be answered by a method, because the answer depends on your life, your team and your organisation. In coaching, you decide what we work on. I listen, ask questions and help you see your situation more clearly, so the answers you find are your own and they last.</p>
+      <p class="coach-how"><strong>Is it me, or is it the job?</strong>Some questions can't be answered by a method, because the answer depends on your life, your team and your organisation. That's what coaching is for.</p>
     </div>
-    <div class="topics-head"><h3>Some things we might explore together</h3></div>
+    <div class="topics-head"><h3>Things we might explore together</h3></div>
     <ul class="topics">
-      <li>Your energy and priorities</li>
-      <li>Letting go and handing over</li>
-      <li>Boundaries and saying no</li>
-      <li>How much to share with your team</li>
-      <li>Hard conversations</li>
+      <li>Your energy, and how to recover while you keep leading</li>
+      <li>Feeling responsible for everyone, and letting go</li>
+      <li>Handing over and trusting your team</li>
+      <li>Boundaries, saying no, and staying kind</li>
+      <li>How much to share with your team, and with your own boss</li>
+      <li>Whether leadership still fits you, and what would make it fit</li>
       <li>Leading through a demanding season</li>
     </ul>
     <p class="step-label"><span>1</span>Start here</p>
@@ -358,7 +400,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <div>
         <div class="format">Free · 30 minutes</div>
         <h3>Discovery Conversation</h3>
-        <p>We find out together whether coaching fits you. There's no pressure to commit.</p>
+        <p>We find out together whether coaching fits you. No pressure to commit.</p>
       </div>
       <a class="btn" href="#book">Book your free conversation</a>
     </div>
@@ -372,13 +414,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <div class="path">
         <div class="format">Six 1:1 sessions</div>
         <h3>Walking Home</h3>
-        <p>Lasting change in how you lead and how you live.</p>
+        <p>Lasting change in how you lead and how you live, coming back to yourself along the way.</p>
       </div>
     </div>
     <!-- TODO (Eji): add prices for The Compass and Walking Home -->
-    <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation.</p>
     <!-- TODO (Eji): check this wording against what you may claim while your certification is in progress -->
-    <p class="trust">Trained with Wayfinder Life Coach Training and following ICF ethics and standards. 20+ years inside leadership, Agile and organisational change.</p>
+    <p class="note">I'm offering introductory prices while I complete my certification with Wayfinder Life Coach Training. We can talk them through in your free conversation. Coaching follows ICF ethics and standards.</p>
   </div>
 </section>
 
@@ -388,22 +429,23 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <div>
         <div class="eyebrow">Option 2 · Group Masterclass</div>
         <span class="badge">Coming soon</span>
-        <h2>The ALIGN Method</h2>
-        <p class="mc-sub">Five steps from running on empty to a new normal you can sustain</p>
+        <h2>The ALIGN Method<span class="h2-benefit">Recover from running on empty while you keep leading</span></h2>
+        <p class="mc-sub">Five live steps for leaders who feel responsible for everything, from carrying it all to sharing the load.</p>
       </div>
       <div>
-        <p class="lead">You already know you should delegate more, protect your energy and ask for support. The hard part is doing it while everything keeps coming at you. In a live online masterclass, ALIGN gives you five clear steps to make it happen.</p>
+        <p class="lead">You already know you should delegate more, protect your energy and ask for support. The hard part is doing it while everything keeps coming at you, and when you can't simply stop. In a live online masterclass, ALIGN gives you five clear steps to make it happen, alongside other leaders who know exactly what this feels like.</p>
         <p class="mc-note">Built on change models leaders already trust, and 20+ years inside Agile teams.</p>
         <a class="btn ghost" href="#interest">Register your interest</a>
       </div>
     </div>
-    <ul class="align-list">
-      <li><span class="ltr">A</span><span class="q"><em>Acknowledge</em>Where am I?</span><p class="d">See your current reality clearly, without judging yourself for running on empty.</p></li>
-      <li><span class="ltr">L</span><span class="q"><em>Locate</em>Where do I want to go, and why?</span><p class="d">Decide what leading well actually looks like for you, and why it matters.</p></li>
-      <li><span class="ltr">I</span><span class="q"><em>Investigate</em>What's standing in my way?</span><p class="d">Find the beliefs and patterns, like “I have to be everything for everyone”, that keep you carrying it all.</p></li>
-      <li><span class="ltr">G</span><span class="q"><em>Generate</em>How will I move forward?</span><p class="d">Make a clear plan and choose your first real step.</p></li>
-      <li><span class="ltr">N</span><span class="q"><em>Normalize</em>How do I make it my new normal?</span><p class="d">Try it in real life, adjust, and keep going until it sticks.</p></li>
+    <ul class="align-strip" aria-label="The five steps of ALIGN">
+      <li><span class="ltr">A</span><span class="nm">Acknowledge</span></li>
+      <li><span class="ltr">L</span><span class="nm">Locate</span></li>
+      <li><span class="ltr">I</span><span class="nm">Investigate</span></li>
+      <li><span class="ltr">G</span><span class="nm">Generate</span></li>
+      <li><span class="ltr">N</span><span class="nm">Normalize</span></li>
     </ul>
+    <p class="align-more">How each step works is what you learn, and practise, in the masterclass.</p>
     <div class="mc-grid">
       <div class="card">
         <span class="mc-label">An ALIGN Masterclass</span>
@@ -414,10 +456,25 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       </div>
       <div class="card">
         <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Boundaries Without Guilt</h3>
+        <h3>Kind, Not a Pushover: Boundaries Without Guilt</h3>
         <div class="len">75 minutes · live online</div>
         <div class="leave">You leave with</div>
         <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
+      </div>
+      <!-- TODO (Eji): confirm length and "You leave with" for the two new masterclasses -->
+      <div class="card">
+        <span class="mc-label">An ALIGN Masterclass</span>
+        <h3>Whole Leader, Healthy Team</h3>
+        <div class="len">90 minutes · live online</div>
+        <div class="leave">You leave with</div>
+        <p>A clear picture of what you carry for your team, and one conversation to start sharing it, so your team stays healthy because you are.</p>
+      </div>
+      <div class="card">
+        <span class="mc-label">An ALIGN Masterclass</span>
+        <h3>Lead Without Losing Yourself</h3>
+        <div class="len">75 minutes · live online</div>
+        <div class="leave">You leave with</div>
+        <p>The early signs that you're losing yourself in the role, and one daily practice to come back to yourself before the next meeting.</p>
       </div>
     </div>
     <div class="interest" id="interest">
@@ -437,9 +494,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
           <input id="if-email" name="email" type="email" autocomplete="email" required>
         </div>
         <fieldset class="field full">
-          <legend>Which masterclass interests you?</legend>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty" checked> Lead Without Running on Empty</label>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt" checked> Boundaries Without Guilt</label>
+          <legend>Which masterclasses interest you? <span>(choose one or more)</span></legend>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty"> Lead Without Running on Empty</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Kind, Not a Pushover: Boundaries Without Guilt"> Kind, Not a Pushover: Boundaries Without Guilt</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Whole Leader, Healthy Team"> Whole Leader, Healthy Team</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Losing Yourself"> Lead Without Losing Yourself</label>
         </fieldset>
         <div class="field full">
           <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
@@ -455,21 +514,42 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   </div>
 </section>
 
+<section class="about" id="about">
+  <div class="wrap">
+    <div><img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">About me</div>
+      <h2>Hi, I'm Eji Eze Stenlund.</h2>
+      <p class="lead">I'm a Transformational Life Coach and Leadership Mentor. I work with caring, overextended leaders who have lost touch with themselves, so they can reconnect with who they are and thrive in life and in leadership.</p>
+      <blockquote class="about-quote">“When perspectives shift, new possibilities emerge.”</blockquote>
+      <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
+      <ul class="roles"><li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li></ul>
+      <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming, and to be the one nobody thinks to check on.</p>
+      <!-- TODO (Eji): add one or two sentences of your own story here -->
+      <p>Today I work online with leaders around the world.</p>
+    </div>
+  </div>
+</section>
+
 <section class="faq-section" id="faq">
   <div class="wrap faq-grid">
     <h2>Questions <em>you might have</em></h2>
     <div>
       <details open>
-        <summary>I have no time. Is coaching realistic?</summary>
-        <p>Sessions are online and focused. You can choose a single 90-minute session, or six sessions at your own pace.</p>
+        <summary>Which one should I choose, coaching or a masterclass?</summary>
+        <p>If your question depends on your own life, team or organisation, choose coaching: you set the agenda and find your own way forward. If you'd like a clear method and the company of other leaders, choose an ALIGN masterclass. Not sure? Book the free conversation and we'll work it out together.</p>
       </details>
       <details>
-        <summary>What's the difference between a masterclass and coaching?</summary>
-        <p>In a masterclass, you learn the ALIGN method with a group. In coaching, you work 1:1 on your own situation, you set the agenda, and you find your own way forward.</p>
+        <summary>I can't take time off. Is this realistic?</summary>
+        <p>Yes. Both are designed for leaders who are still leading. Sessions are online and focused: one 90-minute session, six sessions at your own pace, or a single live masterclass.</p>
       </details>
       <details>
         <summary>What if the problem is my organisation, not me?</summary>
-        <p>That is often part of it. A new perspective won't fix too much work or too little support. We look at what is yours to change, and how to raise the rest.</p>
+        <p>That's often part of it. A new perspective won't fix too much work or too little support. We look at what's yours to change, and how to raise the rest.</p>
+      </details>
+      <details>
+        <summary>Will coaching tell me what to do?</summary>
+        <p>No. Coaching isn't advice. I listen and ask questions so you can see clearly and decide for yourself. If you want a structured method, that's what the ALIGN masterclasses are for.</p>
       </details>
       <details>
         <summary>Is this therapy?</summary>
@@ -482,14 +562,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 <section class="final">
   <div class="wrap">
     <p class="script-line" aria-hidden="true">Walk with Eji</p>
-    <h2>What might become possible with more room for you?</h2>
-    <p class="sub">No pressure. Start wherever feels right.</p>
+    <h2>You hold everyone. Who's holding you?</h2>
+    <p class="sub">What might become possible with more room for you? Start wherever feels right.</p>
     <div class="actions">
-      <a class="btn" href="#book">Choose a time for your free conversation</a>
-      <a class="link" href="#interest">Register interest in an ALIGN masterclass</a>
+      <a class="btn" href="#book"><span class="btn-k">1:1 Coaching</span>Choose a time for your free conversation</a>
+      <a class="btn alt" href="#interest"><span class="btn-k">ALIGN Masterclass</span>Register your interest</a>
     </div>
   </div>
 </section>
+
 
 <section class="book" id="book">
   <div class="wrap">
