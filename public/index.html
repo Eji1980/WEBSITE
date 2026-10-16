@@ -117,6 +117,10 @@ p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
 .mc-grid .card h3{font-size:1.45rem;color:var(--deep);padding:6px 28px 0;margin:0;}
 .mc-grid .card .leave{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin:1.1rem 28px .35rem;}
 .mc-grid .card p{padding:0 28px 28px;}
+.mc-grid .card .mc-tag{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.05rem;line-height:1.4;color:var(--warm);padding:8px 28px 0;margin:0;}
+.mc-grid .card .mc-desc{font-size:.95rem;color:var(--muted);padding:14px 28px 0;margin:0;}
+.mc-grid .card.flagship{border:2px solid var(--clay);}
+.mc-care{font-size:.9rem;color:var(--muted);max-width:65ch;margin:20px 0 0;padding-left:14px;border-left:2px solid var(--line);}
 .book{background:var(--blush);border-bottom:1px solid var(--line);}
 .book-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:36px;}
 .book-intro h2,.book-intro .lead{margin:0;}
@@ -447,36 +451,44 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     </ul>
     <p class="align-more">How each step works is what you learn, and practise, in the masterclass.</p>
     <div class="mc-grid">
-      <div class="card">
-        <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Lead Without Running on Empty</h3>
+      <div class="card flagship">
+        <span class="mc-label">The flagship ALIGN Masterclass</span>
+        <h3>Leading Without Burning Out</h3>
+        <p class="mc-tag">Steady, confident and whole: keep caring without it costing your health, your home life or your sense of who you are.</p>
         <div class="len">90 minutes · live online</div>
+        <p class="mc-desc">For caring leaders who have become their team's shock absorber and unpaid therapist, can't switch off in the evening, and quietly wonder whether they are a weak leader. We name the invisible load, sort what is yours to carry from what isn't, start with the signals your body sends first, and explore the question underneath: who am I if I'm not holding everything?</p>
         <div class="leave">You leave with</div>
-        <p>A one-page plan for a demanding week: what to keep, share or pause, and where to ask for support.</p>
+        <p>You know what is yours to carry, you have three non-negotiables and an evening shutdown ritual to protect your energy, and you lead from a steadier, more confident place.</p>
       </div>
       <div class="card">
         <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Kind, Not a Pushover: Boundaries Without Guilt</h3>
+        <h3>Boundaries Without Guilt</h3>
+        <p class="mc-tag">Supportive, not a pushover: say no and make tough calls without losing respect or sleep.</p>
         <div class="len">75 minutes · live online</div>
+        <p class="mc-desc">For supportive leaders who worry they are people pleasers, feel guilty about unpopular decisions, and are sandwiched between leadership and the team. We look at why saying no feels like “career suicide”, reframe caring as a strength that needs limits, and practise saying no, upward and downward, including delivering a decision you didn't make to people you care about.</p>
         <div class="leave">You leave with</div>
-        <p>Three boundary sentences for one real situation, so you can say no and stay the caring leader you are.</p>
+        <p>One boundary you are ready to hold this week, and the exact words to say it to your team or your boss.</p>
       </div>
-      <!-- TODO (Eji): confirm length and "You leave with" for the two new masterclasses -->
       <div class="card">
         <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Whole Leader, Healthy Team</h3>
+        <h3>From Firefighter to Leader</h3>
+        <p class="mc-tag">Step back without things falling apart.</p>
         <div class="len">90 minutes · live online</div>
+        <p class="mc-desc">For leaders who have become the default path for every escalation, manage the board alone and quietly pick up the work that slips. We look at the rescue reflex, find the fires that keep coming back, and practise handing over outcomes, using the Lean-Agile language you may already know, so the team becomes self-reliant and you get room to lead.</p>
         <div class="leave">You leave with</div>
-        <p>A clear picture of what you carry for your team, and one conversation to start sharing it, so your team stays healthy because you are.</p>
+        <p>You know which fires to stop fighting, and you leave with a 7-day experiment that buys back one protected block of time a week.</p>
       </div>
       <div class="card">
         <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Lead Without Losing Yourself</h3>
+        <h3>Who Listens to the Listener?</h3>
+        <p class="mc-tag">For leaders who feel lonely: reconnect with yourself, and stop holding it all alone.</p>
         <div class="len">75 minutes · live online</div>
+        <p class="mc-desc">For leaders in the middle who listen to everyone and have no one listening to them: too senior to vent down, not wanting to look weak up, with a boss too busy for real one-to-ones. In the first half we connect inward, noticing what you need. In the second half we connect outward, mapping who you can lean on and practising one honest conversation, such as asking your boss for real one-to-ones.</p>
         <div class="leave">You leave with</div>
-        <p>The early signs that you're losing yourself in the role, and one daily practice to come back to yourself before the next meeting.</p>
+        <p>You reconnect with what you need, and leave with a support map and one person to reach out to this week.</p>
       </div>
     </div>
+    <p class="mc-care">These masterclasses are coaching, not therapy. If you are living with panic attacks or burnout, medical or therapeutic help may be the right first step, and that is a strong choice too.</p>
     <div class="interest" id="interest">
       <div class="interest-intro">
         <h3>Register your interest</h3>
@@ -495,10 +507,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         </div>
         <fieldset class="field full">
           <legend>Which masterclasses interest you? <span>(choose one or more)</span></legend>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Running on Empty"> Lead Without Running on Empty</label>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Kind, Not a Pushover: Boundaries Without Guilt"> Kind, Not a Pushover: Boundaries Without Guilt</label>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Whole Leader, Healthy Team"> Whole Leader, Healthy Team</label>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Losing Yourself"> Lead Without Losing Yourself</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Leading Without Burning Out"> Leading Without Burning Out</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt"> Boundaries Without Guilt</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="From Firefighter to Leader"> From Firefighter to Leader</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Who Listens to the Listener?"> Who Listens to the Listener?</label>
         </fieldset>
         <div class="field full">
           <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
