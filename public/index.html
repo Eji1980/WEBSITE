@@ -154,7 +154,7 @@ p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
 .way li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line);}.way li:last-child{border-bottom:0;}
 .way li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--warm);}
 .way .btn{margin:10px 28px 28px;align-self:flex-start;}.way.mcw .btn{background:var(--clay);}.way.mcw .btn:hover{background:#7f3b21;}
-.mc{background:#ebeef8;}
+.mc{background:#ebeef8;}.mc .btn{background:var(--clay);}.mc .btn:hover{background:#7f3b21;}.mc .btn.ghost{background:transparent;color:var(--clay);border-color:var(--clay);}.mc .btn.ghost:hover{background:#f6e7df;}.mc input[type=checkbox]{accent-color:var(--clay);}
 @media (max-width:860px){.ways-grid{grid-template-columns:1fr;}.ways{padding:56px 0;}}
 
 .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 80px;align-items:start;}
@@ -199,7 +199,30 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 .hero.full .hero-copy .actions{justify-content:flex-start;}
 .hero.full .btn{background:#fff;color:var(--deep);}.hero.full .btn:hover{background:#f3c9a8;}
 .hero.full .link{color:#fff;}
-@media (max-width:860px){.hero.full{min-height:0;}.hero.full .hero-bg{height:480px;object-position:24% 20%;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%);}.hero.full::before{background:linear-gradient(180deg,rgba(15,27,69,.6) 0px,rgba(15,27,69,.1) 150px,rgba(15,27,69,.55) 300px,rgba(15,27,69,.9) 420px,rgba(15,27,69,1) 480px);}.hero.full .hero-band{flex-direction:column;padding:20px 16px 0;}.hero.full .hero-copy{padding:250px 16px 64px;align-items:stretch;}}
+@media (max-width:860px){.hero.full{min-height:min(100svh,880px);}.hero.full .hero-bg{height:100%;object-position:37% 16%;}.hero.full::before{background:linear-gradient(270deg,rgba(15,27,69,.95) 0%,rgba(15,27,69,.88) 46%,rgba(18,32,80,.45) 72%,rgba(22,38,92,.05) 100%),linear-gradient(180deg,rgba(15,27,69,.55) 0%,rgba(15,27,69,0) 22%,rgba(15,27,69,0) 70%,rgba(15,27,69,.5) 100%);}.hero.full .hero-band{flex-direction:column;align-items:flex-end;text-align:right;padding:20px 18px 0;gap:4px;}.hero.full .band-label{font-size:.72rem;letter-spacing:.12em;}.hero.full .hero-copy{padding:40px 18px 48px;align-items:flex-end;justify-content:flex-end;}.hero.full .hero-inner{width:min(62%,22rem);}.hero.full .hero-copy>.lockup{margin-right:0;}.hero.full .lockup{margin-bottom:1.8rem;}.hero.full .lockup .box{font-size:clamp(1.45rem,7vw,2.6rem);padding:14px 14px 20px;}.hero.full .hero-sub{font-size:1rem;}.hero.full .hero-body{font-size:.92rem;line-height:1.55;}.hero.full .actions{gap:14px;margin-top:1.4rem;}.hero.full .actions .btn{width:100%;text-align:center;padding:13px 16px;white-space:normal;}}
+/* Hero: centred text block, name left / tagline right */
+.hero.full::before{background:radial-gradient(ellipse 50% 75% at 58% 55%,rgba(15,27,69,.62) 0%,rgba(15,27,69,0) 100%),linear-gradient(rgba(15,27,69,.42),rgba(15,27,69,.42)),linear-gradient(180deg,rgba(15,27,69,.55) 0%,rgba(15,27,69,0) 20%,rgba(15,27,69,0) 75%,rgba(15,27,69,.6) 100%);}
+.hero.full .hero-copy{align-items:center;justify-content:center;padding-left:max(32px,16vw);}
+.hero.full .hero-inner{width:42rem;max-width:100%;}
+.hero.full .lockup .box{font-size:clamp(2.4rem,5vw,4.4rem);}
+.hero.full .hero-band{flex-wrap:nowrap;align-items:baseline;}
+.hero.full .band-label{text-align:right;}
+@media (max-width:860px){
+.hero.full .hero-bg{object-position:30% 14%;}
+.hero.full::before{background:linear-gradient(180deg,rgba(15,27,69,.6) 0%,rgba(15,27,69,.05) 18%,rgba(15,27,69,.2) 36%,rgba(15,27,69,.86) 54%,rgba(15,27,69,.97) 72%,rgba(15,27,69,.98) 100%);}
+.hero.full .hero-band{flex-direction:row;justify-content:space-between;align-items:flex-start;text-align:left;gap:16px;}
+.hero.full .band-name{font-size:1.15rem;white-space:nowrap;}
+.hero.full .band-label{max-width:13.5em;text-align:right;line-height:1.5;}
+.hero.full .hero-copy{align-items:center;justify-content:flex-end;padding:40px 22px 48px;}
+.hero.full .hero-inner{width:100%;max-width:28rem;}
+.hero.full .lockup .box{font-size:clamp(1.8rem,8.4vw,2.8rem);}
+}
+.hero.full .hero-copy .actions{flex-wrap:wrap;gap:12px;align-items:stretch;}
+.hero.full .actions .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:14px 22px;border:1.5px solid transparent;white-space:nowrap;}
+.hero.full .btn.hero-alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.9);}
+.hero.full .btn.hero-alt:hover{background:#fff;color:var(--deep);}
+@media (max-width:860px){.hero.full .actions .btn{flex:1 1 100%;}}
+@media (max-width:480px){.hero.full .actions .btn{font-size:.95rem;padding:14px 10px;}}
 </style>
 </head>
 <body>
@@ -214,7 +237,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <p class="hero-body">For leaders who are running on empty but still expected to lead. Learn the ALIGN method in a live masterclass, or work 1:1 on your own situation with a coach.</p>
       <div class="actions">
         <a class="btn" href="#book">1:1 coaching: book a free conversation</a>
-        <a class="link" href="#masterclasses">Group masterclass: register interest</a>
+        <a class="btn hero-alt" href="#masterclasses">Masterclass: Register Interest</a>
       </div>
     </div>
   </div>
