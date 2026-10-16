@@ -304,6 +304,44 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 @media (max-width:860px){.hero.full .hero-band{align-items:center;flex-wrap:nowrap;}.hero.full .band-name{font-size:1.05rem;line-height:1.3;}.hero.full .band-label{max-width:none;white-space:nowrap;font-size:.62rem;letter-spacing:.06em;line-height:1.3;}}
 @media (max-width:420px){.hero.full .band-online{display:none;}}
 @media (max-width:380px){.hero.full .hero-band{gap:10px;padding-left:16px;padding-right:16px;}.hero.full .band-name{font-size:.95rem;}.hero.full .band-label{font-size:.56rem;letter-spacing:.04em;}}
+/* Compact hero on phones */
+@media (max-width:600px){
+.hero.full .hero-copy{padding:32px 20px 40px;}
+.hero.full .lockup{margin-bottom:0;}
+.hero.full .lockup .box{font-size:1.7rem;padding:11px 14px 17px;}
+.hero.full .hero-claim{font-size:1.08rem;line-height:1.35;margin-top:1.4rem;padding-bottom:10px;}
+.hero.full .hero-benefit{font-size:.92rem;line-height:1.5;margin-top:.8rem;}
+.hero.full .hero-copy .actions{margin-top:1.1rem;gap:9px;}
+.hero.full .actions .btn{font-size:.88rem;padding:10px 14px;}
+.hero.full .band-name{font-size:.98rem;}
+.hero.full .band-label{font-size:.62rem;}
+}
+/* Hero: symmetrical, everything centred under Lead from Full */
+.hero.full .hero-inner{text-align:center;margin-left:auto;margin-right:auto;}
+.hero.full .hero-inner .lockup{display:flex;flex-direction:column;align-items:center;}
+.hero.full .hero-claim{text-align:center;margin-top:2.9rem;}
+.hero.full .hero-benefit{margin-left:auto;margin-right:auto;}
+.hero.full .hero-copy .actions{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:none;width:100%;margin-left:auto;margin-right:auto;}
+@media (min-width:861px){
+.hero.full .hero-copy{padding:132px 32px 96px;align-items:center;}
+.hero.full .hero-inner{width:38rem;}
+.hero.full .hero-copy .actions .btn{min-width:20rem;}
+.hero.full .hero-claim{margin-top:3.4rem;}
+}
+@media (max-width:860px){
+.hero.full .hero-copy{align-items:center;}
+.hero.full .hero-copy .actions .btn{width:100%;}
+.hero.full .hero-claim{margin-top:2.2rem;}
+}
+/* Top bar: name and tagline sit on one baseline */
+.hero.full .hero-band,.hero.full .hero-band:is(*){align-items:baseline;}
+@media (max-width:860px){.hero.full .hero-band{align-items:baseline;}}
+/* Page Designer pass: symmetry between the opening, the bridge text and the closing */
+.ways-hook{max-width:40rem;text-align:center;}
+.ways-hook p{text-wrap:pretty;}
+.final .actions{flex-direction:column;align-items:center;gap:12px;}
+.final .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-width:20rem;padding:14px 22px;white-space:nowrap;}
+@media (max-width:600px){.final .btn{min-width:0;width:100%;font-size:.88rem;padding:10px 14px;}.final .actions{width:100%;}}
 </style>
 </head>
 <body>
@@ -589,8 +627,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     <h2>You hold everyone. Who's holding you?</h2>
     <p class="sub">What might become possible with more room for you? Start wherever feels right.</p>
     <div class="actions">
-      <a class="btn" href="#book"><span class="btn-k">1:1 Coaching</span>Choose a time for your free conversation</a>
-      <a class="btn alt" href="#interest"><span class="btn-k">ALIGN Masterclass</span>Register your interest</a>
+      <a class="btn" href="#book">Book a free 1:1 conversation</a>
+      <a class="btn alt" href="#interest">Masterclass: Register Interest</a>
     </div>
   </div>
 </section>
