@@ -276,17 +276,45 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 @media (max-width:640px){.align-strip{grid-template-columns:1fr;}.align-strip li{flex-direction:row;align-items:baseline;gap:16px;padding:12px 0;}.align-strip li+li{border-left:0;border-top:1px solid var(--line);}.align-strip .ltr{font-size:1.7rem;width:28px;}}
 .coach-intro{align-items:end;}
 @media (max-width:860px){.hero.full .hero-bg{z-index:0;}.hero.full::before{z-index:1;background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.1) 30%,rgba(15,27,69,.78) 44%,rgba(15,27,69,.95) 58%,rgba(15,27,69,.98) 100%);}}
+.mc-grid{grid-template-columns:repeat(3,1fr);}
+.mc-grid .card{border-top:4px solid var(--clay);border-radius:0 0 var(--radius) var(--radius);}
+.mc-grid .card h3{padding-top:26px;}
+.mc-grid .card p.desc{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.05rem;line-height:1.4;color:var(--deep);padding:8px 28px 0;margin:0;}
+@media (max-width:960px){.mc-grid{grid-template-columns:1fr;}}
+.hero.full .hero-benefit{font-size:1.15rem;font-weight:500;color:#fff;text-wrap:balance;}
+/* Option 1 / Option 2 bands and tints */
+.coaching,.mc{padding-top:0;}
+.coaching{background:#eef1fa;}
+.mc{background:#f8eee8;}
+.about{background:var(--surface);}
+.mc .interest,.mc-grid .card{background:var(--surface);}
+.mc-grid{grid-template-columns:repeat(2,1fr);}
+.opt-band{color:#fff;margin-bottom:72px;}
+.opt-1{background:var(--accent);}.opt-2{background:var(--clay);}
+.opt-band .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px;padding-block:20px;}
+.opt-num{font-family:"Fraunces",Georgia,serif;font-size:2.6rem;line-height:1;}
+.opt-label{font-size:.9rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;}
+.opt-kind{margin-left:auto;font-size:.9rem;color:rgba(255,255,255,.85);}
+.coach-intro .mc-sub{margin:0;}
+@media (max-width:860px){.opt-band{margin-bottom:48px;}.opt-band .wrap{padding-block:16px;}.opt-num{font-size:2rem;}.opt-label{font-size:.78rem;letter-spacing:.1em;}.opt-kind{margin-left:0;flex-basis:100%;padding-left:calc(2rem + 18px);font-size:.82rem;}}
+@media (max-width:960px){.mc-grid{grid-template-columns:1fr;}}
+/* Hero top bar: name and label share one horizontal centre line */
+.hero.full .hero-band{align-items:center;}
+.hero.full .band-name,.hero.full .band-label{margin:0;}
+@media (max-width:860px){.hero.full .hero-band{align-items:center;flex-wrap:nowrap;}.hero.full .band-name{font-size:1.05rem;line-height:1.3;}.hero.full .band-label{max-width:none;white-space:nowrap;font-size:.62rem;letter-spacing:.06em;line-height:1.3;}}
+@media (max-width:420px){.hero.full .band-online{display:none;}}
+@media (max-width:380px){.hero.full .hero-band{gap:10px;padding-left:16px;padding-right:16px;}.hero.full .band-name{font-size:.95rem;}.hero.full .band-label{font-size:.56rem;letter-spacing:.04em;}}
 </style>
 </head>
 <body>
 <main>
 <section class="hero full">
   <img class="hero-bg" src="eji-hero-bg.jpg" alt="" width="1671" height="941" fetchpriority="high">
-  <div class="hero-band"><p class="band-name">Eji Eze Stenlund</p><p class="band-label">Coaching and masterclasses for leaders who care too much to stop · Online</p></div>
+  <div class="hero-band"><p class="band-name">Eji Eze Stenlund</p><p class="band-label">Life Coach &amp; Leadership Mentor<span class="band-online"> · Online</span></p></div>
   <div class="hero-copy">
     <div class="hero-inner">
-      <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span><span class="hero-claim">Care for your team without carrying all of it</span></h1>
-      <p class="hero-body">Two ways to come back to yourself while you keep leading:<br><strong>1:1 coaching</strong>, where you're finally the one being listened to, or the <strong>ALIGN Method</strong>, a five-step live masterclass for leaders running on empty.</p>
+      <h1 class="lockup"><span class="box">Lead from <span class="script">Full</span></span><span class="hero-claim">1:1 coaching and the ALIGN Method for leaders who care too much to stop</span></h1>
+      <p class="hero-body hero-benefit">Care for your team without carrying all of it.</p>
       <div class="actions">
         <a class="btn two" href="#book"><span class="btn-k">1:1 Coaching</span>Book a free 30-minute conversation</a>
         <a class="btn two hero-alt" href="#interest"><span class="btn-k">ALIGN Masterclass</span>Register your interest</a>
@@ -298,7 +326,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 <section class="ways" id="ways">
   <div class="wrap">
     <div class="ways-hook">
-      <p>You're the one everyone brings things to: the deadlines, the crises at home, the decisions from above you didn't make but have to deliver. You keep a steady face, pick up what slips, and feel responsible for everything. Somewhere along the way, you stopped hearing your own voice.<strong>You don't need to care less. You need somewhere to put it down, and a way back to yourself that fits inside a full calendar. That's what Lead from Full is for.</strong></p>
+      <p>You're the one everyone brings things to: the deadlines, the crises at home, the decisions from above you didn't make but have to deliver. You keep a steady face, pick up what slips, and feel responsible for everything. Somewhere along the way, you stopped hearing your own voice.<strong>You don't need to care less. You need somewhere to put it down: coaching where you're finally the one being listened to, and the ALIGN Method to recover while you keep leading.</strong></p>
     </div>
     <div class="ways-head">
       <div class="eyebrow">Two ways to lead from full</div>
@@ -319,7 +347,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         <div class="way-top"><span class="opt">Option 2 · Small group</span><h3>The ALIGN Method</h3><p class="mech">Five steps from running on empty to a new normal</p></div>
         <p class="way-benefit">Recover while you keep leading, with a method you can use straight away.</p>
         <dl class="way-row best"><dt>Best when</dt><dd>You want a clear structure and the company of other leaders</dd></dl>
-        <dl class="way-row"><dt>Format</dt><dd>Small live group online · 75–90 minutes</dd></dl>
+        <dl class="way-row"><dt>Format</dt><dd>Small live group online · 75 minutes</dd></dl>
         <dl class="way-row"><dt>How it works</dt><dd>You learn ALIGN: Acknowledge, Locate, Investigate, Generate, Normalize</dd></dl>
         <dl class="way-row"><dt>Start with</dt><dd>Register your interest (dates coming soon)</dd></dl>
         <a class="btn" href="#masterclasses">Explore the ALIGN Method</a>
@@ -379,25 +407,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 </section>
 
 <section class="coaching" id="coaching">
+  <div class="opt-band opt-1"><div class="wrap"><span class="opt-num">1</span><span class="opt-label">Option 1 · Lead from Full Coaching</span><span class="opt-kind">1:1 · online</span></div></div>
   <div class="wrap">
     <div class="coach-intro">
       <div>
-        <div class="eyebrow">Option 1 · Lead from Full Coaching</div>
         <h2>Someone in your corner<span class="h2-benefit">1:1 coaching where you set the agenda</span></h2>
         <p class="mc-sub">You listen to everyone. Here, you're the one being listened to.</p>
-        <p class="lead">Leaders often tell each other: get a coach, someone outside the business you can be honest with. You bring your own situation. There's no method to follow and no advice to take. I listen and ask questions, and together we find what's truly yours to carry and your next step.</p>
       </div>
-      <p class="coach-how"><strong>Is it me, or is it the job?</strong>Some questions can't be answered by a method, because the answer depends on your life, your team and your organisation. That's what coaching is for.</p>
+      <p class="lead">Leaders often tell each other: get a coach, someone outside the business you can be honest with. You bring your own situation. There's no method to follow and no advice to take. I listen and ask questions, and together we find what's truly yours to carry and your next step.</p>
     </div>
     <div class="topics-head"><h3>Things we might explore together</h3></div>
     <ul class="topics">
       <li>Your energy, and how to recover while you keep leading</li>
-      <li>Feeling responsible for everyone, and letting go</li>
-      <li>Handing over and trusting your team</li>
+      <li>Letting go, handing over and trusting your team</li>
       <li>Boundaries, saying no, and staying kind</li>
-      <li>How much to share with your team, and with your own boss</li>
-      <li>Whether leadership still fits you, and what would make it fit</li>
-      <li>Leading through a demanding season</li>
+      <li>Who supports you, and whether leadership still fits</li>
     </ul>
     <p class="step-label"><span>1</span>Start here</p>
     <div class="start">
@@ -428,10 +452,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 </section>
 
 <section class="mc" id="masterclasses">
+  <div class="opt-band opt-2"><div class="wrap"><span class="opt-num">2</span><span class="opt-label">Option 2 · The ALIGN Method</span><span class="opt-kind">Group masterclasses · online</span></div></div>
   <div class="wrap">
     <div class="mc-intro">
       <div>
-        <div class="eyebrow">Option 2 · Group Masterclass</div>
         <span class="badge">Coming soon</span>
         <h2>The ALIGN Method<span class="h2-benefit">Recover from running on empty while you keep leading</span></h2>
         <p class="mc-sub">Five live steps for leaders who feel responsible for everything, from carrying it all to sharing the load.</p>
@@ -451,41 +475,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     </ul>
     <p class="align-more">How each step works is what you learn, and practise, in the masterclass.</p>
     <div class="mc-grid">
-      <div class="card flagship">
-        <span class="mc-label">The flagship ALIGN Masterclass</span>
-        <h3>Leading Without Burning Out</h3>
-        <p class="mc-tag">Steady, confident and whole: keep caring without it costing your health, your home life or your sense of who you are.</p>
-        <div class="len">90 minutes · live online</div>
-        <p class="mc-desc">For caring leaders who have become their team's shock absorber and unpaid therapist, can't switch off in the evening, and quietly wonder whether they are a weak leader. We name the invisible load, sort what is yours to carry from what isn't, start with the signals your body sends first, and explore the question underneath: who am I if I'm not holding everything?</p>
+      <div class="card">
+        <h3>Lead Without Losing Yourself</h3>
+        <p class="desc">Caring for your team without carrying it all.</p>
         <div class="leave">You leave with</div>
-        <p>You know what is yours to carry, you have three non-negotiables and an evening shutdown ritual to protect your energy, and you lead from a steadier, more confident place.</p>
+        <p>A clear view of what you're carrying that isn't yours, three non-negotiables for your hardest weeks, and one thing to put down this week.</p>
       </div>
       <div class="card">
-        <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Boundaries Without Guilt</h3>
-        <p class="mc-tag">Supportive, not a pushover: say no and make tough calls without losing respect or sleep.</p>
-        <div class="len">75 minutes · live online</div>
-        <p class="mc-desc">For supportive leaders who worry they are people pleasers, feel guilty about unpopular decisions, and are sandwiched between leadership and the team. We look at why saying no feels like “career suicide”, reframe caring as a strength that needs limits, and practise saying no, upward and downward, including delivering a decision you didn't make to people you care about.</p>
-        <div class="leave">You leave with</div>
-        <p>One boundary you are ready to hold this week, and the exact words to say it to your team or your boss.</p>
-      </div>
-      <div class="card">
-        <span class="mc-label">An ALIGN Masterclass</span>
         <h3>From Firefighter to Leader</h3>
-        <p class="mc-tag">Step back without things falling apart.</p>
-        <div class="len">90 minutes · live online</div>
-        <p class="mc-desc">For leaders who have become the default path for every escalation, manage the board alone and quietly pick up the work that slips. We look at the rescue reflex, find the fires that keep coming back, and practise handing over outcomes, using the Lean-Agile language you may already know, so the team becomes self-reliant and you get room to lead.</p>
+        <p class="desc">Step back without things falling apart.</p>
         <div class="leave">You leave with</div>
-        <p>You know which fires to stop fighting, and you leave with a 7-day experiment that buys back one protected block of time a week.</p>
+        <p>The fires that keep coming back, and a 7-day experiment that buys back one protected block of time for you.</p>
       </div>
       <div class="card">
-        <span class="mc-label">An ALIGN Masterclass</span>
-        <h3>Who Listens to the Listener?</h3>
-        <p class="mc-tag">For leaders who feel lonely: reconnect with yourself, and stop holding it all alone.</p>
-        <div class="len">75 minutes · live online</div>
-        <p class="mc-desc">For leaders in the middle who listen to everyone and have no one listening to them: too senior to vent down, not wanting to look weak up, with a boss too busy for real one-to-ones. In the first half we connect inward, noticing what you need. In the second half we connect outward, mapping who you can lean on and practising one honest conversation, such as asking your boss for real one-to-ones.</p>
+        <h3>Too Nice to Lead?</h3>
+        <p class="desc">Kind, clear and still respected: boundaries without guilt, with your team and your boss.</p>
         <div class="leave">You leave with</div>
-        <p>You reconnect with what you need, and leave with a support map and one person to reach out to this week.</p>
+        <p>One boundary you're ready to hold this week, and the exact words to say it to your team or your boss.</p>
+      </div>
+      <div class="card">
+        <h3>Who Listens to the Listener?</h3>
+        <p class="desc">Not holding it all alone: reconnect with yourself and build the support you give everyone else.</p>
+        <div class="leave">You leave with</div>
+        <p>A clearer sense of what you need, a map of who you can lean on, and one person to reach out to this week.</p>
       </div>
     </div>
     <p class="mc-care">These masterclasses are coaching, not therapy. If you are living with panic attacks or burnout, medical or therapeutic help may be the right first step, and that is a strong choice too.</p>
@@ -507,9 +519,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         </div>
         <fieldset class="field full">
           <legend>Which masterclasses interest you? <span>(choose one or more)</span></legend>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Leading Without Burning Out"> Leading Without Burning Out</label>
-          <label class="choice"><input type="checkbox" name="masterclass" value="Boundaries Without Guilt"> Boundaries Without Guilt</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Lead Without Losing Yourself"> Lead Without Losing Yourself</label>
           <label class="choice"><input type="checkbox" name="masterclass" value="From Firefighter to Leader"> From Firefighter to Leader</label>
+          <label class="choice"><input type="checkbox" name="masterclass" value="Too Nice to Lead?"> Too Nice to Lead?</label>
           <label class="choice"><input type="checkbox" name="masterclass" value="Who Listens to the Listener?"> Who Listens to the Listener?</label>
         </fieldset>
         <div class="field full">
