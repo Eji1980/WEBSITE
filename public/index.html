@@ -344,6 +344,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 @media (max-width:600px){.final .btn{min-width:0;width:100%;font-size:.88rem;padding:10px 14px;}.final .actions{width:100%;}}
 /* Top bar: name further left, title further right */
 .hero.full .hero-band{max-width:none;padding-left:clamp(14px,2.2vw,40px);padding-right:clamp(14px,2.2vw,40px);}
+/* Page Designer pass 3: one button size across the page */
+a.btn,button.btn{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.25;min-height:56px;padding-top:0;padding-bottom:0;border-width:1.5px;border-style:solid;}
+a.btn:not(.ghost):not(.alt):not(.hero-alt),button.btn{border-color:transparent;}
+.form-foot .btn{border-color:transparent;border-width:1.5px;border-style:solid;}
+@media (max-width:600px){
+a.btn,button.btn{min-height:48px;font-size:.9rem;padding-left:18px;padding-right:18px;}
+}
+@media (max-width:600px){.hero.full .band-name{font-size:.86rem;letter-spacing:.03em;}.hero.full .band-label{font-size:.58rem;}}
+/* Page Designer pass 4: calmer masterclass heading and tighter phone cards */
+.h2-benefit{text-wrap:balance;max-width:24em;}
+@media (max-width:600px){.mc-grid .card h3{padding-top:20px;}.mc-grid .card p{padding-bottom:22px;}.mc-grid{gap:16px;}}
 </style>
 </head>
 <body>
@@ -379,7 +390,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         <p class="way-benefit">You bring your situation, and together we find what's truly yours to carry.</p>
         <dl class="way-row best"><dt>Best when</dt><dd>Your question depends on your own life, team and organisation</dd></dl>
         <dl class="way-row"><dt>Format</dt><dd>1:1 online · one session or six, at your pace</dd></dl>
-        <dl class="way-row"><dt>How it works</dt><dd>You set the agenda. I listen and ask questions. The answers are yours.</dd></dl>
         <dl class="way-row"><dt>Start with</dt><dd>A free 30-minute conversation</dd></dl>
         <a class="btn" href="#coaching">Explore coaching</a>
       </div>
@@ -388,7 +398,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         <p class="way-benefit">Recover while you keep leading, with a method you can use straight away.</p>
         <dl class="way-row best"><dt>Best when</dt><dd>You want a clear structure and the company of other leaders</dd></dl>
         <dl class="way-row"><dt>Format</dt><dd>Small live group online · 75 minutes</dd></dl>
-        <dl class="way-row"><dt>How it works</dt><dd>You learn ALIGN: Acknowledge, Locate, Investigate, Generate, Normalize</dd></dl>
         <dl class="way-row"><dt>Start with</dt><dd>Register your interest (dates coming soon)</dd></dl>
         <a class="btn" href="#masterclasses">Explore the ALIGN Method</a>
       </div>
@@ -497,7 +506,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     <div class="mc-intro">
       <div>
         <span class="badge">Coming soon</span>
-        <h2>The ALIGN Method<span class="h2-benefit">Recover from running on empty while you keep leading</span></h2>
+        <h2>The ALIGN Method<span class="h2-benefit">Recover from running on empty<br>while you keep leading</span></h2>
         <p class="mc-sub">Five live steps for leaders who feel responsible for everything, from carrying it all to sharing the load.</p>
       </div>
       <div>
