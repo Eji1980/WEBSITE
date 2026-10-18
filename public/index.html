@@ -355,6 +355,8 @@ a.btn,button.btn{min-height:48px;font-size:.9rem;padding-left:18px;padding-right
 /* Page Designer pass 4: calmer masterclass heading and tighter phone cards */
 .h2-benefit{text-wrap:balance;max-width:24em;}
 @media (max-width:600px){.mc-grid .card h3{padding-top:20px;}.mc-grid .card p{padding-bottom:22px;}.mc-grid{gap:16px;}}
+/* Mobile: lighter hero overlay so the photo shows through, closer to desktop */
+@media (max-width:860px){.hero.full::before{background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.12) 34%,rgba(15,27,69,.5) 54%,rgba(15,27,69,.68) 74%,rgba(15,27,69,.78) 100%);}.hero.full .hero-copy{text-shadow:0 1px 12px rgba(15,27,69,.55);}.hero.full .hero-copy .btn{text-shadow:none;}}
 </style>
 </head>
 <body>
