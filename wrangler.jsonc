@@ -1,9 +1,13 @@
 {
-  // Tells Cloudflare: this is a plain static website. Serve the files in /public.
+  // Tells Cloudflare: a static website in /public, with a small worker.js
+  // that serves the Ownership Reset page on theownershipreset.com.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "walkwitheji",
   "compatibility_date": "2026-10-01",
+  "main": "./worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
