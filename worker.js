@@ -1,32 +1,21 @@
-// Serves the Ownership Reset page on its own domain.
-// - theownershipreset.com/        -> shows public/owners.html
-// - www.theownershipreset.com     -> redirects to theownershipreset.com
-// - ejiezestenlund.com/owners     -> redirects to theownershipreset.com
-// Everything else is served from /public as before.
-const NEW_HOST = "theownershipreset.com";
+// One main domain: theownershipreset.com
+// - theownershipreset.com/          -> main page (public/index.html)
+// - theownershipreset.com/owners    -> owners and founders page (public/owners.html)
+// - theownershipreset.com/leaders   -> leaders page (public/leaders.html)
+// - www.theownershipreset.com, ejiezestenlund.com and www.ejiezestenlund.com
+//                                   -> redirect (301) to the same path on theownershipreset.com
+// Everything else is served from /public as is.
+const MAIN_HOST = "theownershipreset.com";
+const REDIRECT_HOSTS = ["www.theownershipreset.com", "ejiezestenlund.com", "www.ejiezestenlund.com"];
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.hostname === "www." + NEW_HOST) {
-      url.hostname = NEW_HOST;
+    if (REDIRECT_HOSTS.includes(url.hostname)) {
+      url.hostname = MAIN_HOST;
+      url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
-    }
-
-    if (url.hostname === NEW_HOST) {
-      if (url.pathname === "/" || url.pathname === "/index.html") {
-        url.pathname = "/owners";
-        return env.ASSETS.fetch(new Request(url.toString(), request));
-      }
-      if (url.pathname === "/owners" || url.pathname === "/owners.html") {
-        return Response.redirect("https://" + NEW_HOST + "/" + url.search, 301);
-      }
-      return env.ASSETS.fetch(request);
-    }
-
-    if (url.pathname === "/owners" || url.pathname === "/owners.html") {
-      return Response.redirect("https://" + NEW_HOST + "/" + url.search, 301);
     }
 
     return env.ASSETS.fetch(request);

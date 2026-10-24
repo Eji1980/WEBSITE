@@ -1,6 +1,6 @@
 {
   // Tells Cloudflare: a static website in /public, with a small worker.js
-  // that serves the Ownership Reset page on theownershipreset.com.
+  // that sends ejiezestenlund.com and www addresses to theownershipreset.com.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "walkwitheji",
   "compatibility_date": "2026-10-01",
