@@ -40,7 +40,8 @@ section{padding:104px 0}
 .hero h1{font-size:clamp(2.5rem,5.4vw,4.4rem);letter-spacing:-.02em;margin-bottom:1.4rem}
 .hero h1 em{font-family:"Allura",cursive;font-style:normal;font-weight:400;color:var(--peach);font-size:1.18em;line-height:.9;display:block;margin-top:.12em}
 .hero .sub{font-size:1.15rem;line-height:1.6;color:rgba(255,255,255,.9);max-width:30em;margin:0 0 2rem}
-.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .actions{display:grid;grid-template-columns:minmax(0,max-content);gap:12px}
+.hero .actions .btn{width:100%}
 .hero .btn{background:#fff;color:var(--deep)}.hero .btn:hover{background:var(--peach)}
 .hero .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}.hero .btn.alt:hover{background:#fff;color:var(--deep)}
 .proof{flex:none;background:rgba(10,18,48,.82);border-top:1px solid rgba(255,255,255,.14);padding:20px 0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
@@ -127,6 +128,8 @@ section{padding:72px 0}
 @media (max-width:480px){.wrap{padding:0 18px}a.btn{min-height:50px;font-size:.95rem}}
 @media (max-width:420px){.top .online{display:none}}
 @media (max-width:380px){.top{gap:10px;padding-left:16px;padding-right:16px}.top .name{font-size:.95rem}.top .label{font-size:.56rem;letter-spacing:.04em}}
+/* On phones the photo fills the top of the hero, so the face sits above the text */
+@media (max-width:860px){.hero>img{height:64%;object-position:26% 30%;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}.hero .actions{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -140,8 +143,8 @@ section{padding:72px 0}
       <h1>Come home to yourself, <em>and lead from there.</em></h1>
       <p class="sub">I help caring, overextended leaders reconnect with who they are, so they can thrive in life and in leadership.</p>
       <div class="actions">
-        <a class="btn" href="#book">Book a free conversation</a>
-        <a class="btn alt" href="https://theownershipreset.com/">For leaders: Leading from Full</a>
+        <a class="btn" href="#book">Book a free coaching conversation</a>
+        <a class="btn alt" href="https://theownershipreset.com/">Join my leadership programme</a>
       </div>
     </div>
   </div>
@@ -154,7 +157,7 @@ section{padding:72px 0}
     <div>
       <p class="eyebrow">Hi, I'm Eji</p>
       <p class="lead">For twenty years I led teams and organisations in tech. Then life asked me to learn a different kind of leadership: the kind that starts inside.</p>
-      <p>Losing my husband Fredrik, and raising our two children on my own while I kept leading, taught me the difference between carrying everything and leading from full. Today I bring both worlds together: two decades of practical leadership, and the inner work that makes change last.</p>
+      <p>Navigating deep grief after losing my husband Fredrik, while raising our two young children and still leading, took me on a journey of profound transformation. It taught me the difference between carrying everything and leading from full. Today I bring both worlds together: two decades of practical leadership, and the inner work that makes change last.</p>
       <ul class="facts"><li>20+ years in leadership</li><li>15+ teams built, well-being first</li><li>Wayfinder-trained life coach</li><li>Online · English or Swedish</li></ul>
     </div>
   </div>
@@ -193,7 +196,7 @@ section{padding:72px 0}
         <p class="kind">1:1 · Online</p>
         <h3>Life &amp; leadership coaching</h3>
         <p>You bring your situation: a decision, a crossroads, or a way of leading and living that no longer fits. I listen and ask, and together we find your next step.</p>
-        <a class="btn" href="#book">Book a free conversation</a>
+        <a class="btn" href="#book">Book a free coaching conversation</a>
       </div>
       <div class="way lead">
         <p class="kind">For tech and product leaders</p>
@@ -224,7 +227,7 @@ section{padding:72px 0}
   <div class="wrap">
     <span>© 2026 Eji Eze Stenlund · Transformational Life Coach &amp; Leadership Mentor</span>
     <a href="https://theownershipreset.com/">For leaders</a>
-    <a href="#book">Book a free conversation</a>
+    <a href="#book">Book a free coaching conversation</a>
   </div>
 </footer>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
