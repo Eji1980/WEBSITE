@@ -12,7 +12,7 @@ the pages will be reworked once the premium offer is finished).
 - `worker.js` does the routing: www addresses redirect to the address without www; other pages on
   ejiezestenlund.com redirect to theownershipreset.com; theownershipreset.com/home redirects to ejiezestenlund.com.
 - `public/index.html` is the earlier main page ("The Ownership Reset Method"). It is no longer shown; kept for reference.
-- Photos: `eji-hero-sunrise.jpg` (homepage hero), `eji-hero-bg.jpg` (leaders hero), `eji-about.jpg` (portraits),
+- Photos: `eji-hero-bg.jpg` (stage photo: homepage and leaders hero), `eji-hero-sunrise.jpg` (not in use), `eji-about.jpg` (portraits),
   `eji-hero-portrait.jpg` (social media preview).
 
 ## Still to add
