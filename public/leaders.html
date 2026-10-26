@@ -375,6 +375,28 @@ section{padding-block:80px}
 .hero .kicker{display:none}
 .mech{font-size:.92rem}
 }
+/* Laptops: keep the credentials strip on the first screen too */
+@media (min-width:861px) and (max-height:1000px){
+.hero-in{padding-top:96px!important;padding-bottom:28px!important}
+.hero h1{font-size:clamp(2.6rem,4.8vw,4.2rem)}
+.hero .kicker{margin-bottom:.9rem}
+.mech{padding-bottom:.9rem}
+.hero .sub{margin-bottom:0}
+.hero .actions{margin-top:1.2rem}
+.hero .micro{margin-top:.6rem}
+.creds ul{padding-top:16px;padding-bottom:16px}
+}
+@media (min-width:861px) and (max-height:840px){
+.nav .wrap{padding-block:16px}
+.hero-in{padding-top:80px!important;padding-bottom:20px!important}
+.hero h1{font-size:clamp(2.4rem,4.2vw,3.4rem)}
+.mech{font-size:1.15rem!important}
+.hero .sub{font-size:.98rem;line-height:1.55}
+.hero .actions .btn{min-height:50px}
+.hero .micro{display:none}
+.creds ul{padding-top:12px;padding-bottom:12px}
+.creds b{font-size:1.4rem}
+}
 </style>
 </head>
 <body>
