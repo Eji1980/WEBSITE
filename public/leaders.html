@@ -148,6 +148,38 @@ section{padding:72px 0}
 .calendly-inline-widget{height:1000px}
 }
 @media (max-width:480px){.wrap{padding:0 18px}a.btn,button.btn{min-height:50px;font-size:.95rem}.interest-form{grid-template-columns:1fr}}
+
+/* Preview additions, in the page's own style */
+.pains{list-style:none;padding:0;margin:0 auto 2.4rem;max-width:36rem;text-align:left}
+.pains li{padding:14px 0 14px 26px;border-bottom:1px solid var(--line);position:relative}
+.pains li:first-child{border-top:1px solid var(--line)}
+.pains li::before{content:"";position:absolute;left:4px;top:1.5em;width:10px;height:2px;background:var(--warm)}
+.notgen .wrap{max-width:52rem}
+.notgen h2,.notgen .lead{text-align:center}
+.notgen .lead{color:var(--muted);max-width:38em;margin:0 auto 32px}
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.compare>div{padding:28px 30px;min-width:0}
+.compare>div+div{background:var(--deep);color:#fff}
+.compare h3{font-size:1.15rem;margin-bottom:.8rem}
+.compare>div:first-child h3,.compare>div:first-child li{color:var(--muted)}
+.compare>div+div h3{color:var(--peach)}
+.compare ul{margin:0;padding-left:1.1rem}.compare li{margin-bottom:.5rem}
+.about .facts{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.about .facts li{font-size:.82rem;font-weight:500;padding:6px 14px;border-radius:999px;background:var(--blush);color:var(--deep)}
+.about p+p{margin-top:1em}
+.about .pullq{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--clay);margin:0 0 1rem}
+.band{background:linear-gradient(135deg,var(--deep),var(--accent));color:#fff;text-align:center;padding:88px 0}
+.band blockquote{margin:0 auto;max-width:20em;font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.3}
+.band cite{display:block;margin-top:1rem;font-family:"Allura",cursive;font-style:normal;font-size:2rem;color:var(--peach)}
+.ladder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 56px}
+.rung{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;border-top:4px solid var(--accent);min-width:0}
+.rung:nth-child(2){border-top-color:var(--clay)}.rung:nth-child(3){border-top-color:var(--deep)}
+.rung .step{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm)}
+.rung h3{font-size:1.25rem;color:var(--deep);margin:.5rem 0 .4rem}
+.rung p{color:var(--muted);font-size:.94rem}
+.rung .price{margin-top:auto;font-weight:600;color:var(--deep);padding-top:12px;border-top:1px solid var(--line);margin-bottom:0}
+.ladder-head{text-align:center;max-width:34rem;margin:0 auto 32px}.ladder-head p{color:var(--muted)}
+@media (max-width:860px){.compare,.ladder{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -158,8 +190,8 @@ section{padding:72px 0}
   <div class="hero-copy">
     <div>
       <p class="eyebrow">For tech and product leaders who've delegated, and still carry it all</p>
-      <h1>The real change happens beneath the surface.</h1>
-      <p class="mech"><b>The Ownership Reset:</b> inner work and team ownership, together.</p>
+      <h1>The Ownership Reset</h1>
+      <p class="mech">The five-step, inside-out method that gets your team to own its goals, problems and decisions, <b>so you can lead from full.</b></p>
       <p class="sub">Your structure is in place. What still pulls you back in isn't. That's where we work, so your team owns its goals, problems and decisions, and you lead from full.</p>
       <div class="actions">
         <a class="btn" href="#interest">Masterclass: Register interest</a>
@@ -169,8 +201,33 @@ section{padding:72px 0}
   </div>
 </section>
 
+<section class="method">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">How it works</p><h2>Five steps, from the inside out</h2></div>
+      <p><strong>Frameworks change the structure. The Ownership Reset also changes what pulls you and your leaders back in when the pressure is on.</strong> In your real work, not on top of it.</p>
+    </div>
+    <ol class="steps" aria-label="The five ALIGN steps">
+      <li><span class="ltr">A</span><span class="nm">Acknowledge</span><p>See what really circles back to you, and why.</p></li>
+      <li><span class="ltr">L</span><span class="nm">Locate</span><p>Define what ownership should look like, for you and your leaders.</p></li>
+      <li><span class="ltr">I</span><span class="nm">Investigate</span><p>Uncover the beliefs and patterns that pull you back in.</p></li>
+      <li><span class="ltr">G</span><span class="nm">Generate</span><p>Build the tools, agreements and plan to hand over for real.</p></li>
+      <li><span class="ltr">N</span><span class="nm">Normalize</span><p>Practise in real work until stepping back is the new normal.</p></li>
+    </ol>
+    <p class="small">Format, dates and price will be shared with everyone who registers interest.</p>
+  </div>
+</section>
+
 <section class="know">
   <div class="wrap">
+    <p class="eyebrow">Sound familiar?</p>
+    <h2>You can run a reorg across five teams. But no one taught you how to stop carrying it.</h2>
+    <ul class="pains">
+      <li>It's 11 pm and you're still checking Slack, because it's faster than explaining.</li>
+      <li>You're the escalation point for every team, even the ones with great leads.</li>
+      <li>The reorg was meant to free you up. Somehow it landed on your desk.</li>
+      <li>Your calendar is full of other people's problems, and your own work happens at night.</li>
+    </ul>
     <p class="eyebrow">You already know what you want</p>
     <h2>A team that runs itself, and a leader with room to lead.</h2>
     <ul class="wants">
@@ -202,20 +259,15 @@ section{padding:72px 0}
   </div>
 </section>
 
-<section class="method">
+<section class="notgen">
   <div class="wrap">
-    <div class="head">
-      <div><p class="eyebrow">How it works</p><h2>Five steps, from the inside out</h2></div>
-      <p><strong>Frameworks change the structure. The Ownership Reset also changes what pulls you and your leaders back in when the pressure is on.</strong> In your real work, not on top of it.</p>
+    <p class="eyebrow" style="text-align:center">Why this is different</p>
+    <h2>Not generic leadership training</h2>
+    <p class="lead">Built for heads of engineering and product who already know the theory, and want it to hold on a hard Tuesday.</p>
+    <div class="compare">
+      <div><h3>Most leadership training</h3><ul><li>Adds another framework</li><li>Stays in the training room</li><li>Changes the structure only</li><li>Fades when pressure rises</li></ul></div>
+      <div><h3>The Ownership Reset</h3><ul><li>Starts with what pulls you back in</li><li>Works in your real week, with your real team</li><li>Changes you and your leaders, together</li><li>Practised until it holds under pressure</li></ul></div>
     </div>
-    <ol class="steps" aria-label="The five ALIGN steps">
-      <li><span class="ltr">A</span><span class="nm">Acknowledge</span><p>See what really circles back to you, and why.</p></li>
-      <li><span class="ltr">L</span><span class="nm">Locate</span><p>Define what ownership should look like, for you and your leaders.</p></li>
-      <li><span class="ltr">I</span><span class="nm">Investigate</span><p>Uncover the beliefs and patterns that pull you back in.</p></li>
-      <li><span class="ltr">G</span><span class="nm">Generate</span><p>Build the tools, agreements and plan to hand over for real.</p></li>
-      <li><span class="ltr">N</span><span class="nm">Normalize</span><p>Practise in real work until stepping back is the new normal.</p></li>
-    </ol>
-    <p class="small">Format, dates and price will be shared with everyone who registers interest.</p>
   </div>
 </section>
 
@@ -237,13 +289,28 @@ section{padding:72px 0}
     <div>
       <p class="eyebrow">Your guide</p>
       <h2>Hi, I'm Eji.</h2>
-      <p>For more than twenty years I led teams and organisations in Stockholm's tech and banking world: about fifteen teams built or turned around, always well-being first, and most recently a five-team digital organisation at a bank. I know the pull to step back in from the inside. <a href="https://ejiezestenlund.com/">More about me</a></p>
+      <p class="pullq">I built what I needed as a leader, and couldn't find.</p>
+      <p>I started as a programmer and became a leader. For more than twenty years I led teams and organisations in Stockholm's tech and banking world: about fifteen teams built or turned around, always well-being first, and most recently a five-team digital organisation at a bank. I know the pull to step back in from the inside.</p>
+      <p>From the outside I was a high performer. Inside, I was running on empty. Losing my husband, and raising our two children on my own while I kept leading, taught me what no leadership course had: the change has to start inside. That inner work changed how I lead, and it's what I teach. <a href="https://ejiezestenlund.com/">More about me</a></p>
+      <ul class="facts"><li>20+ years leading in tech</li><li>15–20 teams built</li><li>Wayfinder Life Coach Training</li><li>SAFe certified</li><li>From programmer to leader</li></ul>
     </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Movement">
+  <div class="wrap">
+    <blockquote>“Leaders who run on full change their teams. And it starts with you.”<cite>Eji</cite></blockquote>
   </div>
 </section>
 
 <section class="next">
   <div class="wrap">
+    <div class="ladder-head"><p class="eyebrow">Ways to work with me</p><h2>Start where you are</h2><p>Each step stands on its own.</p></div>
+    <div class="ladder">
+      <div class="rung"><span class="step">Start here</span><h3>Free Discovery Conversation</h3><p>30 minutes to see where you are and whether this fits you and your team.</p><p class="price">Free</p></div>
+      <div class="rung"><span class="step">Learn the method</span><h3>Masterclass: Leading Without Running on Empty</h3><p>A live introduction to The Ownership Reset and ALIGN.</p><p class="price">Price and dates coming soon</p></div>
+      <div class="rung"><span class="step">Go deeper</span><h3>The Ownership Reset programme</h3><p>Inner work and team ownership, together, for you and your leaders.</p><p class="price">Price coming soon</p></div>
+    </div>
     <div class="interest" id="interest">
       <div class="interest-intro">
         <h3>Register your interest</h3>
