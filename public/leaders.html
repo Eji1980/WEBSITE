@@ -9,530 +9,241 @@
 <meta property="og:title" content="The Ownership Reset for tech and product leaders | Eji Ezestenlund">
 <meta property="og:description" content="For tech and product leaders who've delegated and still carry it all. Inner work and team ownership, together, so you can lead what only you can lead.">
 <meta property="og:image" content="https://theownershipreset.com/eji-hero-portrait.jpg">
-<link rel="preload" as="image" href="/eji-hero-bg.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Inter:ital,wght@0,400;0,500;0,600;1,600&amp;family=Allura&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Inter:wght@400;500;600&amp;family=Allura&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f4f0;--surface:#fffefc;--ink:#18213b;--muted:#5a6178;--line:#e2e1e8;--accent:#2b44a0;--accent-ink:#ffffff;--warm:#a9532f;--clay:#9c4a2a;--soft:#e8edf9;--deep:#16245a;--blush:#f9efe8;--navy:#0f1b45;--radius:14px;--max:1080px;}
-*{box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Inter",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em;text-wrap:balance;}
-h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-0.01em;}h3{font-size:1.25rem;}
-p{margin:0 0 1em;text-wrap:pretty;}a{color:var(--accent);}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}section{padding:88px 0;}
-.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:1rem;}
-.lead{font-size:1.2rem;color:var(--muted);max-width:min(36em,65ch);}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .15s ease,background .15s ease;}
-.btn:hover{background:#22388a;transform:translateY(-1px);}
-.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);}.btn.ghost:hover{background:var(--soft);}
-.link{font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;}
-.actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:2rem;}
-.hero{padding:0 0 72px;}
-.hero-band{background:var(--accent);color:#fff;text-align:center;padding:30px 20px 128px;}
-.band-name{margin:0 0 6px;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:500;letter-spacing:.04em;color:#fff;line-height:1.2;}
-.band-label{margin:0;text-wrap:balance;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#f3c9a8;}
-.hero-panel{position:relative;width:calc(100% - 48px);max-width:1260px;margin:-96px auto 0;background:var(--blush);display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;box-shadow:0 30px 60px -40px rgba(15,27,69,.45);}
-.hero-panel::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--accent);}
-.hero-copy{position:relative;z-index:1;padding:72px 48px 116px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;}
-.lockup{margin:0 0 2.4rem;color:var(--deep);font-weight:400;line-height:1;}
-.lockup .box{position:relative;display:inline-block;border:2px solid var(--deep);padding:22px 30px 30px;font-size:clamp(2rem,4.4vw,3.7rem);text-transform:uppercase;letter-spacing:.05em;}
-.lockup .script{position:absolute;right:-14px;bottom:-.62em;background:var(--blush);padding:0 8px;font-family:"Allura",cursive;text-transform:none;letter-spacing:0;font-size:1.05em;line-height:1;}
-.hero-sub{text-wrap:balance;font-style:italic;font-weight:600;letter-spacing:.02em;color:var(--deep);font-size:1.1rem;line-height:1.45;max-width:24em;margin:.4rem 0 0;padding-bottom:14px;border-bottom:1.5px solid var(--deep);}
-.hero-body{color:var(--ink);font-size:1.05rem;line-height:1.6;max-width:30em;margin:1.1rem 0 0;}
-.hero-copy .actions{justify-content:center;margin-top:1.8rem;}
-.hero-photo{position:relative;z-index:1;padding:56px 56px 0 0;display:flex;min-width:0;min-height:596px;}
-.hero-photo::before{content:"";position:absolute;top:0;right:0;bottom:0;width:72%;background:#9db5a4;}
-.hero-photo img{position:absolute;top:56px;left:0;width:calc(100% - 56px);height:calc(100% - 56px);object-fit:cover;object-position:50% 26%;display:block;}
-.familiar{background:var(--surface);border-block:1px solid var(--line);}
-.familiar-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px 80px;align-items:start;}
-.familiar-grid>div:first-child{position:sticky;top:40px;}
-.quote{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.25;font-style:italic;margin:0;padding-left:24px;border-left:3px solid var(--warm);color:var(--deep);}
-.hook{color:var(--muted);font-size:1.05rem;max-width:34em;margin-top:1.2rem;}
-.checks{list-style:none;padding:0;margin:0 0 2rem;display:grid;}
-.checks li{padding:16px 0 16px 34px;position:relative;font-size:1.1rem;border-bottom:1px solid var(--line);}
-.checks li:first-child{padding-top:0;}
-.checks li::before{content:"";position:absolute;left:0;top:calc(16px + .5em);width:14px;height:14px;border-radius:50%;border:2px solid var(--warm);}
-.checks li:first-child::before{top:.5em;}
-.reassure{font-size:1.15rem;margin:0;padding:24px 28px;background:var(--blush);border-left:4px solid var(--deep);border-radius:0 var(--radius) var(--radius) 0;max-width:65ch;}
-.shift-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:40px;}
-.shift-intro h2,.shift-intro .lead{margin:0;}
-.shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);}
-.shift-grid>div{padding:20px 28px;border-top:1px solid var(--line);min-width:0;}
-.shift-grid>.head{border-top:0;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding-block:16px;}
-.shift-grid>.less{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(184,101,63,.45);text-decoration-thickness:1.5px;}
-.shift-grid>.head.less{text-decoration:none;background:var(--bg);}
-.shift-grid>.more{position:relative;background:var(--blush);color:var(--deep);font-weight:600;font-size:1.05rem;padding-left:52px;}
-.shift-grid>.more::before{content:"→";position:absolute;left:24px;color:var(--warm);font-weight:400;}
-.shift-grid>.head.more{background:var(--deep);color:#fff;font-size:.8rem;padding-left:28px;border-top-color:var(--deep);}
-.shift-grid>.head.more::before{content:none;}
-.coaching{background:var(--surface);border-block:1px solid var(--line);}
-.coach-intro{display:grid;grid-template-columns:1fr 1fr;gap:24px 72px;align-items:end;margin-bottom:64px;}
-.coach-intro h2{margin-bottom:.3em;}.coach-intro .lead{margin:0;}
-.coach-how{margin:0;padding:4px 0 4px 26px;border-left:2px solid var(--warm);max-width:65ch;}
-.coach-how strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.25rem;font-weight:600;margin-bottom:.35rem;}
-.topics-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;}
-.topics-head h3{margin:0;white-space:nowrap;}
-.topics-head::after{content:"";flex:1;border-top:1px solid var(--line);}
-.topics{list-style:none;padding:0;margin:0 0 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:40px;counter-reset:topic;}
-.topics li{counter-increment:topic;display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:1.05rem;min-width:0;}
-.topics li::before{content:counter(topic,decimal-leading-zero);font-family:"Fraunces",Georgia,serif;font-size:1rem;color:var(--warm);flex:none;}
-.step-label{display:flex;align-items:center;gap:12px;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin:0 0 14px;}
-.step-label span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--deep);font-family:"Fraunces",Georgia,serif;font-size:.95rem;letter-spacing:0;}
-.start{display:grid;grid-template-columns:1fr auto;gap:24px 48px;align-items:center;background:var(--deep);color:#fff;border-radius:var(--radius);padding:40px 44px;margin-bottom:48px;}
-.start .format{color:#f3c9a8;}.start h3{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.3em;}
-.start p{margin:0;max-width:46ch;opacity:.92;}
-.start .btn{background:var(--surface);color:var(--deep);white-space:nowrap;}.start .btn:hover{background:#fff;}
-.format{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:.6rem;}
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;}
-.path{position:relative;background:var(--blush);border-radius:0 0 var(--radius) var(--radius);padding:36px 36px 32px;border-top:4px solid var(--accent);min-width:0;}
-.path:nth-child(2){border-top-color:var(--warm);}
-.path h3{font-size:1.6rem;color:var(--deep);margin-bottom:.35em;}.path p{margin:0;font-size:1.1rem;}
-.note{font-size:.95rem;color:var(--muted);margin:20px 0 0;max-width:65ch;}
-.trust{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:8px;max-width:65ch;}
-.about .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:56px;align-items:center;}
-.about img{width:100%;height:auto;aspect-ratio:1 / 1;object-fit:cover;object-position:50% 30%;border-radius:50%;display:block;box-shadow:0 0 0 10px var(--surface),0 24px 50px -24px rgba(15,27,69,.45);}
-.about-quote{font-family:"Fraunces",Georgia,serif;font-size:1.3rem;color:var(--deep);border-left:3px solid var(--warm);padding-left:16px;margin:1.4rem 0;}
-.roles{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:1.5rem 0;}
-.roles li{font-size:.85rem;padding:5px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--deep);font-weight:500;}
-.stat{display:flex;gap:18px;align-items:baseline;margin-bottom:1.5rem;}
-.stat strong{font-family:"Fraunces",Georgia,serif;font-size:3.2rem;line-height:1;color:var(--warm);}
-.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;}.card p{margin:0;}
-.about{background:var(--blush);border-block:1px solid var(--line);}
-.mc{background:var(--surface);border-block:1px solid var(--line);}
-.mc-intro{display:grid;grid-template-columns:1fr 1fr;gap:28px 80px;align-items:start;margin-bottom:40px;}
-.mc-intro h2{margin:0;}.mc-intro .lead{margin:0 0 .9rem;}
-.mc-note{font-size:.95rem;color:var(--muted);margin:0 0 1.5rem;padding-left:14px;border-left:2px solid var(--warm);max-width:40ch;}
-.mc-sub{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.35;color:var(--deep);margin:.6rem 0 0;max-width:22em;}
-.badge{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--warm);color:#fff;padding:4px 10px;border-radius:6px;margin-bottom:1rem;}
-.align-list{list-style:none;padding:0;margin:8px 0 48px;display:grid;}
-.align-list li{display:grid;grid-template-columns:56px 1fr;gap:4px 20px;padding:18px 0;border-bottom:1px solid var(--line);min-width:0;}
-.align-list .ltr{grid-row:span 2;font-family:"Fraunces",Georgia,serif;font-size:2.2rem;line-height:1;color:var(--deep);}
-.align-list .q{font-weight:600;min-width:0;}
-.align-list .q em{font-style:normal;color:var(--warm);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin-right:10px;}
-.align-list .d{color:var(--muted);margin:0;min-width:0;}
-.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;}
-.mc-grid .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;}
-.mc-grid .card .len{order:-1;background:var(--clay);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 28px;margin:0;}
-.mc-label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);padding:22px 28px 0;}
-.mc-grid .card h3{font-size:1.45rem;color:var(--deep);padding:6px 28px 0;margin:0;}
-.mc-grid .card .leave{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin:1.1rem 28px .35rem;}
-.mc-grid .card p{padding:0 28px 28px;}
-.mc-grid .card .mc-tag{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.05rem;line-height:1.4;color:var(--warm);padding:8px 28px 0;margin:0;}
-.mc-grid .card .mc-desc{font-size:.95rem;color:var(--muted);padding:14px 28px 0;margin:0;}
-.mc-grid .card.flagship{border:2px solid var(--clay);}
-.mc-care{font-size:.9rem;color:var(--muted);max-width:65ch;margin:20px 0 0;padding-left:14px;border-left:2px solid var(--line);}
-.book{background:var(--blush);border-bottom:1px solid var(--line);}
-.book-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px 80px;align-items:end;margin-bottom:36px;}
-.book-intro h2,.book-intro .lead{margin:0;}
-.book-frame{background:#fff;border-radius:var(--radius);border-top:4px solid var(--deep);box-shadow:0 30px 60px -40px rgba(15,27,69,.45);overflow:hidden;}
-.calendly-inline-widget{min-width:280px;height:720px;}
-.book .note{margin-top:16px;}
-.interest{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 64px;margin-top:56px;padding:44px;background:var(--blush);border-radius:var(--radius);scroll-margin-top:24px;}
-.interest-intro h3{font-size:1.6rem;color:var(--deep);}
-.interest-intro p{color:var(--muted);max-width:40ch;}
-.interest-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;min-width:0;}
-.interest-form .full{grid-column:1 / -1;}
-.field{display:flex;flex-direction:column;gap:6px;min-width:0;margin:0;padding:0;border:0;}
-.field label,.field legend{font-weight:600;font-size:.95rem;padding:0;}
-.field label span,.field legend span{font-weight:400;color:var(--muted);}.field legend{margin-bottom:6px;}
-.interest-form input[type=text],.interest-form input[type=email],.interest-form textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;}
-.interest-form textarea{resize:vertical;}
-.interest-form input:focus-visible,.interest-form textarea:focus-visible{outline:2px solid var(--deep);outline-offset:1px;border-color:var(--deep);}
-.choice{display:flex;gap:10px;align-items:flex-start;font-size:1rem;line-height:1.45;margin-top:4px;}
-.choice input{accent-color:var(--deep);width:18px;height:18px;margin:2px 0 0;flex:none;}
-.consent{font-size:.9rem;color:var(--muted);}
-.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;}
-.form-foot .btn{border:0;cursor:pointer;font:inherit;font-weight:600;}
-.form-status{margin:0;font-weight:500;}.form-status.error{color:#a23b1e;}
-.interest-done{grid-column:1 / -1;text-align:center;padding:12px 0;}.interest-done h3{color:var(--deep);font-size:1.6rem;}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
-.faq-section{background:var(--bg);}
-.ways{background:var(--bg);padding:72px 0;}
-.ways-head{text-align:center;margin:0 auto 36px;max-width:34em;}.ways-head h2{margin:0 0 .4rem;}.ways-head p{color:var(--muted);margin:0;}
-.ways-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.way{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;}
-.way-top{background:var(--accent);color:#fff;padding:22px 28px;}.way.mcw .way-top{background:var(--clay);}
-.way-top .opt{display:block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#f3c9a8;margin-bottom:.3rem;}
-.way-top h3{margin:0;font-size:1.55rem;color:#fff;}
-.way ul{list-style:none;margin:0;padding:22px 28px 6px;flex:1;}
-.way li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line);}.way li:last-child{border-bottom:0;}
-.way li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--warm);}
-.way .btn{margin:10px 28px 28px;align-self:flex-start;}.way.mcw .btn{background:var(--clay);}.way.mcw .btn:hover{background:#7f3b21;}
-.mc{background:#ebeef8;}.mc .btn{background:var(--clay);}.mc .btn:hover{background:#7f3b21;}.mc .btn.ghost{background:transparent;color:var(--clay);border-color:var(--clay);}.mc .btn.ghost:hover{background:#f6e7df;}.mc input[type=checkbox]{accent-color:var(--clay);}
-@media (max-width:860px){.ways-grid{grid-template-columns:1fr;}.ways{padding:56px 0;}}
+:root{--bg:#f6f4f0;--surface:#fffefc;--ink:#18213b;--muted:#474d63;--line:#e2e1e8;--accent:#2b44a0;--warm:#a9532f;--clay:#9c4a2a;--deep:#16245a;--blush:#f9efe8;--navy:#0f1b45;--peach:#f3c9a8;--radius:14px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Inter",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.12;margin:0 0 .5em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.01em;color:var(--deep)}
+p{margin:0 0 1em;text-wrap:pretty}a{color:var(--accent)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:104px 0}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--warm);margin:0 0 1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:0 28px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:1.5px solid transparent;transition:transform .15s ease,background .15s ease;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{transform:translateY(-1px);background:#22388a}
 
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 80px;align-items:start;}
-.faq-grid h2{position:sticky;top:32px;}
-.faq-grid h2 em{display:block;font-family:"Allura",cursive;font-style:normal;font-weight:400;font-size:1.15em;color:var(--warm);margin-top:.15em;}
-details{border-bottom:1px solid var(--line);padding:22px 0;}details:first-of-type{border-top:1px solid var(--line);}
-summary{cursor:pointer;font-weight:600;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-summary::-webkit-details-marker{display:none;}
-summary::after{content:"+";flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--deep);color:var(--deep);font-size:1.1rem;line-height:1;font-weight:400;}
-details[open] summary::after{content:"–";background:var(--deep);color:#fff;}
-details p{margin:12px 0 0;color:var(--muted);max-width:60ch;}
-.final{position:relative;background:linear-gradient(135deg,var(--deep),var(--accent));color:var(--accent-ink);text-align:center;overflow:hidden;}
-.final::before{content:"";position:absolute;inset:28px;border:1px solid rgba(255,255,255,.22);pointer-events:none;}
-.final .script-line{font-family:"Allura",cursive;font-size:clamp(2rem,4vw,2.6rem);color:#f3c9a8;line-height:1;margin:0 0 .4rem;}
-.final h2{max-width:18em;margin:0 auto 1.25rem;}
-.final .btn{background:var(--surface);color:var(--accent);}.final .btn:hover{background:#fff;}
-.final .sub{text-wrap:balance;opacity:.9;font-size:1.15rem;}.final .actions{justify-content:center;}.final .link{color:#fff;}
-footer{padding:32px 0;font-size:.9rem;color:var(--muted);}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-@media (max-width:860px){section{padding:64px 0;}.hero{padding:0 0 56px;}.hero-band{padding:22px 16px 80px;}.hero-panel{grid-template-columns:1fr;width:auto;margin:-56px 16px 0;}.hero-photo{order:-1;padding:28px 28px 0 0;min-height:0;}.hero-photo img{position:relative;top:0;width:100%;aspect-ratio:1 / 1;height:auto;object-position:50% 22%;}.hero-copy{padding:48px 20px 92px;}.lockup .box{padding:18px 18px 26px;}.about .wrap{grid-template-columns:1fr;gap:40px;}.about .wrap>div:first-child{width:180px;margin:10px 0 0 10px;}.familiar-grid,.shift-intro,.mc-intro,.faq-grid,.book-intro,.interest{grid-template-columns:1fr;}.familiar-grid>div:first-child{position:static;}.interest{padding:28px 20px;}.calendly-inline-widget{height:1000px;}.faq-grid h2{position:static;}.final::before{inset:14px;}.coach-intro{grid-template-columns:1fr;margin-bottom:48px;}.start{grid-template-columns:1fr;padding:32px 24px;}.start .btn{white-space:normal;text-align:center;}.path{padding:28px 24px;}.shift-grid{grid-template-columns:1fr;}.shift-grid>.head{display:none;}.shift-grid>.less{padding-bottom:6px;}.shift-grid>.more{border-top:0;background:var(--surface);padding-top:0;padding-bottom:20px;}}
-@media (min-width:561px) and (max-width:860px){.hero-photo img{aspect-ratio:4 / 3;object-position:50% 18%;}}
-@media (max-width:480px){.wrap{padding:0 16px;}.actions .btn{width:100%;text-align:center;}.final .wrap{padding:0 32px;}.interest-form{grid-template-columns:1fr;}.align-list li{grid-template-columns:40px 1fr;gap:4px 14px;}.align-list .ltr{font-size:1.8rem;}}
+/* Hero */
+.hero{padding:0;position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;color:#fff;overflow:hidden;background:var(--navy)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 28%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(270deg,rgba(15,27,69,.94) 0%,rgba(15,27,69,.82) 38%,rgba(22,38,92,.35) 62%,rgba(22,38,92,0) 82%),linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 18%)}
+.hero>*:not(img){position:relative;z-index:2}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:26px clamp(18px,3vw,44px) 0}
+.top a.name{font-family:"Fraunces",Georgia,serif;font-size:1.35rem;letter-spacing:.03em;color:#fff;text-decoration:none}
+.top .label{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--peach)}
+.hero-copy{flex:1;display:flex;justify-content:flex-end;align-items:center;max-width:1260px;width:100%;margin:0 auto;padding:48px clamp(18px,5vw,72px) 88px}
+.hero-copy>div{width:36rem;max-width:100%}
+.hero .eyebrow{color:var(--peach)}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.02em;margin-bottom:1.3rem}
+.mech{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.35;margin:0 0 1.2rem;padding-bottom:1rem;border-bottom:1.5px solid rgba(243,201,168,.8)}
+.mech b{font-style:normal;font-weight:600}
+.hero .sub{font-size:1.08rem;line-height:1.6;color:rgba(255,255,255,.88);max-width:30em;margin:0 0 2rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn{background:#fff;color:var(--deep)}.hero .btn:hover{background:var(--peach)}
+.hero .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}.hero .btn.alt:hover{background:#fff;color:var(--deep)}
 
-/* PREVIEW: full-bleed photo hero, text on the right */
-.hero.full{position:relative;padding:0;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;color:#fff;overflow:hidden;background:var(--navy);}
-.hero.full .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 28%;display:block;}
-.hero.full::before{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(15,27,69,.94) 0%,rgba(18,32,80,.84) 32%,rgba(22,38,92,.4) 58%,rgba(22,38,92,0) 80%),linear-gradient(0deg,rgba(15,27,69,.6) 0%,rgba(15,27,69,0) 26%),linear-gradient(180deg,rgba(15,27,69,.5) 0%,rgba(15,27,69,0) 18%);}
-.hero.full>*{position:relative;z-index:1;}
-.hero.full .hero-band{background:transparent;padding:26px 32px 0;text-align:left;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;max-width:1260px;width:100%;margin:0 auto;}
-.hero.full .band-name{margin:0;}
-.hero.full .hero-copy{flex:1;max-width:1260px;width:100%;margin:0 auto;padding:64px 32px 96px;align-items:flex-end;justify-content:center;}
-.hero.full .hero-copy>*{width:34rem;max-width:100%;}
-.hero.full .hero-copy{text-align:left;}
-.hero.full .hero-copy>.lockup{width:auto;align-self:auto;margin-right:calc(34rem - min(34rem,100%));}
-.hero.full .hero-inner{width:34rem;max-width:100%;}
-.hero.full .lockup{color:#fff;}
-.hero.full .lockup .box{border-color:rgba(255,255,255,.9);border-bottom-color:transparent;}
-.hero.full .lockup .box::after{content:"";position:absolute;left:-2px;bottom:-2px;width:calc(100% - 2.6em);border-bottom:2px solid rgba(255,255,255,.9);}
-.hero.full .lockup .script{background:none;color:#f3c9a8;}
-.hero.full .hero-sub{color:#fff;border-bottom-color:rgba(243,201,168,.8);}
-.hero.full .hero-body{color:rgba(255,255,255,.88);}
-.hero.full .hero-copy .actions{justify-content:flex-start;}
-.hero.full .btn{background:#fff;color:var(--deep);}.hero.full .btn:hover{background:#f3c9a8;}
-.hero.full .link{color:#fff;}
-@media (max-width:860px){.hero.full{min-height:100vh;min-height:100svh;}.hero.full .hero-bg{height:100%;object-position:37% 16%;}.hero.full::before{background:linear-gradient(270deg,rgba(15,27,69,.95) 0%,rgba(15,27,69,.88) 46%,rgba(18,32,80,.45) 72%,rgba(22,38,92,.05) 100%),linear-gradient(180deg,rgba(15,27,69,.55) 0%,rgba(15,27,69,0) 22%,rgba(15,27,69,0) 70%,rgba(15,27,69,.5) 100%);}.hero.full .hero-band{flex-direction:column;align-items:flex-end;text-align:right;padding:20px 18px 0;gap:4px;}.hero.full .band-label{font-size:.72rem;letter-spacing:.12em;}.hero.full .hero-copy{padding:40px 18px 48px;align-items:flex-end;justify-content:flex-end;}.hero.full .hero-inner{width:min(62%,22rem);}.hero.full .hero-copy>.lockup{margin-right:0;}.hero.full .lockup{margin-bottom:1.8rem;}.hero.full .lockup .box{font-size:clamp(1.45rem,7vw,2.6rem);padding:14px 14px 20px;}.hero.full .hero-sub{font-size:1rem;}.hero.full .hero-body{font-size:.92rem;line-height:1.55;}.hero.full .actions{gap:14px;margin-top:1.4rem;}.hero.full .actions .btn{width:100%;text-align:center;padding:13px 16px;white-space:normal;}}
-/* Hero: centred text block, name left / tagline right */
-.hero.full::before{background:radial-gradient(ellipse 50% 75% at 58% 55%,rgba(15,27,69,.62) 0%,rgba(15,27,69,0) 100%),linear-gradient(rgba(15,27,69,.42),rgba(15,27,69,.42)),linear-gradient(180deg,rgba(15,27,69,.55) 0%,rgba(15,27,69,0) 20%,rgba(15,27,69,0) 75%,rgba(15,27,69,.6) 100%);}
-.hero.full .hero-copy{align-items:center;justify-content:center;padding-left:max(32px,16vw);}
-.hero.full .hero-inner{width:42rem;max-width:100%;}
-.hero.full .lockup .box{font-size:clamp(2.4rem,5vw,4.4rem);}
-.hero.full .hero-band{flex-wrap:nowrap;align-items:baseline;}
-.hero.full .band-label{text-align:right;}
+/* Already know */
+.know{background:var(--surface);text-align:center}
+.know .wrap{max-width:46rem}
+.know h2{margin-bottom:1.6rem}
+.wants{list-style:none;padding:0;margin:0 auto 2.6rem;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.wants li{padding:8px 18px;border-radius:999px;background:var(--blush);color:var(--deep);font-weight:500;font-size:.98rem}
+.know p{color:var(--muted);font-size:1.1rem;max-width:36em;margin-left:auto;margin-right:auto}
+.pull{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.3;color:var(--deep);margin:2.4rem auto 0;padding-top:2.2rem;border-top:1px solid var(--line);max-width:24em}
+.pull span{display:block;color:var(--clay);font-style:italic}
+
+/* What can change */
+.change .head{max-width:36rem;margin-bottom:48px}
+.change .head p{color:var(--muted)}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.grid6 div{background:var(--surface);padding:30px 28px}
+.grid6 h3{font-size:1.2rem;color:var(--deep);margin-bottom:.35rem}
+.grid6 p{margin:0;color:var(--muted);font-size:.98rem}
+
+/* Method */
+.method{background:var(--deep);color:#fff}
+.method .head{display:grid;grid-template-columns:1fr 1fr;gap:24px 72px;align-items:end;margin-bottom:56px}
+.method h2{color:#fff;margin:0}
+.method .eyebrow{color:var(--peach)}
+.method .head p{margin:0;color:rgba(255,255,255,.85);font-size:1.08rem}
+.method .head p strong{color:#fff;font-weight:600}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.2)}
+.steps li{padding:28px 20px 8px 0}
+.steps li+li{padding-left:20px;border-left:1px solid rgba(255,255,255,.2)}
+.steps .ltr{display:block;font-family:"Fraunces",Georgia,serif;font-size:2.6rem;line-height:1;color:var(--peach)}
+.steps .nm{display:block;font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin:.7rem 0 .4rem}
+.steps p{margin:0;font-size:.95rem;color:rgba(255,255,255,.8)}
+.method .small{margin:40px 0 0;font-size:.9rem;color:rgba(255,255,255,.7)}
+
+/* Moment */
+.moment{background:var(--blush);text-align:center}
+.moment .wrap{max-width:44rem}
+.moment p{color:var(--muted);font-size:1.12rem}
+.moment .actions{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:2rem}
+.moment .btn{min-width:min(22rem,100%)}
+.moment .btn.clay{background:var(--clay)}.moment .btn.clay:hover{background:#7f3b21}
+.moment .btn.ghost{background:transparent;color:var(--deep);border-color:var(--deep)}.moment .btn.ghost:hover{background:#fff}
+
+/* About */
+.about .wrap{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;max-width:56rem}
+.about img{width:200px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:50%;box-shadow:0 0 0 8px var(--blush)}
+.about h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.about p{color:var(--muted);margin:0}
+
+/* Interest + book */
+.next{background:var(--surface);border-top:1px solid var(--line)}
+.interest{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px 64px;padding:44px;background:var(--blush);border-radius:var(--radius);margin-bottom:88px;scroll-margin-top:24px}
+.interest h3{font-size:1.6rem;color:var(--deep)}
+.interest-intro p{color:var(--muted);max-width:40ch}
+.interest-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;min-width:0}
+.interest-form .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;margin:0;padding:0;border:0}
+.field label,.field legend{font-weight:600;font-size:.95rem;padding:0}
+.field label span,.field legend span{font-weight:400;color:var(--muted)}.field legend{margin-bottom:6px}
+.interest-form input[type=text],.interest-form input[type=email],.interest-form textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.choice{display:flex;gap:10px;align-items:flex-start;font-size:1rem;line-height:1.45;margin-top:4px}
+.choice input{accent-color:var(--clay);width:18px;height:18px;margin:2px 0 0;flex:none}
+.consent{font-size:.9rem;color:var(--muted)}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.form-foot .btn{background:var(--clay)}
+.form-status{margin:0;font-weight:500}.form-status.error{color:#a23b1e}
+.interest-done{grid-column:1/-1;text-align:center;padding:12px 0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.book-head{text-align:center;max-width:34rem;margin:0 auto 32px}
+.book-head p{color:var(--muted)}
+.book-frame{background:#fff;border-radius:var(--radius);border-top:4px solid var(--deep);box-shadow:0 30px 60px -40px rgba(15,27,69,.45);overflow:hidden}
+.calendly-inline-widget{min-width:280px;height:720px}
+.note{text-align:center;font-size:.92rem;color:var(--muted);margin-top:16px}
+
+/* FAQ */
+.faq .wrap{max-width:46rem}
+.faq h2{text-align:center;margin-bottom:32px}
+details{border-bottom:1px solid var(--line);padding:20px 0}details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--deep);color:var(--deep);line-height:1}
+details[open] summary::after{content:"–";background:var(--deep);color:#fff}
+details p{margin:12px 0 0;color:var(--muted)}
+footer{padding:32px 0;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:960px){.steps{grid-template-columns:1fr}.steps li,.steps li+li{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.2)}.steps .ltr{grid-row:span 2;font-size:2rem}.steps .nm{margin:0 0 .2rem}}
 @media (max-width:860px){
-.hero.full .hero-bg{object-position:30% 14%;}
-.hero.full::before{background:linear-gradient(180deg,rgba(15,27,69,.6) 0%,rgba(15,27,69,.05) 18%,rgba(15,27,69,.2) 36%,rgba(15,27,69,.86) 54%,rgba(15,27,69,.97) 72%,rgba(15,27,69,.98) 100%);}
-.hero.full .hero-band{flex-direction:row;justify-content:space-between;align-items:flex-start;text-align:left;gap:16px;}
-.hero.full .band-name{font-size:1.15rem;white-space:nowrap;}
-.hero.full .band-label{max-width:13.5em;text-align:right;line-height:1.5;}
-.hero.full .hero-copy{align-items:center;justify-content:flex-end;padding:40px 22px 48px;}
-.hero.full .hero-inner{width:100%;max-width:28rem;}
-.hero.full .lockup .box{font-size:clamp(1.8rem,8.4vw,2.8rem);}
+section{padding:72px 0}
+.top .label{display:none}
+.hero>img{object-position:30% 14%}
+.hero::before{background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.15) 32%,rgba(15,27,69,.8) 50%,rgba(15,27,69,.96) 68%)}
+.hero-copy{align-items:flex-end;padding:40px 20px 44px}
+.hero h1{font-size:clamp(2rem,8.6vw,2.7rem);margin-bottom:1rem}
+.mech{font-size:1.1rem}
+.hero .sub{font-size:.98rem;margin-bottom:1.4rem}
+.hero .actions .btn{flex:1 1 100%}
+.grid6{grid-template-columns:1fr}
+.method .head{grid-template-columns:1fr}
+.about .wrap{grid-template-columns:1fr;gap:28px}
+.about img{width:160px}
+.interest{grid-template-columns:1fr;padding:28px 20px;margin-bottom:64px}
+.calendly-inline-widget{height:1000px}
 }
-.hero.full .hero-copy .actions{flex-wrap:wrap;gap:12px;align-items:stretch;}
-.hero.full .actions .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:14px 22px;border:1.5px solid transparent;white-space:nowrap;}
-.hero.full .btn.hero-alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.9);}
-.hero.full .btn.hero-alt:hover{background:#fff;color:var(--deep);}
-@media (max-width:860px){.hero.full .actions .btn{flex:1 1 100%;}}
-@media (min-width:861px){.hero.full .hero-copy .actions{flex-direction:column;align-items:flex-start;}}
-@media (max-width:480px){.hero.full .actions .btn{font-size:.95rem;padding:14px 10px;}}
-/* Lead from Full rewrite: mechanism-first headlines, offer fork after the hero */
-.h2-benefit{display:block;font-size:.62em;font-weight:400;line-height:1.3;letter-spacing:0;color:var(--clay);margin-top:.45em;}
-.btn-k{display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.72;margin-bottom:3px;}
-.hero.full .lockup{margin-bottom:1.4rem;}
-.hero-claim{display:block;margin-top:2.1rem;padding-bottom:16px;border-bottom:1.5px solid rgba(243,201,168,.8);font-family:"Fraunces",Georgia,serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:400;line-height:1.25;letter-spacing:0;text-transform:none;color:#fff;text-wrap:balance;}
-.hero.full .hero-body strong{color:#fff;font-weight:600;}
-.hero.full .actions .btn.two{flex-direction:column;white-space:normal;line-height:1.3;}
-.hero-note{font-size:.92rem;line-height:1.5;color:rgba(255,255,255,.8);margin:1.1rem 0 0;max-width:30em;}
-@media (min-width:861px){.hero.full .hero-copy .actions{align-items:stretch;max-width:25rem;}.hero.full .actions .btn.two{align-items:flex-start;text-align:left;}}
-@media (max-width:860px){.hero-claim{font-size:1.3rem;margin-top:1.8rem;}.hero-note{font-size:.85rem;}}
-
-.ways{padding:88px 0;}
-.ways-hook{max-width:44rem;margin:0 auto 72px;}
-.ways-hook p{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.55;color:var(--ink);margin:0;}
-.ways-hook p strong{display:block;margin-top:1rem;font-weight:600;color:var(--deep);}
-.ways-head{max-width:36em;}
-.ways-grid{grid-template-rows:auto;row-gap:0;column-gap:24px;}
-.way{display:grid;grid-row:span 7;grid-template-rows:subgrid;gap:0;}
-.way-top{padding:24px 28px 26px;}
-.way-top .mech{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.12rem;line-height:1.35;color:#fff;opacity:.92;margin:.55rem 0 0;}
-.way-benefit{padding:22px 28px 18px;margin:0;font-size:1.08rem;font-weight:500;color:var(--deep);}
-.way-row{padding:14px 28px;border-top:1px solid var(--line);margin:0;min-width:0;}
-.way-row dt{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:3px;}
-.way-row dd{margin:0;}
-.way-row.best{background:var(--blush);}
-.way-row.best dd{font-weight:600;color:var(--deep);}
-.way .btn{margin:20px 28px 28px;align-self:end;justify-self:start;}
-.ways-foot{text-align:center;font-size:.95rem;color:var(--muted);max-width:52ch;margin:28px auto 0;}
-@media (max-width:860px){.ways{padding:64px 0;}.ways-hook{margin-bottom:56px;}.way{margin-bottom:20px;}.way-top,.way-benefit,.way-row{padding-left:22px;padding-right:22px;}.way .btn{margin-left:22px;margin-right:22px;}}
-
-.shift-intro{grid-template-columns:1fr;margin-bottom:36px;}
-.shift-intro .eyebrow{margin-bottom:.6rem;}
-.coach-intro .mc-sub{margin:0 0 1.2rem;}
-.topics{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));}
-.final .actions{gap:14px;}
-.final .btn{display:inline-flex;flex-direction:column;align-items:center;line-height:1.3;border:1.5px solid transparent;}
-.final .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.85);}
-.final .btn.alt:hover{background:#fff;color:var(--deep);}
-.familiar .quote{font-weight:400;}
-.align-strip{list-style:none;padding:0;margin:8px 0 14px;display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid var(--line);}
-.align-strip li{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 16px 20px;min-width:0;}
-.align-strip li+li{border-left:1px solid var(--line);}
-.align-strip .ltr{font-family:"Fraunces",Georgia,serif;font-size:2.2rem;line-height:1;color:var(--deep);}
-.align-strip .nm{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--warm);}
-.align-more{color:var(--muted);font-size:.95rem;margin:0 0 48px;}
-@media (max-width:640px){.align-strip{grid-template-columns:1fr;}.align-strip li{flex-direction:row;align-items:baseline;gap:16px;padding:12px 0;}.align-strip li+li{border-left:0;border-top:1px solid var(--line);}.align-strip .ltr{font-size:1.7rem;width:28px;}}
-.coach-intro{align-items:end;}
-@media (max-width:860px){.hero.full .hero-bg{z-index:0;}.hero.full::before{z-index:1;background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.1) 30%,rgba(15,27,69,.78) 44%,rgba(15,27,69,.95) 58%,rgba(15,27,69,.98) 100%);}}
-.mc-grid{grid-template-columns:repeat(3,1fr);}
-.mc-grid .card{border-top:4px solid var(--clay);border-radius:0 0 var(--radius) var(--radius);}
-.mc-grid .card h3{padding-top:26px;}
-.mc-grid .card p.desc{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.05rem;line-height:1.4;color:var(--deep);padding:8px 28px 0;margin:0;}
-@media (max-width:960px){.mc-grid{grid-template-columns:1fr;}}
-.hero.full .hero-benefit{font-size:1.15rem;font-weight:500;color:#fff;text-wrap:balance;}
-/* Option 1 / Option 2 bands and tints */
-.coaching,.mc{padding-top:0;}
-.coaching{background:#eef1fa;}
-.mc{background:#f8eee8;}
-.about{background:var(--surface);}
-.mc .interest,.mc-grid .card{background:var(--surface);}
-.mc-grid{grid-template-columns:repeat(2,1fr);}
-.opt-band{color:#fff;margin-bottom:72px;}
-.opt-1{background:var(--accent);}.opt-2{background:var(--clay);}
-.opt-band .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px;padding-block:20px;}
-.opt-num{font-family:"Fraunces",Georgia,serif;font-size:2.6rem;line-height:1;}
-.opt-label{font-size:.9rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;}
-.opt-kind{margin-left:auto;font-size:.9rem;color:rgba(255,255,255,.85);}
-.coach-intro .mc-sub{margin:0;}
-@media (max-width:860px){.opt-band{margin-bottom:48px;}.opt-band .wrap{padding-block:16px;}.opt-num{font-size:2rem;}.opt-label{font-size:.78rem;letter-spacing:.1em;}.opt-kind{margin-left:0;flex-basis:100%;padding-left:calc(2rem + 18px);font-size:.82rem;}}
-@media (max-width:960px){.mc-grid{grid-template-columns:1fr;}}
-/* Hero top bar: name and label share one horizontal centre line */
-.hero.full .hero-band{align-items:center;}
-.hero.full .band-name,.hero.full .band-label{margin:0;}
-@media (max-width:860px){.hero.full .hero-band{align-items:center;flex-wrap:nowrap;}.hero.full .band-name{font-size:1.05rem;line-height:1.3;}.hero.full .band-label{max-width:none;white-space:nowrap;font-size:.62rem;letter-spacing:.06em;line-height:1.3;}}
-@media (max-width:420px){.hero.full .band-online{display:none;}}
-@media (max-width:380px){.hero.full .hero-band{gap:10px;padding-left:16px;padding-right:16px;}.hero.full .band-name{font-size:.95rem;}.hero.full .band-label{font-size:.56rem;letter-spacing:.04em;}}
-/* Compact hero on phones */
-@media (max-width:600px){
-.hero.full .hero-copy{padding:32px 20px 40px;}
-.hero.full .lockup{margin-bottom:0;}
-.hero.full .lockup .box{font-size:1.7rem;padding:11px 14px 17px;}
-.hero.full .hero-claim{font-size:1.08rem;line-height:1.35;margin-top:1.4rem;padding-bottom:10px;}
-.hero.full .hero-benefit{font-size:.92rem;line-height:1.5;margin-top:.8rem;}
-.hero.full .hero-copy .actions{margin-top:1.1rem;gap:9px;}
-.hero.full .actions .btn{font-size:.88rem;padding:10px 14px;}
-.hero.full .band-name{font-size:.98rem;}
-.hero.full .band-label{font-size:.62rem;}
-}
-/* Hero: symmetrical, everything centred under Lead from Full */
-.hero.full .hero-inner{text-align:center;margin-left:auto;margin-right:auto;}
-.hero.full .hero-inner .lockup{display:flex;flex-direction:column;align-items:center;}
-.hero.full .hero-claim{text-align:center;margin-top:2.9rem;}
-.hero.full .hero-benefit,.hero.full .hero-note{margin-left:auto;margin-right:auto;}
-.hero.full .hero-copy .actions{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:none;width:100%;margin-left:auto;margin-right:auto;}
-@media (min-width:861px){
-.hero.full .hero-copy{padding:132px 32px 96px;align-items:center;}
-.hero.full .hero-inner{width:38rem;}
-.hero.full .hero-copy .actions .btn{min-width:20rem;}
-.hero.full .hero-claim{margin-top:3.4rem;}
-}
-@media (max-width:860px){
-.hero.full .hero-copy{align-items:center;}
-.hero.full .hero-copy .actions .btn{width:100%;}
-.hero.full .hero-claim{margin-top:2.2rem;}
-}
-/* Top bar: name and tagline sit on one baseline */
-.hero.full .hero-band,.hero.full .hero-band:is(*){align-items:baseline;}
-@media (max-width:860px){.hero.full .hero-band{align-items:baseline;}}
-/* Page Designer pass: symmetry between the opening, the bridge text and the closing */
-.ways-hook{max-width:40rem;text-align:center;}
-.ways-hook p{text-wrap:pretty;}
-.final .actions{flex-direction:column;align-items:center;gap:12px;}
-.final .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-width:20rem;padding:14px 22px;white-space:nowrap;}
-@media (max-width:600px){.final .btn{min-width:0;width:100%;font-size:.88rem;padding:10px 14px;}.final .actions{width:100%;}}
-/* Top bar: name further left, title further right */
-.hero.full .hero-band{max-width:none;padding-left:clamp(14px,2.2vw,40px);padding-right:clamp(14px,2.2vw,40px);}
-/* Page Designer pass 3: one button size across the page */
-a.btn,button.btn{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.25;min-height:56px;padding-top:0;padding-bottom:0;border-width:1.5px;border-style:solid;}
-a.btn:not(.ghost):not(.alt):not(.hero-alt),button.btn{border-color:transparent;}
-.form-foot .btn{border-color:transparent;border-width:1.5px;border-style:solid;}
-@media (max-width:600px){
-a.btn,button.btn{min-height:48px;font-size:.9rem;padding-left:18px;padding-right:18px;}
-}
-@media (max-width:600px){.hero.full .band-name{font-size:.86rem;letter-spacing:.03em;}.hero.full .band-label{font-size:.58rem;}}
-/* Page Designer pass 4: calmer masterclass heading and tighter phone cards */
-.h2-benefit{text-wrap:balance;max-width:24em;}
-@media (max-width:600px){.mc-grid .card h3{padding-top:20px;}.mc-grid .card p{padding-bottom:22px;}.mc-grid{gap:16px;}}
-/* Mobile: lighter hero overlay so the photo shows through, closer to desktop */
-@media (max-width:860px){.hero.full::before{background:linear-gradient(180deg,rgba(15,27,69,.45) 0%,rgba(15,27,69,0) 14%,rgba(15,27,69,.12) 34%,rgba(15,27,69,.5) 54%,rgba(15,27,69,.68) 74%,rgba(15,27,69,.78) 100%);}.hero.full .hero-copy{text-shadow:0 1px 12px rgba(15,27,69,.55);}.hero.full .hero-copy .btn{text-shadow:none;}}
-/* Mechanism-led hero: ALIGN headline, Lead from Full as brand label */
-.hero.full h1.lockup-mech{border:0;}.hero.full .hero-brand{display:block;font:600 .8rem/1.2 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#f3c9a8;margin-bottom:.9rem;}.hero.full .hero-h1{display:block;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.08;color:#fff;margin-bottom:1.1rem;}
-/* ALIGN step descriptions */
-.align-strip .ds{font-size:.92rem;line-height:1.45;color:var(--muted);}
-@media (max-width:640px){.align-strip li{display:grid;grid-template-columns:28px 1fr;column-gap:16px;row-gap:4px;align-items:baseline;}.align-strip .ltr{grid-row:span 2;}.align-strip .ds{grid-column:2;}}
-/* Polish: tighter hero headline block, darker muted text for readability */
-.hero.full h1.lockup-mech .hero-claim{margin-top:.4rem;}
-:root{--muted:#474d63;}
+@media (max-width:480px){.wrap{padding:0 18px}a.btn,button.btn{min-height:50px;font-size:.95rem}.interest-form{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main>
-<section class="hero full">
-  <img class="hero-bg" src="/eji-hero-bg.jpg" alt="" width="1671" height="941" fetchpriority="high">
-  <div class="hero-band"><p class="band-name">Eji Eze Stenlund</p><p class="band-label">Life Coach &amp; Leadership Mentor<span class="band-online"> · Online</span></p></div>
+<section class="hero">
+  <img src="eji-hero-bg.jpg" alt="" width="1671" height="941" fetchpriority="high">
+  <div class="top"><a class="name" href="https://ejiezestenlund.com/">Eji Eze Stenlund</a><span class="label">Leading from Full</span></div>
   <div class="hero-copy">
-    <div class="hero-inner">
-      <h1 class="lockup lockup-mech"><span class="hero-brand">For leaders who've delegated, and still carry it all</span><span class="hero-h1">The Ownership Reset for tech and product leaders</span><span class="hero-claim">Inner work and team ownership, together.</span></h1>
-      <p class="hero-body hero-benefit">Build the team that runs itself: leaders who own their goals, problems and decisions, teams that deliver without you chasing, and your time and energy back for what only you can lead.</p>
-      <p class="hero-note">You've delegated, and still it all circles back to you. Not for lack of knowledge, but because of a pull no framework touches.</p>
+    <div>
+      <p class="eyebrow">For tech and product leaders who've delegated, and still carry it all</p>
+      <h1>The real change happens beneath the surface.</h1>
+      <p class="mech"><b>The Ownership Reset:</b> inner work and team ownership, together.</p>
+      <p class="sub">Your structure is in place. What still pulls you back in isn't. That's where we work, so your team owns its goals, problems and decisions, and you lead from full.</p>
       <div class="actions">
         <a class="btn" href="#interest">Masterclass: Register interest</a>
-        <a class="btn hero-alt" href="#book">Free Discovery Conversation</a>
+        <a class="btn alt" href="#book">Free Discovery Conversation</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="ways" id="ways">
+<section class="know">
   <div class="wrap">
-    <div class="ways-hook">
-      <p>You've delegated. You've set goals, roles and decision rights. Your leaders are good. And still, when the pressure rises, it all circles back to you: the escalations, the problems to solve, the progress to chase. So you step back in, because it's faster, or it feels safer, and it costs you the time and energy you need to lead. It isn't a lack of knowledge. It's a pull no framework touches, in you and in your leaders. The Ownership Reset works on both at once, in your real work.<strong>The Ownership Reset Masterclass teaches five ALIGN steps from running on empty to a new normal you can keep.<br>In 1:1 coaching there's no method: you bring your situation and set the agenda.</strong></p>
-    </div>
-    <div class="ways-head">
-      <div class="eyebrow">Two ways to lead from full</div>
-      <h2>Choose the support that fits where you are</h2>
-      <p>Coaching: your situation, your agenda. Masterclasses: a method and a result you use straight away. Not sure? <a href="#book">Start with the free conversation</a>.</p>
-    </div>
-    <div class="ways-grid">
-      <div class="way">
-        <div class="way-top"><span class="opt">Option 1 · 1:1</span><h3>1:1 Coaching</h3><p class="mech">Someone in your corner, outside your organisation</p></div>
-        <p class="way-benefit">You bring your situation, and together we find what matters most to you, and your next step.</p>
-        <dl class="way-row best"><dt>Best when</dt><dd>Your question depends on your own life, team and organisation</dd></dl>
-        <a class="btn" href="#coaching">Explore coaching</a>
-      </div>
-      <div class="way mcw">
-        <div class="way-top"><span class="opt">Option 2 · Small group</span><h3>The Ownership Reset Masterclass</h3><p class="mech">Own more, carry less: five ALIGN steps to a new normal</p></div>
-        <p class="way-benefit">Refill while you keep leading, with a method you can use straight away.</p>
-        <dl class="way-row best"><dt>Best when</dt><dd>You want a clear structure and the company of other leaders</dd></dl>
-        <a class="btn" href="#masterclasses">Explore the masterclass</a>
-      </div>
-    </div>
-    <p class="ways-foot">Coaching follows Wayfinder training and ICF ethics. The Ownership Reset is my own teaching method.</p>
-  </div>
-</section>
-
-<section class="familiar">
-  <div class="wrap familiar-grid">
-    <div>
-      <div class="eyebrow">Does this sound familiar?</div>
-      <h2 class="quote">“Do you care too much to lead well?”</h2>
-      <p class="hook">It's the question caring leaders ask late in the evening. So you push harder: faster replies, later nights, a steady face. But pushing harder doesn't refill anything.</p>
-    </div>
-    <div>
-      <ul class="checks">
-        <li>You feel responsible for everything, and everyone's emotions.</li>
-        <li>It's easier to do it yourself than to hand it over, so you pick up what slips.</li>
-        <li>You say yes when you mean no, then feel guilty or resentful.</li>
-        <li>You're home, but your head is still at work.</li>
-        <li>You wonder: is it me, or is it the job? Should I even be a leader?</li>
-      </ul>
-      <p class="reassure">None of this makes you a weak leader. Your care is a strength. It just needs somewhere to go other than your own shoulders.</p>
-    </div>
-  </div>
-</section>
-
-<section class="shift">
-  <div class="wrap">
-    <div class="shift-intro">
-      <div>
-        <div class="eyebrow">What would you like more of?</div>
-        <h2>From carrying it all to leading from full</h2>
-      </div>
-    </div>
-    <div class="shift-grid" role="table" aria-label="Less of and more of">
-      <div class="head less" role="columnheader">Less of</div>
-      <div class="head more" role="columnheader">More of</div>
-      <div class="less">Carrying everything on your own</div>
-      <div class="more">A team that shares responsibility</div>
-      <div class="less">Feeling responsible for everything</div>
-      <div class="more">Knowing what's yours to carry</div>
-      <div class="less">An automatic yes, then guilt</div>
-      <div class="more">Clear, kind boundaries</div>
-      <div class="less">Taking work home in your head</div>
-      <div class="more">Evenings that are yours again</div>
-    </div>
-  </div>
-</section>
-
-<section class="coaching" id="coaching">
-  <div class="opt-band opt-1"><div class="wrap"><span class="opt-num">1</span><span class="opt-label">Option 1 · Coaching</span><span class="opt-kind">1:1 · online</span></div></div>
-  <div class="wrap">
-    <div class="coach-intro">
-      <div>
-        <h2>Someone in your corner<span class="h2-benefit">1:1 coaching where you set the agenda</span></h2>
-        <p class="mc-sub">You listen to everyone. Here, you're the one being listened to.</p>
-      </div>
-      <p class="lead">You bring your own situation. There's no method to follow and no advice to take. I listen and ask questions, and together we find what matters most to you, and your next step.</p>
-    </div>
-    <div class="topics-head"><h3>Things we might explore together</h3></div>
-    <ul class="topics">
-      <li>Your energy, and how to refill it while you keep leading</li>
-      <li>Letting go, handing over and trusting your team</li>
-      <li>Boundaries, saying no, and staying kind</li>
-      <li>Who supports you, and whether leadership still fits</li>
+    <p class="eyebrow">You already know what you want</p>
+    <h2>A team that runs itself, and a leader with room to lead.</h2>
+    <ul class="wants">
+      <li>Leaders who own their decisions</li>
+      <li>Delivery without you chasing</li>
+      <li>Time to think ahead</li>
+      <li>Energy left for your life</li>
     </ul>
-    <p class="step-label"><span>1</span>Start here</p>
-    <div class="start">
-      <div>
-        <div class="format">Free · 30 minutes</div>
-        <h3>Discovery Conversation</h3>
-        <p>We find out together whether coaching fits you. No pressure to commit.</p>
-      </div>
-      <a class="btn" href="#book">Free Discovery Conversation</a>
-    </div>
-    <p class="step-label"><span>2</span>Then choose your path</p>
-    <div class="paths">
-      <div class="path">
-        <div class="format">One 90-minute session</div>
-        <h3>The Compass</h3>
-        <p>Clarity on one pressing situation, and one meaningful next step.</p>
-      </div>
-      <div class="path">
-        <div class="format">Six 1:1 sessions</div>
-        <h3>Walking Home</h3>
-        <p>Lasting change in how you lead and how you live, coming back to yourself along the way.</p>
-      </div>
-    </div>
-    <!-- TODO (Eji): add prices for The Compass and Walking Home -->
-    <!-- TODO (Eji): check this wording against what you may claim while your certification is in progress -->
-    <p class="note">Introductory prices while I complete my Wayfinder certification. Coaching follows ICF ethics.</p>
+    <p>You've delegated. You've set goals, roles and decision rights. Your leaders are good. And still, when the pressure rises, it all circles back to you.</p>
+    <p class="pull">Structure changes what people are asked to do. <span>What's beneath it decides what they do under pressure.</span></p>
   </div>
 </section>
 
-<section class="mc" id="masterclasses">
-  <div class="opt-band opt-2"><div class="wrap"><span class="opt-num">2</span><span class="opt-label">Option 2 · The Ownership Reset Masterclass</span><span class="opt-kind">Group masterclasses · online</span></div></div>
+<section class="change">
   <div class="wrap">
-    <div class="mc-intro">
-      <div>
-        <span class="badge">Coming soon</span>
-        <h2>The Ownership Reset Masterclass<span class="h2-benefit">Own more, carry less:<br>from running on empty to leading from full</span></h2>
-        <p class="mc-sub">Five live steps for leaders who feel responsible for everything, from carrying it all to sharing the load.</p>
-      </div>
-      <div>
-        <p class="lead">Frameworks change the structure. The Ownership Reset also changes what pulls you and your leaders back in when the pressure is on. You already know you should delegate and ask for support. The Ownership Reset works on why it doesn't stick: over-responsibility, carrying what was never yours. Five live ALIGN steps, with leaders who know how this feels.</p>
-        <p class="mc-note">Built on change models leaders already trust, and 20+ years inside Agile teams.</p>
-        <a class="btn ghost" href="#interest">Register your interest</a>
-      </div>
+    <div class="head">
+      <p class="eyebrow">What can change</p>
+      <h2>The pull to step back in can change.</h2>
+      <p>In you, and in your leaders. Here's what becomes possible.</p>
     </div>
-    <ul class="align-strip" aria-label="The five steps of ALIGN">
-      <li><span class="ltr">A</span><span class="nm">Acknowledge</span><span class="ds">Where you are now, and what brought you here.</span></li>
-      <li><span class="ltr">L</span><span class="nm">Locate</span><span class="ds">What you really want, why it matters, and how you'll know it's working.</span></li>
-      <li><span class="ltr">I</span><span class="nm">Investigate</span><span class="ds">The beliefs, patterns and obstacles in your way, and new ways to see them.</span></li>
-      <li><span class="ltr">G</span><span class="nm">Generate</span><span class="ds">The tools you need, and a personal plan you can follow.</span></li>
-      <li><span class="ltr">N</span><span class="nm">Normalize</span><span class="ds">Try it in real life, adjust, and keep practising until it's yours.</span></li>
-    </ul>
-    <div class="mc-grid">
-      <div class="card">
-        <h3>Leading Without Running on Empty</h3>
-        <p class="desc">Keep caring. Make room for yourself and your life.</p>
-        <div class="leave">You leave with</div>
-        <p>A clear view of what isn't yours to carry, and three non-negotiables for your hardest weeks.</p>
-      </div>
+    <div class="grid6">
+      <div><h3>Hand over decisions, not just tasks</h3><p>Let go without losing your grip on what matters.</p></div>
+      <div><h3>From firefighter to leader</h3><p>Stop reacting to every escalation. Start leading with intention.</p></div>
+      <div><h3>Calm in the storm</h3><p>Stay steady when pressure rises, so your team can too.</p></div>
+      <div><h3>Energy you can sustain</h3><p>Lead from strength instead of exhaustion.</p></div>
+      <div><h3>A new story about your role</h3><p>From the one who fixes everything to the one who leads what only you can lead.</p></div>
+      <div><h3>Change that lasts</h3><p>Shifts you and your leaders keep practising, long after we finish.</p></div>
     </div>
-    <p class="mc-care">These masterclasses are teaching and mentoring, not therapy. If you're dealing with panic attacks or burnout, medical or therapeutic help may be the right first step.</p>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow">How it works</p><h2>Five steps, from the inside out</h2></div>
+      <p><strong>Frameworks change the structure. The Ownership Reset also changes what pulls you and your leaders back in when the pressure is on.</strong> In your real work, not on top of it.</p>
+    </div>
+    <ol class="steps" aria-label="The five ALIGN steps">
+      <li><span class="ltr">A</span><span class="nm">Acknowledge</span><p>See what really circles back to you, and why.</p></li>
+      <li><span class="ltr">L</span><span class="nm">Locate</span><p>Define what ownership should look like, for you and your leaders.</p></li>
+      <li><span class="ltr">I</span><span class="nm">Investigate</span><p>Uncover the beliefs and patterns that pull you back in.</p></li>
+      <li><span class="ltr">G</span><span class="nm">Generate</span><p>Build the tools, agreements and plan to hand over for real.</p></li>
+      <li><span class="ltr">N</span><span class="nm">Normalize</span><p>Practise in real work until stepping back is the new normal.</p></li>
+    </ol>
+    <p class="small">Format, dates and price will be shared with everyone who registers interest.</p>
+  </div>
+</section>
+
+<section class="moment">
+  <div class="wrap">
+    <p class="eyebrow">The next step</p>
+    <h2>At some point, knowing isn't enough.</h2>
+    <p>The team that runs itself won't build itself while you're still holding it together. The first step is small.</p>
+    <div class="actions">
+      <a class="btn clay" href="#interest">Masterclass: Register interest</a>
+      <a class="btn ghost" href="#book">Free Discovery Conversation</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <img src="eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy">
+    <div>
+      <p class="eyebrow">Your guide</p>
+      <h2>Hi, I'm Eji.</h2>
+      <p>For more than twenty years I led teams and organisations in Stockholm's tech and banking world: about fifteen teams built or turned around, always well-being first, and most recently a five-team digital organisation at a bank. I know the pull to step back in from the inside. <a href="https://ejiezestenlund.com/">More about me</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="next">
+  <div class="wrap">
     <div class="interest" id="interest">
       <div class="interest-intro">
         <h3>Register your interest</h3>
@@ -541,118 +252,47 @@ a.btn,button.btn{min-height:48px;font-size:.9rem;padding-left:18px;padding-right
       <form class="interest-form" action="https://formspree.io/f/xoejpvjz" method="POST">
         <input type="hidden" name="_subject" value="Masterclass interest">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-        <div class="field">
-          <label for="if-name">Name</label>
-          <input id="if-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="if-email">Email</label>
-          <input id="if-email" name="email" type="email" autocomplete="email" required>
-        </div>
+        <div class="field"><label for="if-name">Name</label><input id="if-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="if-email">Email</label><input id="if-email" name="email" type="email" autocomplete="email" required></div>
         <fieldset class="field full">
           <legend>Which masterclasses interest you? <span>(choose one or more)</span></legend>
           <label class="choice"><input type="checkbox" name="masterclass" value="Leading Without Running on Empty" checked> Leading Without Running on Empty</label>
         </fieldset>
-        <div class="field full">
-          <label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label>
-          <textarea id="if-msg" name="message" rows="3"></textarea>
-        </div>
+        <div class="field full"><label for="if-msg">Anything you'd like it to cover? <span>(optional)</span></label><textarea id="if-msg" name="message" rows="3"></textarea></div>
         <label class="choice consent full"><input type="checkbox" name="consent" value="yes" required> I agree that Eji Eze Stenlund may email me about the masterclasses. I can unsubscribe at any time.</label>
-        <div class="full form-foot">
-          <button class="btn" type="submit">Register your interest</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </div>
+        <div class="full form-foot"><button class="btn" type="submit">Register your interest</button><p class="form-status" role="status" aria-live="polite"></p></div>
       </form>
     </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap">
-    <div><img src="/eji-about.jpg" alt="Black-and-white portrait of Eji Eze Stenlund, smiling" width="800" height="800" loading="lazy"></div>
-    <div>
-      <div class="eyebrow">About me</div>
-      <h2>Hi, I'm Eji Eze Stenlund.</h2>
-      <p class="lead">I'm a Transformational Life Coach and Leadership Mentor. I work with caring, overextended leaders who have lost touch with themselves, so they can reconnect with who they are and thrive in life and in leadership.</p>
-      <blockquote class="about-quote">“When perspectives shift, new possibilities emerge.”</blockquote>
-      <div class="stat"><strong>20+</strong><span>years in leadership, Agile and organisational change</span></div>
-      <ul class="roles"><li>Manager</li><li>Agile Coach</li><li>Scrum Master</li><li>Product Owner</li><li>Consultant</li></ul>
-      <p>I've done this work from the inside, so I know what it's like to hold a team together while the work keeps coming, and to be the one nobody thinks to check on.</p>
-      <!-- TODO (Eji): add one or two sentences of your own story here -->
-      <p>Today I work online with leaders around the world.</p>
-    </div>
-  </div>
-</section>
-
-<section class="faq-section" id="faq">
-  <div class="wrap faq-grid">
-    <h2>Questions <em>you might have</em></h2>
-    <div>
-      <details open>
-        <summary>Which one should I choose, coaching or a masterclass?</summary>
-        <p>Coaching if your question is about your own life, team or organisation. The Ownership Reset Masterclass if you want a clear method and other leaders around you. Not sure? Book the free conversation.</p>
-      </details>
-      <details>
-        <summary>I can't take time off. Is this realistic?</summary>
-        <p>Yes. Both are designed for leaders who are still leading. Sessions are online and focused: one 90-minute session, six sessions at your own pace, or a single live masterclass.</p>
-      </details>
-      <details>
-        <summary>What if the problem is my organisation, not me?</summary>
-        <p>That's often part of it. A new perspective won't fix too much work or too little support. We look at what's yours to change, and how to raise the rest.</p>
-      </details>
-      <details>
-        <summary>Will coaching tell me what to do?</summary>
-        <p>No. Coaching isn't advice. I listen and ask questions so you can see clearly and decide for yourself. If you want a structured method, that's what The Ownership Reset Masterclass is for.</p>
-      </details>
-      <details>
-        <summary>Is this therapy?</summary>
-        <p>No. Coaching works alongside medical or therapeutic support, not instead of it.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <p class="script-line" aria-hidden="true">Walk with Eji</p>
-    <h2>You hold everyone. Who's holding you?</h2>
-    <p class="sub">What might become possible with more room for you? Start wherever feels right.</p>
-    <div class="actions">
-      <a class="btn" href="#book">Free Discovery Conversation</a>
-      <a class="btn alt" href="#interest">Masterclass: Register interest</a>
-    </div>
-  </div>
-</section>
-
-
-<section class="book" id="book">
-  <div class="wrap">
-    <div class="book-intro">
-      <div>
-        <div class="eyebrow">Free · 30 minutes · online</div>
+    <div id="book">
+      <div class="book-head">
+        <p class="eyebrow">Free · 30 minutes · online</p>
         <h2>Book your Discovery Conversation</h2>
+        <p>We find out together whether working with me fits you and your team. No pressure to commit.</p>
       </div>
-      <p class="lead">Choose a time that suits you. You'll get a confirmation by email with everything you need to join.</p>
+      <div class="book-frame"><div class="calendly-inline-widget" data-url="https://calendly.com/eji-ezestenlund/30min?hide_gdpr_banner=1&amp;primary_color=2f5d50"></div></div>
+      <p class="note">Calendar not showing? <a href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
     </div>
-    <div class="book-frame">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/eji-ezestenlund/30min?hide_gdpr_banner=1&amp;primary_color=2f5d50"></div>
-    </div>
-    <p class="note">Calendar not showing? <a href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Open the booking page</a>.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Questions you might have</h2>
+    <details open><summary>Is this coaching or a programme?</summary><p>The Ownership Reset is my own teaching method. 1:1 coaching is separate: it follows the Wayfinder method and ICF ethics, and you set the agenda.</p></details>
+    <details><summary>Can I bring my own leaders?</summary><p>Yes, that's part of the idea: the work happens in you and in your leaders at the same time. We'll talk about what fits in the free conversation.</p></details>
+    <details><summary>Is this therapy?</summary><p>No. This is teaching, mentoring and coaching. It works alongside medical or therapeutic support, not instead of it.</p></details>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="wrap">
     <span>© 2026 Eji Eze Stenlund · Transformational Life Coach &amp; Leadership Mentor</span>
-    <a href="/">The Ownership Reset Method</a>
+    <a href="https://ejiezestenlund.com/">Eji Eze Stenlund</a>
     <a href="#book">Book a free conversation</a>
   </div>
 </footer>
-
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-  // Send the masterclass form in the background and thank the visitor in place.
   (function () {
     var form = document.querySelector('.interest-form');
     if (!form) return;
@@ -671,7 +311,6 @@ a.btn,button.btn{min-height:48px;font-size:.9rem;padding-left:18px;padding-right
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (res) {
           if (!res.ok) {
-            // Show Formspree's own message (e.g. an invalid email) when it sends one.
             return res.json().catch(function () { return {}; }).then(function (data) {
               var msg = data.errors && data.errors.map(function (er) { return er.message; }).join(' ');
               var err = new Error(msg || res.status);
