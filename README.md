@@ -6,7 +6,7 @@ the pages will be reworked once the premium offer is finished).
 | Address | Shows | File |
 | --- | --- | --- |
 | ejiezestenlund.com | Personal coaching homepage | `public/home.html` |
-| theownershipreset.com and theownershipreset.com/leaders | Leaders page (Leading from Full) | `public/leaders.html` |
+| theownershipreset.com and theownershipreset.com/leaders | Leaders page (The Ownership Reset sales page) | `public/leaders.html` |
 | theownershipreset.com/owners | Owners page: **paused**, kept and reachable by direct link only, not linked from any other page | `public/owners.html` |
 
 - `worker.js` does the routing: www addresses redirect to the address without www; other pages on
@@ -20,8 +20,8 @@ Testimonials, prices and dates: add only real ones, once the offer is finished.
 
 ## Booking and sign-ups
 - Bookings: the "Book your Discovery Conversation" section embeds Calendly
-  (`calendly.com/eji-ezestenlund/30min`). Change the `data-url` in `home.html` and `leaders.html` to use another event.
-- Masterclass interest: the form sends to Formspree, which emails you each sign-up and keeps a list
+  (`calendly.com/eji-ezestenlund/30min`). Change the `data-url` in `home.html`, and the Calendly links in `leaders.html`, to use another event.
+- Register interest (programme and/or masterclass): the form sends to Formspree, which emails you each sign-up and keeps a list
   (form `xoejpvjz`, set in the form's `action` in `leaders.html`).
 
 ## Deploying on Cloudflare
