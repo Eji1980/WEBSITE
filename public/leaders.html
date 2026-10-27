@@ -440,6 +440,39 @@ section{padding-block:80px}
 .cost-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1000px){.cost-grid{grid-template-columns:1fr 1fr 1fr}}
 @media (max-width:860px){.cost-grid{grid-template-columns:1fr}}
+/* Hero polish (desktop): left-aligned editorial block, buttons side by side */
+@media (min-width:861px){
+.hero-in{grid-template-columns:1fr minmax(0,640px)}
+.hero-copy{text-align:left}
+.hero-copy>div{width:100%;max-width:640px}
+.hero .kicker{justify-content:flex-start}
+.hero .kicker::after{display:none}
+.hero .mech{border-bottom:0;padding-bottom:0;margin-bottom:.9rem;max-width:30em}
+.hero .sub{margin-left:0;margin-right:0;max-width:34em}
+.hero .actions{justify-content:flex-start;align-items:center;flex-wrap:nowrap;gap:28px}
+.hero .actions .btn{min-width:0;width:auto}
+.hero .actions .btn.line{background:none;border:0;min-height:0;padding:0;box-shadow:none;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;color:var(--white)}
+.hero .actions .btn.line::after{content:" →";white-space:pre}
+.hero .actions .btn.line:hover{background:none;color:var(--peach)}
+.hero .micro{text-align:left}
+.hero-levels{max-width:640px}
+}
+@media (min-width:861px){
+.hero .actions{flex-wrap:wrap;gap:14px 26px}
+.hero .actions .btn{white-space:nowrap;flex:none}
+.hero .actions .btn.line{display:inline-block;font-size:.98rem}
+}
+@media (max-width:860px){/* Phone top bar: name and label always on one line, next to the button */
+@media (max-width:860px){
+.brand small,.brand small{display:inline!important}
+}
+@media (max-width:480px){
+.nav .wrap{padding-left:16px;padding-right:16px;gap:8px}
+.brand{font-size:.9rem;gap:6px}
+.brand small{font-size:.47rem;letter-spacing:.06em}
+.nav .btn{padding:0 10px;font-size:.7rem;min-height:30px}
+}
+@media (max-width:360px){.brand{font-size:.84rem}.brand small{font-size:.43rem;letter-spacing:.04em}}
 </style>
 </head>
 <body>
