@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" href="https://theownershipreset.com/">
 <title>The Ownership Reset for tech and product leaders | Eji Eze Stenlund</title>
-<meta name="description" content="For heads of engineering, product and development who carry it all. Inner work and team ownership, together: lead from calm and clarity while your leadership group aligns around shared goals, with trust and ownership.">
+<meta name="description" content="For heads of engineering, product and development who've delegated, and still carry it all. The goal: a leadership group that owns its decisions, teams that deliver without you chasing, and your time back for strategy and for growing your leaders.">
 <meta property="og:title" content="The Ownership Reset for tech and product leaders | Eji Eze Stenlund">
-<meta property="og:description" content="Inner work and team ownership, together. For leaders who carry it all, and are ready to lead from full.">
+<meta property="og:description" content="One reset. Two levels at once: you stop carrying it all, and your leaders start owning it.">
 <meta property="og:image" content="https://theownershipreset.com/eji-hero-bg.jpg">
 <link rel="preload" as="image" href="/eji-hero-bg.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -397,6 +397,49 @@ section{padding-block:80px}
 .creds ul{padding-top:12px;padding-bottom:12px}
 .creds b{font-size:1.4rem}
 }
+/* Hero: the two levels, at a glance */
+.hero-levels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.4rem 0 1.1rem;text-align:left}
+.hero-levels div{border:1px solid rgba(243,201,168,.35);background:rgba(255,255,255,.05);border-radius:14px;padding:16px 18px 14px;min-width:0}
+.hero-levels span{display:block;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--peach);margin-bottom:6px}
+.hero-levels b{display:block;font-family:var(--display);font-weight:400;font-size:1.3rem;line-height:1.2;color:var(--white)}
+.hero-levels small{display:block;margin-top:6px;font-size:.88rem;line-height:1.4;color:rgba(255,255,255,.75)}
+@media (max-width:860px){
+.hero-levels{gap:8px;margin:.7rem 0 0}
+.hero-levels div{padding:10px 12px 9px;border-radius:12px}
+.hero-levels span{font-size:.58rem;letter-spacing:.1em;margin-bottom:3px}
+.hero-levels b{font-size:1rem}
+.hero-levels small{font-size:.72rem;margin-top:3px}
+}
+@media (max-width:860px) and (max-height:700px){.hero-levels small{display:none}}
+/* Credentials bar: five items */
+.creds ul{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1000px){.creds ul{grid-template-columns:repeat(6,minmax(0,1fr))}.creds li{grid-column:span 2}.creds li:nth-child(4),.creds li:nth-child(5){grid-column:span 3}}
+@media (max-width:860px){.creds ul{grid-template-columns:repeat(6,minmax(0,1fr))}.creds li,.creds li:nth-child(4),.creds li:nth-child(5){grid-column:span 3}.creds li:nth-child(3){grid-column:span 6}}
+/* Design pass (page designer) */
+.cost-grid .num{background:none;border:0;border-radius:0;padding:0}
+.path .btn{padding:0 18px;font-size:.95rem;white-space:nowrap}
+.fit h3{font-family:var(--display);font-weight:400;font-size:1.35rem;margin-bottom:.6rem}
+.fit div:first-child{border-top:3px solid var(--clay)}
+.fit div:last-child{border-top:3px solid var(--line)}
+@media (max-width:860px){
+.path.main{order:-1}
+.soon .btn,.path .btn{white-space:normal;padding:12px 18px;line-height:1.3}
+}
+/* Phone top bar: name and label on one line, aligned with a compact booking button */
+.nav .btn .s{display:none}
+@media (max-width:860px){
+.nav .wrap{align-items:center;padding-block:14px}
+.brand{display:flex;align-items:baseline;gap:8px;white-space:nowrap;font-size:1.02rem}
+.brand small{margin:0;font-size:.56rem;letter-spacing:.12em}
+.nav .btn{display:inline-flex;min-height:36px;padding:0 14px;font-size:.8rem;flex:none}
+.nav .btn .l{display:none}.nav .btn .s{display:inline}
+}
+@media (max-width:860px){.nav .wrap{padding-left:18px;padding-right:18px;gap:10px}.brand{font-size:.98rem;gap:7px}.brand small{font-size:.52rem;letter-spacing:.1em}.nav .btn{padding:0 12px;font-size:.76rem;min-height:34px}}
+@media (max-width:385px){.brand small{display:none}}
+/* Trim: three cost cards */
+.cost-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.cost-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:860px){.cost-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -408,15 +451,18 @@ section{padding-block:80px}
   <div class="glow"></div>
   <nav class="nav" aria-label="Site"><div class="wrap">
     <a class="brand" href="https://ejiezestenlund.com/">Eji Eze Stenlund<small>The Ownership Reset</small></a>
-    <a class="btn" href="#start">Book a free conversation</a>
+    <a class="btn" href="#start"><span class="l">Book a free conversation</span><span class="s">Book a call</span></a>
   </div></nav>
   <div class="hero-in">
     <div aria-hidden="true"></div>
     <div class="hero-copy">
-      <p class="kicker">For heads of engineering, product &amp; development</p>
-      <h1>The Ownership Reset <span>Lead what only you can lead.</span></h1>
-      <p class="mech">Inner work and team ownership, together. For leaders who carry it all, and are ready to lead from full.</p>
-      <p class="sub">Lead from calm and clarity again, while your leadership group aligns around shared goals, with trust and ownership. Your managers make the decisions. Your teams deliver. You get your capacity back for strategy and for growing your leaders.</p>
+      <p class="kicker">For leaders who've delegated, and still carry it all</p>
+      <h1>The Ownership Reset <span>One reset. Two levels at once.</span></h1>
+      <div class="hero-levels">
+        <div><span>In you</span><b>You stop carrying it all.</b><small>Calm, clear, with energy to spare.</small></div>
+        <div><span>In your leaders</span><b>They start owning it.</b><small>They decide, and they deliver.</small></div>
+      </div>
+      <p class="sub">So you get your time back for strategy, and for growing your leaders.</p>
       <div class="actions">
         <a class="btn" href="#start">Book a free Discovery Conversation <span class="arr" aria-hidden="true">→</span></a>
         <a class="btn line" href="#list">Register interest for the programme</a>
@@ -425,10 +471,11 @@ section{padding-block:80px}
     </div>
   </div>
   <div class="creds"><ul>
-    <li><b>20+ years</b>leading teams in tech and banking</li>
-    <li><b>~15 teams</b>built or turned around</li>
-    <li><b>5 product areas</b>led in a bank's digital organisation</li>
-    <li><b>Wayfinder</b>trained coach · SAFe Program Consultant</li>
+    <li><b>20+ years</b>as a leader in tech and banking</li>
+    <li><b>15+ teams</b>developed into high-performing teams</li>
+    <li><b>5 product areas</b>led at a bank, with their long-term strategy</li>
+    <li><b>Wayfinder</b>trained coach</li>
+    <li><b>SAFe</b>Program Consultant</li>
   </ul></div>
 </section>
 
@@ -439,12 +486,12 @@ section{padding-block:80px}
       <div class="switch" role="group" aria-label="Show the day">
         <span class="pill" aria-hidden="true"></span>
         <button type="button" id="b-now" aria-pressed="true">Today</button>
-        <button type="button" id="b-after" aria-pressed="false">A few months from now</button>
+        <button type="button" id="b-after" aria-pressed="false">After the reset</button>
       </div>
     </div>
     <ol class="day rv" id="day">
       <li><time>07:40</time><p data-now="A dozen Slack threads before breakfast. Three start with &quot;Quick question&quot;." data-after="Your leadership group knows this week's shared goals. Slack can wait: they have it, and they know you trust them.">A dozen Slack threads before breakfast. Three start with "Quick question".</p></li>
-      <li><time>09:15</time><p data-now="Your leads' planning ends the way it always does: &quot;Let's check with you.&quot;" data-after="Planning ends with a decision, made by the manager who owns it. Not you.">Your leads' planning ends the way it always does: "Let's check with you."</p></li>
+      <li><time>09:15</time><p data-now="Planning with your team leads ends the way it always does: &quot;Let's check with you.&quot;" data-after="Planning ends with a decision, made by the manager who owns it. Not you.">Planning with your team leads ends the way it always does: "Let's check with you."</p></li>
       <li><time>11:30</time><p data-now="A production issue. You know the fix. It's faster if you just take it." data-after="A production issue. The team solves it together, and delivery stays on track.">A production issue. You know the fix. It's faster if you just take it.</p></li>
       <li><time>14:00</time><p data-now="Your CTO asks for the AI roadmap. You haven't had a free hour to think in weeks." data-after="Two clear hours on strategy and the AI roadmap. The work they hired you for.">Your CTO asks for the AI roadmap. You haven't had a free hour to think in weeks.</p></li>
       <li><time>17:30</time><p data-now="You snap at someone you care about. You're running on empty, and it shows." data-after="A one-to-one growing one of your leaders, not chasing them. Then home, calm and clear.">You snap at someone you care about. You're running on empty, and it shows.</p></li>
@@ -460,12 +507,13 @@ section{padding-block:80px}
     <div class="rv">
       <p class="kicker">It isn't a knowledge problem</p>
       <h2>You've already tried the <em>sensible</em> things.</h2>
-      <ul class="crossed" aria-label="Things already tried"><li>Delegation</li><li>Decision rights</li><li>A reorg</li><li>Leadership training</li><li>Time management</li><li>A mindfulness app</li><li>A long holiday</li><li>Working harder</li></ul>
+      <ul class="crossed" aria-label="Things already tried"><li>Delegation</li><li>Decision rights</li><li>A reorg</li><li>Leadership training</li><li>A mindfulness app</li><li>A long holiday</li></ul>
     </div>
     <div class="rv">
       <p class="pull">They changed the structure, or gave you a short break. They didn't change what happens <em>under pressure.</em></p>
-      <p class="lede" style="font-size:1.05rem">When it gets urgent, something pulls you back in, and you run on empty to keep it all going. Something holds your leaders back too. That pull lives beneath the org chart and the to-do list, in you and in them. No framework or app touches it. That's where The Ownership Reset starts.</p>
+      <p class="lede" style="font-size:1.05rem">When it gets urgent, something pulls you back in, and holds your leaders back too. That pull lives beneath the org chart. That's where The Ownership Reset starts.</p>
       <div class="voices2">
+        <span class="who" style="grid-column:1/-1;margin-bottom:-4px">From leaders' public posts</span>
         <div><span class="who">A Norwegian CEO</span><q>This goes faster if I just take it myself.</q></div>
         <div><span class="who">A Swedish manager</span><q>I recognise them all, and still end up solving things myself too often.</q></div>
       </div>
@@ -478,7 +526,7 @@ section{padding-block:80px}
     <div class="rv" style="max-width:46rem">
       <p class="kicker">How it works</p>
       <h2>One reset. <em>Two levels at once.</em></h2>
-      <p class="lede">Most leadership development adds tools. The Ownership Reset works beneath them: on how you lead yourself, and on how your leaders own their part. In your real work, not on top of it.</p>
+      <p class="lede">Most leadership development works from the outside: more tools, more frameworks. The Ownership Reset starts inside, with how you lead yourself under pressure. Then come the practical ways your leaders own their part. In your real work, not on top of it.</p>
     </div>
     <div class="diagrams rv">
       <div class="diagram">
@@ -493,7 +541,7 @@ section{padding-block:80px}
           <circle cx="160" cy="100" r="30" fill="#9c4a2a"/>
           <text x="160" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#ffffff">You</text>
         </svg>
-        <p>Every decision, problem and deadline runs through you.</p>
+        <p>Every decision, problem and deadline runs through you, and you run on empty.</p>
       </div>
       <div class="diagram">
         <h3>After The Ownership Reset</h3>
@@ -513,35 +561,33 @@ section{padding-block:80px}
           <text x="85" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3c9a8">Your leaders</text>
           <text x="235" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3c9a8">Your leaders</text>
         </svg>
-        <p>Your leaders are aligned on shared goals and own their part. You lead them, and the work only you can do.</p>
+        <p>You lead from a steady centre. Your leaders are aligned on shared goals and own their part.</p>
       </div>
     </div>
     <div class="levels rv">
-      <div><span class="lv">Level 1 · In you</span><h3>Lead from full, not from empty</h3><p>Find your inner compass, calm and energy again. See the beliefs that pull you back in, "faster if I do it myself", and lead from clarity instead of pressure, even on the hard days.</p></div>
-      <div><span class="lv">Level 2 · In your leaders</span><h3>Aligned, trusted, owning it</h3><p>Your leadership group aligns around shared goals and builds trust. Managers make the decisions, and teams solve problems together and deliver more predictably, without waiting for you.</p></div>
+      <div><span class="lv">Level 1 · The inner level · You</span><h3>Lead from full, not from empty</h3><p>Find your inner compass, calm and energy again: a steady centre you can lead from, even on the hard days. See the beliefs that pull you back in, "faster if I do it myself", and lead from clarity instead of pressure.</p></div>
+      <div><span class="lv">Level 2 · The practical level · Your leaders</span><h3>Aligned, trusted, owning it</h3><p>Built on that steady centre, your leadership group agrees on shared goals and who decides what. Managers decide, and teams solve problems together, without waiting for you.</p></div>
     </div>
     <ol class="align rv" aria-label="The five ALIGN steps">
-      <li><span class="l">A</span><span class="n">Acknowledge</span><p>See what really circles back to you, and why.</p></li>
-      <li><span class="l">L</span><span class="n">Locate</span><p>Define what ownership looks like, for you and your leaders.</p></li>
-      <li><span class="l">I</span><span class="n">Investigate</span><p>Uncover the beliefs and patterns that pull you back in.</p></li>
-      <li><span class="l">G</span><span class="n">Generate</span><p>Build the tools, agreements and plan to hand over for real.</p></li>
-      <li><span class="l">N</span><span class="n">Normalize</span><p>Practise in real work until stepping back is the new normal.</p></li>
+      <li><span class="l">A</span><span class="n">Acknowledge</span><p>See where you really are, and what keeps circling back to you.</p></li>
+      <li><span class="l">L</span><span class="n">Locate</span><p>Get clear on what you want, as a leader and for your leadership group.</p></li>
+      <li><span class="l">I</span><span class="n">Investigate</span><p>Uncover the beliefs and patterns that pull you back in, in you and in your team.</p></li>
+      <li><span class="l">G</span><span class="n">Generate</span><p>Build your inner anchor first, then the practical tools, agreements and plans around it.</p></li>
+      <li><span class="l">N</span><span class="n">Normalize</span><p>Practise in real work until steady, grounded leadership is your new normal.</p></li>
     </ol>
   </div>
 </section>
 
 <section class="shift">
   <div class="wrap">
-    <div class="shift-head rv"><p class="kicker">What you're building</p><h2>From running on empty, <em>to leading from full.</em></h2><p class="lede" style="margin:0 auto">A leadership group aligned around shared goals, with trust and ownership. Managers who make decisions. Teams that solve problems together and deliver more predictably. And you, leading from calm and clarity, with room for strategy and for developing your leaders.</p></div>
+    <div class="shift-head rv"><p class="kicker">What you're building</p><h2>From running on empty, <em>to leading from full.</em></h2><p class="lede" style="margin:0 auto">What we work towards, at work and at home:</p></div>
     <ul class="pairs rv">
       <li><span class="from">Running on empty</span><span class="ar" aria-hidden="true">→</span><span class="to">Energy you can sustain, at work and at home</span></li>
-      <li><span class="from">Stressed, reactive, always on edge</span><span class="ar" aria-hidden="true">→</span><span class="to">Leading from calm and clarity</span></li>
       <li><span class="from">"Let me check with you."</span><span class="ar" aria-hidden="true">→</span><span class="to">"Here's what we decided, and why."</span></li>
-            <li><span class="from">Leaders pulling in different directions</span><span class="ar" aria-hidden="true">→</span><span class="to">A leadership group aligned around shared goals</span></li>
+      <li><span class="from">Leaders pulling in different directions</span><span class="ar" aria-hidden="true">→</span><span class="to">A leadership group aligned on shared goals</span></li>
       <li><span class="from">Managers who wait for you</span><span class="ar" aria-hidden="true">→</span><span class="to">Managers who make the decisions</span></li>
-      <li><span class="from">Unpredictable delivery, constant firefighting</span><span class="ar" aria-hidden="true">→</span><span class="to">Teams that solve problems together and deliver predictably</span></li>
-      <li><span class="from">No time to think, or to grow anyone</span><span class="ar" aria-hidden="true">→</span><span class="to">Capacity for strategy and for developing your leaders</span></li>
-      <li><span class="from">Carrying it alone</span><span class="ar" aria-hidden="true">→</span><span class="to">A leadership group built on trust and ownership</span></li>
+      <li><span class="from">Constant firefighting</span><span class="ar" aria-hidden="true">→</span><span class="to">Teams that solve problems together and deliver predictably</span></li>
+      <li><span class="from">No time to think</span><span class="ar" aria-hidden="true">→</span><span class="to">Room for strategy, and for growing your leaders</span></li>
       <li><span class="from">Doing what's expected of you</span><span class="ar" aria-hidden="true">→</span><span class="to">Leading from your own inner compass</span></li>
     </ul>
   </div>
@@ -556,14 +602,13 @@ section{padding-block:80px}
       <div class="qs" id="qs">
         <label class="q"><input type="checkbox"><span>Decisions land on my desk even though I've delegated them.</span></label>
         <label class="q"><input type="checkbox"><span>When it gets urgent, I step back in and fix it myself.</span></label>
-        <label class="q"><input type="checkbox"><span>My leads check with me before they decide.</span></label>
         <label class="q"><input type="checkbox"><span>Strategic work, and my own life, get whatever is left.</span></label>
         <label class="q"><input type="checkbox"><span>I'm tired in a way a weekend doesn't fix.</span></label>
         <label class="q"><input type="checkbox"><span>I carry most of it alone, with no one to think out loud with.</span></label>
       </div>
     </div>
     <div class="result" aria-live="polite">
-      <div class="score"><span id="score">0</span><small> / 6</small></div>
+      <div class="score"><span id="score">0</span><small> / 5</small></div>
       <div class="meter"><i id="meter"></i></div>
       <h3 id="r-h">Tick what's true for you.</h3>
       <p id="r-p">Your result appears here as you go.</p>
@@ -576,11 +621,10 @@ section{padding-block:80px}
   <div class="wrap">
     <div class="cost-head rv">
       <div><p class="kicker">If nothing changes</p><h2>What running on empty <em>really costs.</em></h2></div>
-      <p class="lede">It doesn't fade on its own. It drains you, and it quietly teaches your organisation to wait for you.</p>
+      <p class="lede">It rarely fades on its own. It drains you, and it quietly teaches your organisation to wait for you.</p>
     </div>
     <div class="cost-grid rv">
-      <div><div class="num">68%</div><h3>Your time</h3><p>of Swedish engineering managers can't do the job within normal working hours.</p><small>Sveriges Ingenjörer, 2020</small></div>
-      <div><div class="num">35%</div><h3>Your mandate</h3><p>fully agree they have a clear mandate. The rest carry accountability without the authority.</p><small>Sveriges Ingenjörer, 2020</small></div>
+      <div><div class="num">68%</div><h3>Your time</h3><p>of Swedish managers who are engineers say they can't do the job within normal working hours.</p><small>Sveriges Ingenjörer, 2020</small></div>
       <div><div class="num">3 in 4</div><h3>Your health</h3><p>Swedish tech top managers say the job has harmed their mental health.</p><small>Breakit, 2023</small></div>
       <div><div class="num">“”</div><h3>Your leaders</h3><p>"If everything ends with the leader, the organisation learns one thing: wait for the leader."</p><small>A Norwegian CEO, on LinkedIn</small></div>
     </div>
@@ -594,24 +638,24 @@ section{padding-block:80px}
       <div>
         <p class="kicker">Your guide</p>
         <h2>I've led it. I've coached it. <em>I've lived it.</em></h2>
-        <p class="first">Hi, I'm Eji. I bring three kinds of experience to this work, and you need all three to change how you lead, not only what you know.</p>
+        <p class="first">Hi, I'm Eji. I've been a Product Owner, Scrum Master, Agile Coach, manager and delivery leader, so I know the seats your leaders sit in.</p>
       </div>
     </div>
     <div class="cred3 rv">
       <article>
         <span class="n">01</span><p class="t">Leadership, from the inside</p>
         <h3>Twenty years leading in tech and banking.</h3>
-        <ul><li>From programmer to leader in Stockholm's tech world</li><li>About 15 teams built or turned around</li><li>Led five product areas in a bank's digital organisation</li><li>Turned struggling teams into teams that deliver</li></ul>
+        <ul><li>From programmer to leader in Stockholm's tech world</li><li>Led five product owners at a bank, each with a product and its delivery team</li><li>Developed 15+ teams, strengthening ownership, collaboration and delivery</li></ul>
       </article>
       <article>
         <span class="n">02</span><p class="t">Coaching and mentoring</p>
         <h3>Helping leaders find their own way.</h3>
-        <ul><li>Wayfinder-trained transformational life coach</li><li>A year of integrative psychology</li><li>Started communities of practice for about 100 leaders</li><li>Mentored the leaders who took over after me, every time</li></ul>
+        <ul><li>Wayfinder-trained transformational life coach (Martha Beck)</li><li>Psychosynthesis-based personal development training (Humanova)</li><li>Mentored leaders, Scrum Masters and Product Owners, including those who took over after me</li></ul>
       </article>
       <article>
         <span class="n">03</span><p class="t">Personal transformation</p>
         <h3>I've walked from empty to full myself.</h3>
-        <ul><li>Navigated deep grief after losing my husband, while raising our two young children and still leading</li><li>Came back from the edge of burnout as a senior leader, and redesigned my role so it could hold</li><li>Found the anchor I now help other leaders find</li></ul>
+        <ul><li>Navigated deep grief after losing my husband, while raising our two young children and still leading</li><li>Found my way back from running on empty, while still leading</li><li>Found the anchor I now help other leaders find</li></ul>
       </article>
     </div>
   </div>
@@ -638,14 +682,14 @@ section{padding-block:80px}
     <div class="path-grid rv">
       <div class="path">
         <span class="t">Free · live online</span><h3>The masterclass</h3>
-        <ul><li>Why you keep running on empty, and what pulls you back in</li><li>The first handover you can make next week</li><li>Meet other leaders in the same seat</li></ul>
+        <ul><li>Why you keep running on empty, and what pulls you back in</li><li>A first step you can take next week</li><li>Meet other leaders in the same seat</li></ul>
         <p class="fine">Date coming soon. Register your interest to hear first.</p>
         <a class="btn" href="#list">Register interest</a>
       </div>
       <div class="path main">
-        <span class="t">For you and your leadership team</span><h3>The Ownership Reset</h3>
-        <ul><li>Lead from full: calm, clarity and energy back</li><li>A leadership group aligned on shared goals, with trust and ownership</li><li>ALIGN with you and your leaders, together</li><li>Built on your real decisions and your real week</li><li>Inner work and team ownership, at both levels</li><li>Over several months, so the change holds</li></ul>
-        <p class="fine">Shaped with you after the Discovery Conversation. Price coming soon, or on request.</p>
+        <span class="t">For leaders · with your team, or with peers</span><h3>The Ownership Reset</h3>
+        <ul><li>Lead from calm and clarity, even under pressure</li><li>A leadership group that owns its decisions and delivery</li><li>Built on your real decisions and your real week</li><li>With your own leadership group, or in a small group of senior peers from other companies</li></ul>
+        <p class="fine">Shaped with you after the Discovery Conversation. Price on request. Planning your 2027 budget? Now is a good time to talk.</p>
         <a class="btn light" href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Book a free Discovery Conversation</a>
         <a class="sec-link" href="#list">or register your interest</a>
       </div>
@@ -669,8 +713,8 @@ section{padding-block:80px}
       </form>
     </div>
     <div class="fit rv">
-      <div><h3>This is for you if</h3><ul><li>You lead several teams through other leaders</li><li>You carry too much, and want to lead from full again</li><li>You're willing to look at your own part in it</li></ul></div>
-      <div><h3>It's not for you if</h3><ul><li>You want someone to fix your team without looking at yourself</li><li>You're looking for one more framework to install</li><li>You need therapy or medical support right now</li></ul></div>
+      <div><h3>This is for you if</h3><ul><li>You lead several teams through other leaders</li><li>You're willing to look at your own part in it</li></ul></div>
+      <div><h3>It's not for you if</h3><ul><li>You want someone to fix your team without looking at yourself</li><li>You need therapy or medical support right now</li></ul></div>
     </div>
   </div>
 </section>
@@ -682,19 +726,18 @@ section{padding-block:80px}
       <h2>Before you <em>book.</em></h2>
     </div>
     <div class="rv">
-      <details open><summary>Can my company pay?</summary><p>Most leaders' companies do: it's leadership development for you and your team. I'll help you make the case to your manager.</p></details>
+      <details open><summary>Can my company pay?</summary><p>It's designed to: as leadership development for you, or for you and your leadership group, from a development or training budget. I'll help you make the case upward.</p></details>
       <details><summary>What if the organisation is the real problem?</summary><p>Some of it may be. We start with what's yours to change, in you and in your team. I won't promise to fix the mandate above you, but you'll be much clearer about what to ask for.</p></details>
       <details><summary>I don't have time for this.</summary><p>That's usually the clearest sign it's time. The work happens in your real week, on real decisions, not on top of it.</p></details>
       <details><summary>Is this coaching or a programme?</summary><p>The Ownership Reset is my programme for you and your leaders. 1:1 coaching is separate: it follows the Wayfinder method and ICF ethics, and you set the agenda.</p></details>
-      <details><summary>Is this therapy?</summary><p>No. This is teaching, mentoring and coaching. It works alongside medical or therapeutic support, not instead of it.</p></details>
     </div>
   </div>
 </section>
 
 <section class="close">
   <div class="wrap">
-    <p class="l1 rv">You were promoted for fixing everything.</p>
-    <p class="l2 rv">Now lead what only you can lead.</p>
+    <p class="l1 rv">You've carried so much, for so long.</p>
+    <p class="l2 rv">It's time to lead from full.</p>
     <a class="btn light rv" href="https://calendly.com/eji-ezestenlund/30min" target="_blank" rel="noopener">Book a free Discovery Conversation <span class="arr" aria-hidden="true">→</span></a>
     <p class="micro">Free · 30 minutes · online · no obligation</p>
   </div>
@@ -719,8 +762,8 @@ section{padding-block:80px}
   bNow.addEventListener('click',function(){setDay('now');});bAfter.addEventListener('click',function(){setDay('after');});
   // Self-check
   var boxes=[].slice.call(document.querySelectorAll('#qs input')),sc=document.getElementById('score'),m=document.getElementById('meter'),rh=document.getElementById('r-h'),rp=document.getElementById('r-p');
-  var res=[[0,'Tick what’s true for you.','Your result appears here as you go.'],[1,'Early signs.','Worth catching now, before the tank runs low and your leaders learn to wait.'],[3,'Running low.','The pattern has started. This is exactly where The Ownership Reset begins.'],[5,'Running on empty.','You’re carrying it all. Let’s talk about what could change, for you and for your leaders.']];
-  function upd(){var n=boxes.filter(function(b){return b.checked;}).length;sc.textContent=n;m.style.width=(n/6*100)+'%';var r=res[0];res.forEach(function(x){if(n>=x[0])r=x;});rh.textContent=r[1];rp.textContent=r[2];}
+  var res=[[0,'Tick what’s true for you.','Your result appears here as you go.'],[1,'Early signs.','Worth catching now, before the tank runs low and your leaders learn to wait.'],[3,'Running low.','The pattern has started. This is exactly where The Ownership Reset begins.'],[4,'Running on empty.','You’re carrying it all. Let’s talk about what could change, for you and for your leaders.']];
+  function upd(){var n=boxes.filter(function(b){return b.checked;}).length;sc.textContent=n;m.style.width=(n/5*100)+'%';var r=res[0];res.forEach(function(x){if(n>=x[0])r=x;});rh.textContent=r[1];rp.textContent=r[2];}
   boxes.forEach(function(b){b.addEventListener('change',upd);});
   // Masterclass list (Formspree)
   var form=document.querySelector('.list-form');
