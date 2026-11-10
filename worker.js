@@ -8,6 +8,10 @@
 // - theownershipreset.com/home         -> redirect to ejiezestenlund.com
 // - www. addresses                     -> redirect to the same address without www.
 // The old main page (public/index.html, "The Ownership Reset Method") is no longer shown.
+// COMING SOON (10 Nov 2026): while true, ejiezestenlund.com/ shows public/coming-soon.html instead of the
+// homepage. The homepage (public/home.html) is kept unchanged; preview it at ejiezestenlund.com/?preview
+// To launch: set COMING_SOON to false and push.
+const COMING_SOON = true;
 const MAIN_HOST = "theownershipreset.com";
 const HOME_HOST = "ejiezestenlund.com";
 const FILE = /\.(jpe?g|png|webp|gif|svg|ico|css|js|txt|xml|woff2?)$/i;
@@ -37,6 +41,7 @@ export default {
 
     if (host === HOME_HOST) {
       if (path === "/" || path === "/index.html" || path === "/home" || path === "/home.html") {
+        if (COMING_SOON && !url.searchParams.has("preview")) return serve(request, env, "/coming-soon");
         return serve(request, env, "/home");
       }
       if (FILE.test(path)) return env.ASSETS.fetch(request);
