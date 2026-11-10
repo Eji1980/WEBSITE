@@ -5,7 +5,7 @@ the pages will be reworked once the premium offer is finished).
 
 | Address | Shows | File |
 | --- | --- | --- |
-| ejiezestenlund.com | Personal coaching homepage | `public/home.html` |
+| ejiezestenlund.com | **Coming soon page for now** (`public/coming-soon.html`); the homepage stays in `public/home.html`. You can preview it at ejiezestenlund.com/?preview. To launch, set `COMING_SOON = false` in `worker.js`. | `public/coming-soon.html` / `public/home.html` |
 | theownershipreset.com and theownershipreset.com/leaders | Leaders page (The Ownership Reset sales page) | `public/leaders.html` |
 | theownershipreset.com/owners | Owners page: **paused**, kept and reachable by direct link only, not linked from any other page | `public/owners.html` |
 
